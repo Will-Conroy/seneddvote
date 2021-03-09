@@ -30,14 +30,13 @@ class YearController extends Controller
 
     {
         $seats = $year->seats;
-        $constituencies = [];
+        $regions = [];
         foreach ($seats as $seat){
-            if(!$seat->regional){
-                array_push($constituencies, $seat->constituency); 
+            if($seat->regional){
+                array_push($regions, $seat->region); 
             }
-
         }
-        return view('years.show',['year' => $year,'seats' => $seats ,'constituencies' => $constituencies]);
+        return view('years.show',['year' => $year,'seats' => $seats ,'region' => $regions]);
 
     }
 
