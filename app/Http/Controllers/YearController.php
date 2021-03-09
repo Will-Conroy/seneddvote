@@ -9,14 +9,35 @@ class YearController extends Controller
 {
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $years = DB::table('years')->simplePaginate(15);
+        return view('years.index',['years' => $years]);
+        
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show(Year $year)
+
     {
-        return view('years.show',['year' => $year]);
+        $seats = $year->seats;
+        $constituencies = [];
+        foreach ($seats as $seat){
+            if(!$seat->regional){
+                array_push($constituencies, $seat->constituency); 
+            }
+
+        }
+        return view('years.show',['year' => $year,'seats' => $seats ,'constituencies' => $constituencies]);
 
     }
 
