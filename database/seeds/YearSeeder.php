@@ -13,6 +13,10 @@ class YearSeeder extends Seeder
      */
     public function run()
     {
+        $testYear = new Year;
+        $testYear->name = "Test";
+        $testYear->save();
+
         $default = new Year;
         $default->name = "default";
         $default->save();

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Region;
 use App\Coordinate;
+use App\Constituency;
 class YearController extends Controller
 {
 
@@ -32,8 +33,10 @@ class YearController extends Controller
 
     {
         $seats = $year->seats;
+        $constituencies = [];
         $regions = [];
         $coordinates = [];
+
         foreach ($seats as $seat){
             if($seat->regional == True){
                 $regionQuery = Region::get()->where('seat_id', $seat->id);
@@ -44,18 +47,22 @@ class YearController extends Controller
                     foreach($coordQuery as $coord){
                         array_push($temp,  array($coord->long, $coord->lat));
                     }
-                    $coordinates += [$region->name => $temp];
-
+                    $coordinates += [$region->name => $temp];}
+            }else{                
+                $constituencyQuery = Constituency::get()->where('seat_id', $seat->id);
+                foreach($constituencyQuery as $constituency){
+                    array_push($constituencies, $constituency);
+                    $coordQuery = Coordinate::get()->where('constituency_id', $constituency->id);
+                    $temp = [];
+                    foreach($coordQuery as $coord){
+                        array_push($temp,  array($coord->long, $coord->lat));
+                    }
+                    $coordinates += [$constituency->name => $temp];
                 }
-                //array_push($coordinates,[isset($seat->region->coordinates['long']),isset($seat->region->coordinates['lat'])]);
             }
-
         }
-    
-        
-
-        return view('years.show',['year' => $year,'seats' => $seats ,'regions' => $regions, 'coordinates' =>$coordinates]);
-
+        return view('years.show',['year' => $year,'seats' => $seats ,'regions' => $regions,'constituencies' => $constituencies,
+        'coordinates' => $coordinates]);
     }
 
     /**
@@ -80,4 +87,7 @@ class YearController extends Controller
     {
         //
     }
+
+
+
 }

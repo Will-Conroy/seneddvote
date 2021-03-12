@@ -26,8 +26,7 @@
         }).addTo(mymap);
     </script>
     @foreach ($regions as $region)
-        <script>
-        
+        <script>        
         var regionName = {!! json_encode($region->name) !!};
         var regionCoords = {!! json_encode($coordinates[$region->name]) !!};
         L.polygon(regionCoords).addTo(mymap).bindPopup(regionName);
@@ -68,12 +67,12 @@
         }).addTo(mymap);
     </script>
     
-    @foreach ($regions as $region)
+    @foreach ($constituencies as $constituency)
         <script>
         
-        var regionName = {!! json_encode($region->name) !!};
-        var regionCoords = {!! json_encode($coordinates[$region->name]) !!};
-        L.polygon(regionCoords).addTo(mymap).bindPopup(regionName);
+        var constituencyName = {!! json_encode($constituency->name) !!};
+        var constituencyCoords = {!! json_encode($coordinates[$constituency->name]) !!};
+        L.polygon(regionCoords).addTo(mymap).bindPopup(constituencyName);
         function onMapClick(e) {
             popup
                 .setLatLng(e.latlng)

@@ -11,10 +11,8 @@ class VoterSeeder extends Seeder
      */
     public function run()
     {
-        self::massMakeVoters(10,1,1,1);
-        self::massMakeVoters(5,2,2,3);
-    
-
+        //self::massMakeVoters(10,1,1,1);
+        //self::massMakeVoters(5,2,2,3);
     }
 
 
