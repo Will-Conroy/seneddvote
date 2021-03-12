@@ -39,21 +39,20 @@ class CoordinateSeeder extends Seeder
 
     private function testDatabase()
     {
-        self::massMakeRegionalCoordinates(1,[[53, -3],[53, -4.5],[54, -3],[54, -4.5]]);
-        self::massMakeRegionalCoordinates(2,[[54, -3],[54, -4.5],[55, -3],[55, -4.5]]);
-        self::massMakeRegionalCoordinates(3,[[53, -6],[53, -4.5],[55, -6],[55, -4.5]]);
+        self::massMakeRegionalCoordinates(1,[[53.45, -4.8],[53.45, -3],[52.8, -3],[52.8, -4.8]]);
+        self::massMakeRegionalCoordinates(2,[[52.8, -4.2],[52.8, -3],[52.2, -3],[52.2, -4.2]]);
+        self::massMakeRegionalCoordinates(3,[[52.2, -5.5],[52.2, -3],[51.5, -3],[51.5, -5.5]]);
 
-        self::massMakeConstituencyCoordinates(1,[[53, -3],[53, -4.5],[54, -3],[54, -4.5]]);
-        self::massMakeConstituencyCoordinates(2,[[54, -3],[54, -4.5],[55, -3],[55, -4.5]]);
-
-        self::massMakeConstituencyCoordinates(3,[[53, -6],[53, -4.5],[55, -6],[55, -4.5]]);
-        self::massMakeConstituencyCoordinates(4,[[53, -3],[53, -4.5],[54, -3],[54, -4.5]]);
-
-        self::massMakeConstituencyCoordinates(5,[[54, -3],[54, -4.5],[55, -3],[55, -4.5]]);
-        self::massMakeConstituencyCoordinates(6,[[53, -6],[53, -4.5],[55, -6],[55, -4.5]]);
-        self::massMakeConstituencyCoordinates(7,[[53, -6],[53, -4.5],[55, -6],[55, -4.5]]);
-
+        self::massMakeConstituencyCoordinates(1,[[53.45, -4.8],[53.45, -3.9],[52.8, -3.9],[52.8, -4.8]]);
+        self::massMakeConstituencyCoordinates(2,[[53.45, -3.9],[53.45, -3],[52.8, -3],[52.8, -3.9]]);
         
+        self::massMakeConstituencyCoordinates(3,[[52.8, -4.2],[52.8, -3],[52.5, -3],[52.5, -4.2]]);
+        self::massMakeConstituencyCoordinates(4,[[52.5, -4.2],[52.5, -3],[52.2, -3],[52.2, -4.2]]);
+    
+        self::massMakeConstituencyCoordinates(5,[[52.2, -5.5],[52.2, -4.6],[51.5, -4.6],[51.5, -5.5]]);
+        self::massMakeConstituencyCoordinates(6,[[52.2, -4.6],[52.2, -3.8],[51.5, -3.8],[51.5, -4.6]]);
+        self::massMakeConstituencyCoordinates(7,[[52.2, -3.8],[52.2, -3],[51.5, -3],[51.5, -3.8]]);
+
     }
 
     private function defaultRegional(int $startID)

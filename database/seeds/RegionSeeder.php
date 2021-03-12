@@ -17,17 +17,17 @@ class RegionSeeder extends Seeder
     }
     private function testData(){
         $r1 = new Region;
-        $r1->name = "North West";
+        $r1->name = "North Region";
         $r1->seat_id = 1;
         $r1->save();
 
         $r2 = new Region;
-        $r2->name = "North East";
+        $r2->name = "Middle Region";
         $r2->seat_id = 2;
         $r2->save();
 
         $r2 = new Region;
-        $r2->name = "South";
+        $r2->name = "South Region";
         $r2->seat_id = 3;
         $r2->save();
 
