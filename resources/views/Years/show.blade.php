@@ -28,9 +28,11 @@
 @section('map2')
     @foreach ($constituencies as $constituency)
         <script>        
+            
             var constituencyName = {!! json_encode($constituency->name) !!};
             var constituencyCoords = {!! json_encode($coordinates[$constituency->name]) !!};
-            L.polygon(constituencyCoords, {color: 'red'}).addTo(map2).bindPopup(constituencyName);
+            var constituencyColour = {!! json_encode($colours[$constituency->name]) !!};
+            L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(constituencyName);
             function onMapClick(e) 
             {
                 popup

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use App\Region;
 use App\Coordinate;
 use App\Constituency;
+use App\Representative;
+use App\Party;
 class YearController extends Controller
 {
 
@@ -36,6 +38,7 @@ class YearController extends Controller
         $constituencies = [];
         $regions = [];
         $coordinates = [];
+        $colours = [];
 
         foreach ($seats as $seat){
             if($seat->regional == True){
@@ -47,9 +50,11 @@ class YearController extends Controller
                     foreach($coordQuery as $coord){
                         array_push($temp,  array($coord->long, $coord->lat));
                     }
-                    $coordinates += [$region->name => $temp];}
+                    $coordinates += [$region->name => $temp];
+                }
             }else{                
                 $constituencyQuery = Constituency::get()->where('seat_id', $seat->id);
+               
                 foreach($constituencyQuery as $constituency){
                     array_push($constituencies, $constituency);
                     $coordQuery = Coordinate::get()->where('constituency_id', $constituency->id);
@@ -58,11 +63,22 @@ class YearController extends Controller
                         array_push($temp,  array($coord->long, $coord->lat));
                     }
                     $coordinates += [$constituency->name => $temp];
+                    $representativeQuery = Representative::get()->where('seat_id', $seat->id);
+                    $colour = '#f542e9';
+                    foreach($representativeQuery as $representative)
+                    {
+                        $partyQuery = Party::get()->where('id', $representative->party_id);
+                        foreach($partyQuery as $party)
+                        {
+                            $colour = $party->colour;
+                        }
+                    }
+                    $colours += [$constituency->name => $colour];
                 }
             }
         }
         return view('years.show',['year' => $year,'seats' => $seats ,'regions' => $regions,'constituencies' => $constituencies,
-        'coordinates' => $coordinates]);
+        'coordinates' => $coordinates, 'colours' => $colours]);
     }
 
     /**

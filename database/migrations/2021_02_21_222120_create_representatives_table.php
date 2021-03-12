@@ -18,7 +18,6 @@ class CreateRepresentativesTable extends Migration
             $table->string("name");
             $table->BigInteger('seat_id')->unsigned();
             $table->BigInteger('party_id')->unsigned();
-
             $table->timestamps();
             $table->foreign('seat_id')->references('id')->on('seats')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('party_id')->references('id')->on('parties')->onDelete('cascade')->onUpdate('cascade');
