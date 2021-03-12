@@ -5,6 +5,7 @@
     <!--Styles -->
 
     <link href="/CSS/main.css" rel="stylesheet">
+    
     <head>
 
         <title>Maps - @yield('title')</title>
@@ -44,7 +45,6 @@
                 tileSize: 512,
                 zoomOffset: -1
             }).addTo(map1);
-            bounds = new L.LatLngBounds(new L.LatLng(53.657661, -5.861206), new L.LatLng(51.230968, -2.318115));
             map1._layersMinZoom=7;
         </script>
         @yield('map1')
@@ -69,5 +69,8 @@
 
      </div>
     </body>
+
+    
+    
 </html>
 

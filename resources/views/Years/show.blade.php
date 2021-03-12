@@ -9,7 +9,7 @@
 @section('map1')
 
     @foreach ($regions as $region)
-        <script>        
+        <script>  
             var regionName = {!! json_encode($region->name) !!};
             var regionCoords = {!! json_encode($coordinates[$region->name]) !!};
             L.polygon(regionCoords).addTo(map1).bindPopup(regionName);
@@ -27,12 +27,12 @@
 
 @section('map2')
     @foreach ($constituencies as $constituency)
-        <script>        
-            
+        <script>      
             var constituencyName = {!! json_encode($constituency->name) !!};
             var constituencyCoords = {!! json_encode($coordinates[$constituency->name]) !!};
             var constituencyColour = {!! json_encode($colours[$constituency->name]) !!};
-            L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(constituencyName);
+            messsage = constituencyName + '<br>Winner: '+ {!! json_encode($winners[$constituency->name]) !!}; 
+            L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(messsage);
             function onMapClick(e) 
             {
                 popup

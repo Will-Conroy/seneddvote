@@ -32,13 +32,13 @@ class YearController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Year $year)
-
     {
         $seats = $year->seats;
         $constituencies = [];
         $regions = [];
         $coordinates = [];
         $colours = [];
+        $winners = [];
 
         foreach ($seats as $seat){
             if($seat->regional == True){
@@ -52,7 +52,7 @@ class YearController extends Controller
                     }
                     $coordinates += [$region->name => $temp];
                 }
-            }else{                
+            }else{
                 $constituencyQuery = Constituency::get()->where('seat_id', $seat->id);
                
                 foreach($constituencyQuery as $constituency){
@@ -67,6 +67,7 @@ class YearController extends Controller
                     $colour = '#f542e9';
                     foreach($representativeQuery as $representative)
                     {
+                        $winner = $representative->name;
                         $partyQuery = Party::get()->where('id', $representative->party_id);
                         foreach($partyQuery as $party)
                         {
@@ -74,11 +75,12 @@ class YearController extends Controller
                         }
                     }
                     $colours += [$constituency->name => $colour];
+                    $winners += [$constituency->name => $winner];
                 }
             }
         }
         return view('years.show',['year' => $year,'seats' => $seats ,'regions' => $regions,'constituencies' => $constituencies,
-        'coordinates' => $coordinates, 'colours' => $colours]);
+        'coordinates' => $coordinates, 'colours' => $colours, 'winners' => $winners]);
     }
 
     /**
@@ -103,7 +105,5 @@ class YearController extends Controller
     {
         //
     }
-
-
 
 }
