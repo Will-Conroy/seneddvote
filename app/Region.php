@@ -13,7 +13,7 @@ class Region extends Model
 
     public function constituencies()
     {
-        return $this->hasMany('App\constituency');
+        return $this->hasMany('App\constituency', 'constituency_id');
     }
     
     public function coordinates()
