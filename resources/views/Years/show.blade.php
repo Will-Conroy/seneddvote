@@ -1,11 +1,14 @@
 @extends('layouts.doubleMap')
-@section('title', 'Year')
+@section('header')
+    <h1>{{$year->name}}</h1>
+    <p>Over view of {{$year->name}} results</p>
+@endsection
 
 
 @section('seats')
 
 @endsection
-
+@section('map1Title','Regions')
 @section('map1')
 
     @foreach ($regions as $region)
@@ -24,7 +27,7 @@
         </script>
     @endforeach
 @endsection
-
+@section('map2Title','Constituncies')
 @section('map2')
     @foreach ($constituencies as $constituency)
         <script>      
