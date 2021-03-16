@@ -67,14 +67,14 @@ class YearController extends Controller
                     $colour = '#f542e9';
                     foreach($representativeQuery as $representative)
                     {
-                        $winner = $representative->name;
+                        $winner = $representative;
                         $partyQuery = Party::get()->where('id', $representative->party_id);
                         foreach($partyQuery as $party)
                         {
                             $colour = $party->colour;
                         }
                     }
-                    $colours += [$constituency->name => $colour];
+                    $colours += [$representative->name => $colour];
                     $winners += [$constituency->name => $winner];
                 }
             }

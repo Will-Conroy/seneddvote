@@ -6,6 +6,11 @@
 
 
 @section('seats')
+    @foreach ($constituencies as $constituency)
+        {{$winners[$constituency->name]->party->name}}
+    @endforeach
+
+
 
 @endsection
 @section('map1Title','Regions')
@@ -33,8 +38,9 @@
         <script>      
             var constituencyName = {!! json_encode($constituency->name) !!};
             var constituencyCoords = {!! json_encode($coordinates[$constituency->name]) !!};
-            var constituencyColour = {!! json_encode($colours[$constituency->name]) !!};
-            messsage = constituencyName + '<br>Winner: '+ {!! json_encode($winners[$constituency->name]) !!}; 
+            var constituencyColour = {!! json_encode($colours[$winners[$constituency->name]->name]) !!};
+            messsage = '<h4>'+constituencyName +'</h4><h5>Party:'+ {!! json_encode($winners[$constituency->name]->party->name) !!} +
+            '</h5><h5>Rep: '+ {!! json_encode($winners[$constituency->name]->name) !!}+'</h5>'; 
             L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(messsage);
             function onMapClick(e) 
             {

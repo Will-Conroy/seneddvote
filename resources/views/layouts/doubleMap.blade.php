@@ -3,7 +3,6 @@
 
     @section('content')
         <head>
-            <title>Maps - @yield('title')</title>
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
         </head> 
@@ -23,12 +22,14 @@
         </div>
         @endif
         <div> 
+            <h2>Seats</h2>
             @yield('seats')
+            <hr class="my-4">
             <div class="container">
                 
                 <div class="row">
                     <div class="col-sm">
-                        <h2 class="displacy-1">@yield('map1Title')</h2>
+                        <h2>@yield('map1Title')</h2>
                         <script src="https://unpkg.comleaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
                         <div class ="row" id="map1" style="width: 550px; height: 700px;"></div>
                         <script>
