@@ -37,7 +37,7 @@ class SeatSeeder extends Seeder
 
     function makeRegionalSeats(int $max,int $year)
     {
-        for ($x = 0; $x <= $max; $x+=1)
+        for ($x = 0; $x < $max; $x++)
         {
             $s = new Seat;
             $s->regional = TRUE;
@@ -46,9 +46,9 @@ class SeatSeeder extends Seeder
         } 
     }
 
-    function makeConstituencySeats(int $int,int $year)
+    function makeConstituencySeats(int $max,int $year)
     {
-        for ($x = 0; $x <= $int; $x+=1)
+        for ($x = 0; $x < $max; $x++)
         {
             $s = new Seat;
             $s->regional = FALSE;

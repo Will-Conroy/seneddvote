@@ -21,43 +21,43 @@ class ConstituencySeeder extends Seeder
 
         $r = new Constituency;
         $r->name = "North Constituency 1";
-        $r->seat_id = 5;
+        $r->seat_id = 4;
         $r->region_id = $northRegionID;
         $r->save();
 
         $r = new Constituency;
         $r->name = "North Constituency 2";
-        $r->seat_id = 6;
+        $r->seat_id = 5;
         $r->region_id = $northRegionID;
         $r->save();
 
         $r = new Constituency;
         $r->name = "Middle Constituency 1";
-        $r->seat_id = 7;
+        $r->seat_id = 6;
         $r->region_id = $middleRegionID;
         $r->save();
 
         $r = new Constituency;
         $r->name = "Middle Constituency 2";
-        $r->seat_id = 8;
+        $r->seat_id = 7;
         $r->region_id = $middleRegionID;
         $r->save();
 
         $r = new Constituency;
         $r->name = "South Constituency 1";
-        $r->seat_id = 9;
+        $r->seat_id = 8;
         $r->region_id = $sounthRegionID;
         $r->save();
 
         $r = new Constituency;
         $r->name = "South Constituency 2";
-        $r->seat_id = 10;
+        $r->seat_id = 9;
         $r->region_id = $sounthRegionID;
         $r->save();
 
         $r = new Constituency;
         $r->name = "South Constituency 3";
-        $r->seat_id = 11;
+        $r->seat_id = 10;
         $r->region_id = $sounthRegionID;
         $r->save();
     }

@@ -75,11 +75,5 @@ class RepresentativeSeeder extends Seeder
         $r->seat_id = 10;
         $r->party_id = 1;
         $r->save();
-
-        $r = new Representative;
-        $r->name = "R11";
-        $r->seat_id = 11;
-        $r->party_id = 2;
-        $r->save();
     }
 }

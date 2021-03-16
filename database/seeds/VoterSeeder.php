@@ -14,7 +14,13 @@ class VoterSeeder extends Seeder
         //self::massMakeVoters(10,1,1,1);
         //self::massMakeVoters(5,2,2,3);
     }
+    private function testDatat(){
+        //self::massMakeVoters(10,1,1,1);
+        //self::massMakeVoters(5,2,2,3);
 
+
+
+    }
 
     private function massMakeVoters(int $amount, int $constituency_id,int $constituency_rep_id,int $region_rep_id )
     {
