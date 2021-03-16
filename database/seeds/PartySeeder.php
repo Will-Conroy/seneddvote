@@ -18,17 +18,20 @@ class PartySeeder extends Seeder
     {
         $p = new Party;
         $p->name = "Red";
+        $p->image = "/PartyImages/red.png";
         $p->colour = "#cc0000";
         $p->save();
 
         $p = new Party;
         $p->name = "Green";
         $p->colour = "#009933";
+        $p->image = "/PartyImages/green.png";
         $p->save();
 
         $p = new Party;
         $p->name = "Blue";
         $p->colour = "#000099";
+        $p->image = "/PartyImages/blue.png";
         $p->save();
     }
 }

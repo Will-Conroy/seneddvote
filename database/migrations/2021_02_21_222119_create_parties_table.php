@@ -17,6 +17,7 @@ class CreatePartiesTable extends Migration
             $table->id();
             $table->string("name");
             $table->string("colour");
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
