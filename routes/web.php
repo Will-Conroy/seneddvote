@@ -18,3 +18,10 @@ Route::get('/', function () {
 });
 Route::get('years','YearController@index')->name('years.index');
 Route::get('years/{year}','YearController@show')->name('years.show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
