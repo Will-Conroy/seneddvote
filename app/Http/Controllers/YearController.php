@@ -10,6 +10,7 @@ use App\Coordinate;
 use App\Constituency;
 use App\Representative;
 use App\Party;
+use App\Voter;
 class YearController extends Controller
 {
 
@@ -41,7 +42,9 @@ class YearController extends Controller
         $winners = [];
 
         foreach ($seats as $seat){
+            //Checking if it is an additional member seat.
             if($seat->regional == True){
+                
                 $regionQuery = Region::get()->where('seat_id', $seat->id);
                 foreach($regionQuery as $region){
                     array_push($regions, $region);
@@ -53,8 +56,8 @@ class YearController extends Controller
                     $coordinates += [$region->name => $temp];
                 }
             }else{
+                //"Normal seat"
                 $constituencyQuery = Constituency::get()->where('seat_id', $seat->id);
-               
                 foreach($constituencyQuery as $constituency){
                     array_push($constituencies, $constituency);
                     $coordQuery = Coordinate::get()->where('constituency_id', $constituency->id);
@@ -64,14 +67,30 @@ class YearController extends Controller
                     }
                     $coordinates += [$constituency->name => $temp];
                     $representativeQuery = Representative::get()->where('seat_id', $seat->id);
+                    //defaul colour incase a representative can't befond 
                     $colour = '#f542e9';
+                    $winner;
+                    $winningCount = 0;
                     foreach($representativeQuery as $representative)
                     {
-                        $winner = $representative;
-                        $partyQuery = Party::get()->where('id', $representative->party_id);
-                        foreach($partyQuery as $party)
+                        //This is where the vote for each constiutency is counted
+                        $voterQuery = Voter::get()->where('id', $constituency->id);
+                        $count = 0;
+                        foreach($voterQuery as $voter)
                         {
-                            $colour = $party->colour;
+                            if ($voter->constituency_represenatative_id == $representative->id)
+                            {
+                                $count += 1;
+                            }
+                        }
+                        //Checks if this Party won
+                        if($count >= $winningCount){
+                            $winningCount = $count;
+                            $winner = $representative;
+                            $partyQuery = Party::get()->where('id', $representative->party_id);
+                            foreach($partyQuery as $party){
+                                $colour = $party->colour;
+                            }
                         }
                     }
                     $colours += [$representative->name => $colour];

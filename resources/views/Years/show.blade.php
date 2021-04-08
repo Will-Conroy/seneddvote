@@ -7,7 +7,9 @@
 
 @section('seats')
     @foreach ($constituencies as $constituency)
+    
         <img src= {{asset($winners[$constituency->name]->party->image)}} class="rounded" width= "50" height= "50"> 
+    
     @endforeach
 
 
