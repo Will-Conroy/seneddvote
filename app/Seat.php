@@ -25,4 +25,9 @@ class Seat extends Model
     {
         return $this->hasMany('App\Representative');
     }
+
+    public function voters()
+    {
+        return $this->hasMany('App\Voter');
+    }
 }

@@ -20,11 +20,4 @@ class Constituency extends Model
     {
         return $this->hasMany('App\Coordinate');
     }
-
-    public function voters()
-    {
-        return $this->hasMany('App\Voter');
-    }
-
-
 }

@@ -16,64 +16,16 @@ class RepresentativeSeeder extends Seeder
 
     private function testData()
     {
-        $r = new Representative;
-        $r->name = "R1";
-        $r->seat_id = 1;
-        $r->party_id = 1;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R2";
-        $r->seat_id = 2;
-        $r->party_id = 1;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R3";
-        $r->seat_id = 3;
-        $r->party_id = 2;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R4";
-        $r->seat_id = 4;
-        $r->party_id = 2;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R5";
-        $r->seat_id = 5;
-        $r->party_id = 1;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R6";
-        $r->seat_id = 6;
-        $r->party_id = 1;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R7";
-        $r->seat_id = 7;
-        $r->party_id = 2;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R8";
-        $r->seat_id = 8;
-        $r->party_id = 2;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R9";
-        $r->seat_id = 9;
-        $r->party_id = 3;
-        $r->save();
-
-        $r = new Representative;
-        $r->name = "R10";
-        $r->seat_id = 10;
-        $r->party_id = 1;
-        $r->save();
+        for ($seat = 1; $seat <= 10; $seat++) 
+        {
+            for ($parties = 1; $parties <= 3; $parties++)
+            {
+                $r = new Representative;
+                $r->name = "R" . $seat . $parties;
+                $r->seat_id =  $seat;
+                $r->party_id = $parties;
+                $r->save();
+            }
+        }  
     }
 }

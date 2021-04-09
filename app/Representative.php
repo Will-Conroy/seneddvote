@@ -15,13 +15,8 @@ class Representative extends Model
     {
         return $this->belongsTo('App\party');
     }
-    public function constituencyVoters()
+    public function voters()
     {
-        return $this->hasMany('App\Voter','constituency_represenatative_id');
-    }
-
-    public function regionVoters()
-    {
-        return $this->hasMany('App\Voter','region_represenatative_id');
+        return $this->hasMany('App\Voter');
     }
 }

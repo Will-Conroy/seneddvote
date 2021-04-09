@@ -42,60 +42,52 @@ class YearController extends Controller
         $winners = [];
 
         foreach ($seats as $seat){
-            //Checking if it is an additional member seat.
             if($seat->regional == True){
+            
+                $region = $seat->region;
+                array_push($regions, $region);
+
+                $coordQuery = $region->coordinates;
+
+                $temp = [];
+                foreach($coordQuery as $coord)
+                    array_push($temp,  array($coord->long, $coord->lat));
                 
-                $regionQuery = Region::get()->where('seat_id', $seat->id);
-                foreach($regionQuery as $region){
-                    array_push($regions, $region);
-                    $coordQuery = Coordinate::get()->where('region_id', $region->id);
-                    $temp = [];
-                    foreach($coordQuery as $coord){
-                        array_push($temp,  array($coord->long, $coord->lat));
-                    }
-                    $coordinates += [$region->name => $temp];
-                }
+                $coordinates += [$region->name => $temp];
+                
             }else{
-                //"Normal seat"
-                $constituencyQuery = Constituency::get()->where('seat_id', $seat->id);
-                foreach($constituencyQuery as $constituency){
-                    array_push($constituencies, $constituency);
-                    $coordQuery = Coordinate::get()->where('constituency_id', $constituency->id);
-                    $temp = [];
-                    foreach($coordQuery as $coord){
-                        array_push($temp,  array($coord->long, $coord->lat));
-                    }
-                    $coordinates += [$constituency->name => $temp];
-                    $representativeQuery = Representative::get()->where('seat_id', $seat->id);
-                    //defaul colour incase a representative can't befond 
-                    $colour = '#f542e9';
-                    $winner;
-                    $winningCount = 0;
-                    foreach($representativeQuery as $representative)
-                    {
-                        //This is where the vote for each constiutency is counted
-                        $voterQuery = Voter::get()->where('id', $constituency->id);
-                        $count = 0;
-                        foreach($voterQuery as $voter)
-                        {
-                            if ($voter->constituency_represenatative_id == $representative->id)
-                            {
-                                $count += 1;
-                            }
-                        }
-                        //Checks if this Party won
-                        if($count >= $winningCount){
-                            $winningCount = $count;
-                            $winner = $representative;
-                            $partyQuery = Party::get()->where('id', $representative->party_id);
-                            foreach($partyQuery as $party){
-                                $colour = $party->colour;
+                
+                $constituency = $seat->constituency;
+                array_push($constituencies, $constituency);
+
+                $coordQuery = $constituency->coordinates;
+                $temp = [];
+
+                foreach($coordQuery as $coord)
+                    array_push($temp,  array($coord->long, $coord->lat));
+                
+                $coordinates += [$constituency->name => $temp];
+               
+                $colour = '#f542e9';
+                $winningCount = 0;
+
+                $representativeQuery = $seat->representatives;
+                
+                foreach($representativeQuery as $representative)
+                {
+                    $voters = $representative->voters;
+                    foreach($voters as $voter){
+                        if($voter->seat_id == $seat->id){
+                            if($voter->votes > $winningCount){
+                                $winningCount = $voter->votes;
+                                $winner = $representative;
+                                $colour = $representative->party->colour;
                             }
                         }
                     }
-                    $colours += [$representative->name => $colour];
-                    $winners += [$constituency->name => $winner];
                 }
+                $colours += [$winner->name => $colour];
+                $winners += [$constituency->name => $winner];
             }
         }
         return view('years.show',['year' => $year,'seats' => $seats ,'regions' => $regions,'constituencies' => $constituencies,
