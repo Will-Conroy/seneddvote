@@ -16,9 +16,11 @@ class CreateSeatsTable extends Migration
         Schema::create('seats', function (Blueprint $table) {
             $table->id();
             $table->boolean("regional");
-            $table->BigInteger('year_id')->unsigned();
+            $table->BigInteger('region_id')->unsigned()->nullable();
+            $table->BigInteger('constituency_id')->unsigned()->nullable();
             $table->timestamps();
-            $table->foreign('year_id')->references('id')->on('years')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('constituency_id')->references('id')->on('constituencies')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

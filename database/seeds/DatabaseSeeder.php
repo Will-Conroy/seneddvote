@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $this->call(YearSeeder::class);
-        $this->call(SeatSeeder::class);
         $this->call(RegionSeeder::class);
         $this->call(ConstituencySeeder::class);
+        $this->call(SeatSeeder::class);
         $this->call(PartySeeder::class);
         $this->call(RepresentativeSeeder::class);
         $this->call(VoterSeeder::class);

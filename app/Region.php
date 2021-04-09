@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Region extends Model
 {
-    public function seat()
+    public function year()
     {
-        return $this->belongsTo('App\Seat');
+        return $this->belongsTo('App\Year');
+    }
+
+    public function seats()
+    {
+        return $this->hasMany('App\Seat');
     }
 
     public function constituencies()

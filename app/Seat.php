@@ -6,10 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Seat extends Model
 {
-    public function year()
-    {
-        return $this->belongsTo('App\Year');
-    }
+   
 
     public function region()
     {

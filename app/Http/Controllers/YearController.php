@@ -34,61 +34,60 @@ class YearController extends Controller
      */
     public function show(Year $year)
     {
-        $seats = $year->seats;
-        $constituencies = [];
-        $regions = [];
+        $constituencies =  $year->constituencies;
+        $regions = $year->regions;
+        $seats = [];
         $coordinates = [];
         $colours = [];
         $winners = [];
+        foreach($constituencies as $constituency){
+            $seat = $constituency->seat;
+            array_push($seats, $seat);
 
-        foreach ($seats as $seat){
-            if($seat->regional == True){
+            $coordQuery = $constituency->coordinates;
+            $temp = [];
+
+            foreach($coordQuery as $coord)
+                array_push($temp,  array($coord->long, $coord->lat));
             
-                $region = $seat->region;
-                array_push($regions, $region);
+            $coordinates += [$constituency->name => $temp];
+           
+            $colour = '#f542e9';
+            $winningCount = 0;
 
-                $coordQuery = $region->coordinates;
-
-                $temp = [];
-                foreach($coordQuery as $coord)
-                    array_push($temp,  array($coord->long, $coord->lat));
-                
-                $coordinates += [$region->name => $temp];
-                
-            }else{
-                
-                $constituency = $seat->constituency;
-                array_push($constituencies, $constituency);
-
-                $coordQuery = $constituency->coordinates;
-                $temp = [];
-
-                foreach($coordQuery as $coord)
-                    array_push($temp,  array($coord->long, $coord->lat));
-                
-                $coordinates += [$constituency->name => $temp];
-               
-                $colour = '#f542e9';
-                $winningCount = 0;
-
-                $representativeQuery = $seat->representatives;
-                
-                foreach($representativeQuery as $representative)
-                {
-                    $voters = $representative->voters;
-                    foreach($voters as $voter){
-                        if($voter->seat_id == $seat->id){
-                            if($voter->votes > $winningCount){
-                                $winningCount = $voter->votes;
-                                $winner = $representative;
-                                $colour = $representative->party->colour;
-                            }
+            $representativeQuery = $seat->representatives;
+            
+            
+            foreach($representativeQuery as $representative)
+            {
+                $voters = $representative->voters;
+                foreach($voters as $voter){
+                    if($voter->seat_id == $seat->id){
+                        if($voter->votes > $winningCount){
+                            $winningCount = $voter->votes;
+                            $winner = $representative;
+                            $colour = $representative->party->colour;
                         }
                     }
                 }
-                $colours += [$winner->name => $colour];
-                $winners += [$constituency->name => $winner];
             }
+            $colours += [$winner->name => $colour];
+            $winners += [$constituency->name => $winner];
+            }
+
+        foreach($regions as $region){
+            $regionSeats = $region->seats;
+            foreach($regionSeats as $seat)
+                array_push($seats, $seat);
+
+            $coordQuery = $region->coordinates;
+
+            $temp = [];
+            foreach($coordQuery as $coord)
+                array_push($temp,  array($coord->long, $coord->lat));
+            
+            $coordinates += [$region->name => $temp];
+                
         }
         return view('years.show',['year' => $year,'seats' => $seats ,'regions' => $regions,'constituencies' => $constituencies,
         'coordinates' => $coordinates, 'colours' => $colours, 'winners' => $winners]);
