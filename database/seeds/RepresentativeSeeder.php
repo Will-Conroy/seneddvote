@@ -16,16 +16,27 @@ class RepresentativeSeeder extends Seeder
 
     private function testData()
     {
-        for ($seat = 1; $seat <= 10; $seat++) 
+        for ($region = 1; $region <= 3; $region++) 
         {
             for ($parties = 1; $parties <= 3; $parties++)
             {
                 $r = new Representative;
-                $r->name = "R" . $seat . $parties;
-                $r->seat_id =  $seat;
+                $r->name = "R" . $region . $parties;
+                $r->region_id =  $region;
                 $r->party_id = $parties;
                 $r->save();
             }
-        }  
+        }
+        for ($constituency = 1; $constituency <= 7; $constituency++) 
+        {
+            for ($parties = 1; $parties <= 3; $parties++)
+            {
+                $r = new Representative;
+                $r->name = "R" . $constituency . $parties;
+                $r->constituency_id =  $constituency;
+                $r->party_id = $parties;
+                $r->save();
+            }
+        } 
     }
 }

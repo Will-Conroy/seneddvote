@@ -15,15 +15,25 @@ class VoterSeeder extends Seeder
     }
     private function testData(){
         $count = 0;
-        for ($seat = 1; $seat <= 10; $seat++) {
+        for ($region = 1; $region <= 3; $region++) {
             for ($rep = 1; $rep <= 3; $rep++){
                 $count ++;
                 $s = new Voter;
-                $s->seat_id = $seat;
+                $s->region_id = $region;
                 $s->representative_id = $count;
                 $s->votes = rand(100, 1000);
                 $s->save();
             }
-        }    
+        }
+        for ($constituency = 1; $constituency <= 7; $constituency++) {
+            for ($rep = 1; $rep <= 3; $rep++){
+                $count ++;
+                $s = new Voter;
+                $s->constituency_id = $constituency;
+                $s->representative_id = $count;
+                $s->votes = rand(100, 1000);
+                $s->save();
+            }
+        }     
     } 
 }

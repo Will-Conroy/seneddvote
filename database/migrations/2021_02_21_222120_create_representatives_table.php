@@ -16,10 +16,12 @@ class CreateRepresentativesTable extends Migration
         Schema::create('representatives', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->BigInteger('seat_id')->unsigned();
+            $table->BigInteger('region_id')->unsigned()->nullable();
+            $table->BigInteger('constituency_id')->unsigned()->nullable();
             $table->BigInteger('party_id')->unsigned();
             $table->timestamps();
-            $table->foreign('seat_id')->references('id')->on('seats')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('constituency_id')->references('id')->on('constituencies')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('party_id')->references('id')->on('parties')->onDelete('cascade')->onUpdate('cascade');
             
         });

@@ -6,13 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Voter extends Model
 {
-    public function seat()
+    public function constitunecy()
     {
-        return $this->belongsTo('App\seat');
+        return $this->belongsTo('App\Constituency');
+    }
+
+    public function region()
+    {
+        return $this->belongsTo('App\Region');
     }
 
     public function representative()
     {
-        return $this->belongsTo('App\representative');
+        return $this->belongsTo('App\Representative');
     }
 }

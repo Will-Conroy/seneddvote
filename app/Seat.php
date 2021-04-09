@@ -18,11 +18,6 @@ class Seat extends Model
         return $this->hasOne('App\Constituency');
     }
 
-    public function representatives()
-    {
-        return $this->hasMany('App\Representative');
-    }
-
     public function voters()
     {
         return $this->hasMany('App\Voter');

@@ -15,11 +15,14 @@ class CreateVotersTable extends Migration
     {
         Schema::create('voters', function (Blueprint $table) {
             $table->id();
-            $table->BigInteger('seat_id')->unsigned();
+            $table->BigInteger('region_id')->unsigned()->nullable();
+            $table->BigInteger('constituency_id')->unsigned()->nullable();
             $table->BigInteger('representative_id')->unsigned();
             $table->BigInteger('votes');
             $table->timestamps();
-            $table->foreign('seat_id')->references('id')->on('seats')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('constituency_id')->references('id')->on('constituencies')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('representative_id')->references('id')->on('representatives')->onDelete('cascade')->onUpdate('cascade');
         });
     }
