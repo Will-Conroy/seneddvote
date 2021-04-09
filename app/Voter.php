@@ -16,8 +16,8 @@ class Voter extends Model
         return $this->belongsTo('App\Region');
     }
 
-    public function representative()
+    public function party()
     {
-        return $this->belongsTo('App\Representative');
+        return $this->belongsTo('App\Party');
     }
 }

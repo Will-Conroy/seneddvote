@@ -17,13 +17,13 @@ class CreateVotersTable extends Migration
             $table->id();
             $table->BigInteger('region_id')->unsigned()->nullable();
             $table->BigInteger('constituency_id')->unsigned()->nullable();
-            $table->BigInteger('representative_id')->unsigned();
+            $table->BigInteger('party_id')->unsigned();
             $table->BigInteger('votes');
             $table->timestamps();
 
             $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('constituency_id')->references('id')->on('constituencies')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('representative_id')->references('id')->on('representatives')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('party_id')->references('id')->on('parties')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

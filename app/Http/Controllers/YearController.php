@@ -5,12 +5,7 @@ namespace App\Http\Controllers;
 use App\Year;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Region;
-use App\Coordinate;
-use App\Constituency;
-use App\Representative;
-use App\Party;
-use App\Voter;
+
 class YearController extends Controller
 {
 
@@ -56,22 +51,20 @@ class YearController extends Controller
             $colour = '#f542e9';
             $winningCount = 0;
 
-            $representativeQuery = $constituency->representatives;
-            
-            foreach($representativeQuery as $representative)
+            $voters = $constituency->voters;
+            foreach($voters as $voter)
             {
-                $voters = $representative->voters;
-                foreach($voters as $voter)
+                if($voter->votes > $winningCount)
                 {
-                    if($voter->votes > $winningCount)
-                    {
-                        $winningCount = $voter->votes;
-                        $winner = $representative;
-                        $colour = $representative->party->colour;
-                    }
+                    $winningCount = $voter->votes;
+                    $representatives = $constituency->representatives;
+                    foreach($representatives as $representative)
+                        if($representative->party->id == $voter->party->id)
+                            $winner = $representative;
+                     
+                    $colour = $voter->party->colour;
                 }
             }
-            
             $colours += [$winner->name => $colour];
             $winners += [$constituency->name => $winner];
             }
@@ -86,37 +79,77 @@ class YearController extends Controller
                 array_push($temp,  array($coord->long, $coord->lat));
             
             $coordinates += [$region->name => $temp];
+            
+            $votes = [];
+            $seatsGiven = [];
 
-            /*    
+            
+            $voters = $region->voters;
+            foreach($voters as $voter){
+                $votes += [$voter->party->id => $voter->votes];
+                $seatsGiven += [$voter->party->id => 1];
+
+            }
+
+            $regionColours = array();
+            $parties = $region->parties;
             $regionSeats = $region->seats;
             foreach($regionSeats as $seat)
             {
                 array_push($seats, $seat);
+                $winningCount = 0;
 
-                //gets all the represenatatives vote count and addes it to an array    
-                $regionRep = [];
-                $representativeQuery = $seat->representatives;
-                foreach($representativeQuery as $representative)
+                foreach($parties as $party)
                 {
-                    $voters = $representative->voters;
-                    foreach($voters as $voter)
+                    if($votes[$party->id] > $winningCount)
                     {
-                        if($voter->seat_id == $seat->id)
-                        {
-                            $regionRep += [$regionRep->id => $voter->votes];
-                        }        
+                        $seatsGiven[$party->id] += 1;
+                        $winningCount = $votes[$party->id];
+                        $votes[$party->id] = $votes[$party->id]/$seatsGiven[$party->id];
+                        $representatives = $region->representatives;
+                        foreach($representatives as $representative)
+                            if($representative->party->id == $party->id)
+                                $winner = $representative;
+                        
+                        $colour = $winner->party->colour;
                     }
                 }
+                array_push($regionColours, $colour);
+                $colours += [$winner->name => $colour];
+                $winners += [$seat->id => $winner];
+            }
+            $sum = array(0,0,0);
+            foreach($regionColours as $regionColour){
+                $temp = YearController::get_value_of_color($regionColour);
+                $sum[0] += $temp[0];
+                $sum[1] += $temp[1];
+                $sum[2] += $temp[2];
+            }
 
-
-                for($i = 0; $i < count($regionSeats); $i++){
-                }
-               
-            }      
-            */               
+            $sum[0] = $sum[0]/count($regionColours);
+            $sum[1] = $sum[1]/count($regionColours);
+            $sum[2] = $sum[2]/count($regionColours);
+            $colours += [$region->name => YearController::get_color_from_value($sum)];
+            
         }
         return view('years.show',['year' => $year,'seats' => $seats ,'regions' => $regions,'constituencies' => $constituencies,
         'coordinates' => $coordinates, 'colours' => $colours, 'winners' => $winners]);
+    }
+
+
+    //https://stackoverflow.com/questions/4526062/calculating-the-average-color-between-two-colors-in-php-using-an-index-number-a
+    function get_value_of_color($color) {
+        // assume $color is in the form #xxxxxx
+        return array(
+            hexdec(substr($color, 1, 2)),
+            hexdec(substr($color, 3, 2)),
+            hexdec(substr($color, 5, 2)),
+        );
+    }
+
+    //https://stackoverflow.com/questions/4526062/calculating-the-average-color-between-two-colors-in-php-using-an-index-number-a
+    function get_color_from_value($value) {
+        return sprintf('#%02x%02x%02x', $value[0], $value[1], $value[2]);
     }
 
     /**

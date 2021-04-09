@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRepresentativesTable extends Migration
+class CreateConstituencyPartyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateRepresentativesTable extends Migration
      */
     public function up()
     {
-        Schema::create('representatives', function (Blueprint $table) {
-            $table->id();
-            $table->string("name");
-            $table->Integer('priority')->unsigned();
-            $table->BigInteger('region_id')->unsigned()->nullable();
+        Schema::create('constituency_party', function (Blueprint $table) {
+            $table->primary(['constituency_id', 'party_id']);
             $table->BigInteger('constituency_id')->unsigned()->nullable();
-            $table->BigInteger('party_id')->unsigned();
+            $table->BigInteger('party_id')->unsigned()->nullable();
             $table->timestamps();
-            $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('constituency_id')->references('id')->on('constituencies')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('party_id')->references('id')->on('parties')->onDelete('cascade')->onUpdate('cascade');
             
@@ -35,6 +31,6 @@ class CreateRepresentativesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('representatives');
+        Schema::dropIfExists('constituency_party');
     }
 }

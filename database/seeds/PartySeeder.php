@@ -21,17 +21,33 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/red.png";
         $p->colour = "#cc0000";
         $p->save();
+        for($constituencies = 1; $constituencies <= 7; $constituencies++)
+            $p->constituencies()->attach($constituencies);
 
+        for($regions = 1; $regions <= 3; $regions++)
+            $p->regions()->attach($regions);
+       
         $p = new Party;
         $p->name = "Green";
         $p->colour = "#009933";
         $p->image = "/PartyImages/green.png";
         $p->save();
+        for($constituencies = 1; $constituencies <= 7; $constituencies++)
+            $p->constituencies()->attach($constituencies);
 
+        for($regions = 1; $regions <= 3; $regions++)
+            $p->regions()->attach($regions);
+       
         $p = new Party;
         $p->name = "Blue";
         $p->colour = "#000099";
         $p->image = "/PartyImages/blue.png";
         $p->save();
+
+        for($constituencies = 1; $constituencies <= 7; $constituencies++)
+            $p->constituencies()->attach($constituencies);
+
+        for($regions = 1; $regions <= 3; $regions++)
+            $p->regions()->attach($regions);
     }
 }

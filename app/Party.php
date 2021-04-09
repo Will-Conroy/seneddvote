@@ -10,4 +10,21 @@ class Party extends Model
     {
         return $this->hasMany('App\Representative');
     }
+
+    public function constituencies()
+    {
+        return $this->belongsToMany('App\Constituency');
+    }
+
+    public function regions()
+    {
+        return $this->belongsToMany('App\Region');
+    }
+
+    public function voters()
+    {
+        return $this->hasMany('App\Voter');
+    }
+    
+
 }

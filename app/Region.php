@@ -31,5 +31,15 @@ class Region extends Model
         return $this->hasMany('App\Representative');
     }
 
-    
+    public function parties()
+    {
+        return $this->belongsToMany('App\party');
+    }
+
+    public function voters()
+    {
+        return $this->hasMany('App\Voter');
+    }
+
+
 }

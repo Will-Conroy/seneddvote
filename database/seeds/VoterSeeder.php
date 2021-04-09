@@ -14,23 +14,23 @@ class VoterSeeder extends Seeder
         self::testData();
     }
     private function testData(){
-        $count = 0;
+
         for ($region = 1; $region <= 3; $region++) {
-            for ($rep = 1; $rep <= 3; $rep++){
-                $count ++;
+            for ($party = 1; $party <= 3; $party++){
+     
                 $s = new Voter;
                 $s->region_id = $region;
-                $s->representative_id = $count;
+                $s->party_id = $party;
                 $s->votes = rand(100, 1000);
                 $s->save();
             }
         }
         for ($constituency = 1; $constituency <= 7; $constituency++) {
-            for ($rep = 1; $rep <= 3; $rep++){
-                $count ++;
+            for ($party = 1; $party <= 3; $party++){
+    
                 $s = new Voter;
                 $s->constituency_id = $constituency;
-                $s->representative_id = $count;
+                $s->party_id = $party;
                 $s->votes = rand(100, 1000);
                 $s->save();
             }

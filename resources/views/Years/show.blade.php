@@ -6,11 +6,19 @@
 
 
 @section('seats')
-    @foreach ($constituencies as $constituency)
     
-        <img src= {{asset($winners[$constituency->name]->party->image)}} class="rounded" width= "50" height= "50"> 
-    
+    <h5>Regions</h5>
+    @foreach ($seats as $seat)
+        @if ($seat->regional)
+            <img src= {{asset($winners[$seat->id]->party->image)}} class="rounded" width= "50" height= "50">
+        @endif
     @endforeach
+    <br>
+    <h5>Constituencies</h5>
+    @foreach ($constituencies as $constituency)
+        <img src= {{asset($winners[$constituency->name]->party->image)}} class="rounded" width= "50" height= "50">
+    @endforeach
+    
 
 
 
@@ -22,7 +30,9 @@
         <script>  
             var regionName = {!! json_encode($region->name) !!};
             var regionCoords = {!! json_encode($coordinates[$region->name]) !!};
-            L.polygon(regionCoords).addTo(map1).bindPopup(regionName);
+            var regionColour = {!! json_encode($colours[$region->name]) !!};
+            message = '<h4>'+regionName +'</h4><h5>Party: '; 
+            L.polygon(regionCoords, {color:regionColour}).addTo(map1).bindPopup(message);
             function onMapClick(e) 
             {
                 popup
@@ -34,6 +44,10 @@
         </script>
     @endforeach
 @endsection
+
+
+
+
 @section('map2Title','Constituncies')
 @section('map2')
     @foreach ($constituencies as $constituency)
@@ -41,7 +55,7 @@
             var constituencyName = {!! json_encode($constituency->name) !!};
             var constituencyCoords = {!! json_encode($coordinates[$constituency->name]) !!};
             var constituencyColour = {!! json_encode($colours[$winners[$constituency->name]->name]) !!};
-            messsage = '<h4>'+constituencyName +'</h4><h5>Party:'+ {!! json_encode($winners[$constituency->name]->party->name) !!} +
+            messsage = '<h4>'+constituencyName +'</h4><h5>Party: '+ {!! json_encode($winners[$constituency->name]->party->name) !!} +
             '</h5><h5>Rep: '+ {!! json_encode($winners[$constituency->name]->name) !!}+'</h5>'; 
             L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(messsage);
             function onMapClick(e) 
