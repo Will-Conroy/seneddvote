@@ -12,7 +12,7 @@ class PartySeeder extends Seeder
     public function run()
     {
         self::testData();
-        self::testDataDefault();
+        self::testDataDefault(4,8, 8, 16);
     }
 
     private function testData()
@@ -22,6 +22,7 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/red.png";
         $p->colour = "#cc0000";
         $p->save();
+        
         for($constituencies = 1; $constituencies <= 7; $constituencies++)
             $p->constituencies()->attach($constituencies);
 
@@ -33,6 +34,7 @@ class PartySeeder extends Seeder
         $p->colour = "#009933";
         $p->image = "/PartyImages/green.png";
         $p->save();
+
         for($constituencies = 1; $constituencies <= 7; $constituencies++)
             $p->constituencies()->attach($constituencies);
 
@@ -54,15 +56,19 @@ class PartySeeder extends Seeder
 
 
 
-    private function testDataDefault()
+    private function testDataDefault(int $regionStart, int $regionEnd, int $constStart, int $constEnd)
     {
         $p = new Party;
         $p->name = "Red";
         $p->image = "/PartyImages/red.png";
         $p->colour = "#cc0000";
         $p->save();
-        for($regions = 4; $regions <= 8; $regions++)
+
+        for($regions = $regionStart; $regions <= $regionEnd; $regions++)
             $p->regions()->attach($regions);
+
+        for($constituencies = $constStart; $constituencies <= $constEnd; $constituencies++)
+            $p->constituencies()->attach($constituencies);
        
         $p = new Party;
         $p->name = "Green";
@@ -70,8 +76,11 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/green.png";
         $p->save();
 
-        for($regions = 4; $regions <= 8; $regions++)
+        for($regions = $regionStart; $regions <= $regionEnd; $regions++)
             $p->regions()->attach($regions);
+
+        for($constituencies = $constStart; $constituencies <= $constEnd; $constituencies++)
+            $p->constituencies()->attach($constituencies);  
        
         $p = new Party;
         $p->name = "Blue";
@@ -79,7 +88,10 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/blue.png";
         $p->save();
 
-        for($regions = 4; $regions <= 8; $regions++)
+        for($regions = $regionStart; $regions <= $regionEnd; $regions++)
             $p->regions()->attach($regions);
+
+        for($constituencies = $constStart; $constituencies <= $constEnd; $constituencies++)
+            $p->constituencies()->attach($constituencies);
     }
 }

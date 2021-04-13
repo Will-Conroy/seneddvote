@@ -12,7 +12,7 @@ class VoterSeeder extends Seeder
     public function run()
     {
         self::testData();
-        self::testDataDefault();
+        self::testDataDefault(4,8, 8, 16);
     }
 
     private function testData()
@@ -45,9 +45,9 @@ class VoterSeeder extends Seeder
     } 
 
 
-    private function testDataDefault(){
+    private function testDataDefault(int $regonStart, int $regionEnd, int $constituencyStart, int $constituencyEnd){
 
-        for ($region = 4; $region <= 8; $region++) {
+        for ($region = $regonStart; $region <= $regionEnd; $region++) {
             for ($party =4; $party <= 6; $party++){
      
                 $s = new Voter;
@@ -56,9 +56,10 @@ class VoterSeeder extends Seeder
                 $s->votes = rand(100, 1000);
                 $s->save();
             }
-        }/*
-        for ($constituency = 1; $constituency <= 7; $constituency++) {
-            for ($party = 1; $party <= 3; $party++){
+        }
+        for ($constituency = $constituencyStart; $constituency <= $constituencyEnd; $constituency++) 
+        {
+            for ($party = 4; $party <= 6; $party++){
     
                 $s = new Voter;
                 $s->constituency_id = $constituency;
@@ -66,6 +67,6 @@ class VoterSeeder extends Seeder
                 $s->votes = rand(100, 1000);
                 $s->save();
             }
-        }     */
+        }  
     }
 }

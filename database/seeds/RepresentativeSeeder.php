@@ -12,7 +12,7 @@ class RepresentativeSeeder extends Seeder
     public function run()
     {
         self::testData();
-        self::testDataDefault();
+        self::testDataDefault(4,8, 8, 16);
     }
 
     private function testData()
@@ -49,11 +49,11 @@ class RepresentativeSeeder extends Seeder
 
 
 
-    private function testDataDefault()
+    private function testDataDefault(int $regonStart, int $regionEnd, int $constituencyStart, int $constituencyEnd)
     {
         for($seatsPerRegion = 0; $seatsPerRegion < 3; $seatsPerRegion++)
         {
-            for ($region = 4; $region <= 8; $region++) 
+            for ($region = $regonStart; $region <= $regionEnd; $region++) 
             {
                 for ($parties = 4; $parties <= 6; $parties++)
                 {
@@ -66,10 +66,10 @@ class RepresentativeSeeder extends Seeder
                 }
             }
         }    
-        /*
-        for ($constituency = 8; $constituency <= 48; $constituency++) 
+        
+        for ($constituency = $constituencyStart; $constituency <= $constituencyEnd; $constituency++) 
         {
-            for ($parties = 1; $parties <= 3; $parties++)
+            for ($parties = 4; $parties <= 6; $parties++)
             {
                 $r = new Representative;
                 $r->name = "R" . $constituency . $parties;
@@ -79,6 +79,6 @@ class RepresentativeSeeder extends Seeder
                 $r->save();
             }
         } 
-        */
+        
     }
 }

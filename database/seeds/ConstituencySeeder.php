@@ -12,6 +12,7 @@ class ConstituencySeeder extends Seeder
     public function run()
     {
      self::testData();   
+     self::testDataDefault(2, 8);
     }
 
     private function testData(){
@@ -62,4 +63,74 @@ class ConstituencySeeder extends Seeder
         $r->region_id = $sounthRegionID;
         $r->save();
     }
+
+
+    private function testDataDefault(int $yearID, int $regionStart){
+       
+       $NorthWales = $regionStart;
+       $MidAndWestWales = $regionStart + 1;
+       $SouthWalesWest = $regionStart + 2;
+       $SouthWalesCentral = $regionStart + 3;
+       $SouthWalesEast  = $regionStart + 4;
+       
+
+        /* MidAndWestWales */
+        $r = new Constituency;
+        $r->name = "Aberconwy";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+
+        $r = new Constituency;
+        $r->name = "Alyn and Deeside";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Arfon";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Clwyd South";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Clwyd West";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Delyn";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Vale of Clwyd";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Wrexham";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Ynys Môn";
+        $r->year_id = $yearID;
+        $r->region_id = $NorthWales;
+        $r->save();
+
+        
+    }
 }
+
