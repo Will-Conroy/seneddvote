@@ -12,6 +12,7 @@ class PartySeeder extends Seeder
     public function run()
     {
         self::testData();
+        self::testDataDefault();
     }
 
     private function testData()
@@ -48,6 +49,37 @@ class PartySeeder extends Seeder
             $p->constituencies()->attach($constituencies);
 
         for($regions = 1; $regions <= 3; $regions++)
+            $p->regions()->attach($regions);
+    }
+
+
+
+    private function testDataDefault()
+    {
+        $p = new Party;
+        $p->name = "Red";
+        $p->image = "/PartyImages/red.png";
+        $p->colour = "#cc0000";
+        $p->save();
+        for($regions = 4; $regions <= 8; $regions++)
+            $p->regions()->attach($regions);
+       
+        $p = new Party;
+        $p->name = "Green";
+        $p->colour = "#009933";
+        $p->image = "/PartyImages/green.png";
+        $p->save();
+
+        for($regions = 4; $regions <= 8; $regions++)
+            $p->regions()->attach($regions);
+       
+        $p = new Party;
+        $p->name = "Blue";
+        $p->colour = "#000099";
+        $p->image = "/PartyImages/blue.png";
+        $p->save();
+
+        for($regions = 4; $regions <= 8; $regions++)
             $p->regions()->attach($regions);
     }
 }

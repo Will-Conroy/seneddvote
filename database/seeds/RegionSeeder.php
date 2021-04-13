@@ -13,10 +13,11 @@ class RegionSeeder extends Seeder
     public function run()
     {
         self::testData();
-        //self::default(1);
+        self::default(2);
     }
     private function testData(){
         $yearID = 1;
+        
         $r = new Region;
         $r->name = "North Region";
         $r->year_id = $yearID;

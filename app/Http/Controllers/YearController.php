@@ -125,7 +125,7 @@ class YearController extends Controller
                 $sum[1] += $temp[1];
                 $sum[2] += $temp[2];
             }
-
+            
             $sum[0] = $sum[0]/count($regionColours);
             $sum[1] = $sum[1]/count($regionColours);
             $sum[2] = $sum[2]/count($regionColours);

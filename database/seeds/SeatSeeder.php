@@ -13,24 +13,30 @@ class SeatSeeder extends Seeder
      */
     public function run()
     {
-        self::makeSeats();
+        self::makeTestSeats();
+        self::makeTestSeatsDefault();
+
     }
 
     private function makeTestSeats()
     {
-        self::makeRegionalSeats(3,2);
+        self::makeRegionalSeats(1,3,2);
         self::makeConstituencySeats(7);
     }
 
-    private function makeSeats()
+
+    private function makeTestSeatsDefault()
     {
-        self::makeTestSeats();
+        self::makeRegionalSeats(4,8,3);
+        //self::makeConstituencySeats(7);
     }
 
-    function makeRegionalSeats(int $max, int $seatPerRegion)
+
+
+    function makeRegionalSeats(int $start, int $max, int $seatPerRegion)
     {
         for($i = 0; $i < $seatPerRegion; $i++){
-            for ($x = 1; $x <= $max; $x++)
+            for ($x = $start; $x <= $max; $x++)
             {
                 $s = new Seat;
                 $s->regional = TRUE;
