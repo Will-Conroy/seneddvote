@@ -12,7 +12,7 @@ class ConstituencySeeder extends Seeder
     public function run()
     {
      self::testData();   
-     self::testDataDefault(2, 8);
+     self::testDataDefault(2, 6);
     }
 
     private function testData(){
@@ -74,7 +74,7 @@ class ConstituencySeeder extends Seeder
        $SouthWalesEast  = $regionStart + 4;
        
 
-        /* MidAndWestWales */
+        /* NorthWales */
         $r = new Constituency;
         $r->name = "Aberconwy";
         $r->year_id = $yearID;
@@ -128,6 +128,57 @@ class ConstituencySeeder extends Seeder
         $r->name = "Ynys Môn";
         $r->year_id = $yearID;
         $r->region_id = $NorthWales;
+        $r->save();
+
+
+        /* MidAndWestWales */
+        $r = new Constituency;
+        $r->name = "Brecon and Radnorshire";
+        $r->year_id = $yearID;
+        $r->region_id = $MidAndWestWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Carmarthen East and Dinefwr";
+        $r->year_id = $yearID;
+        $r->region_id = $MidAndWestWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Carmarthen West and South Pembrokeshire";
+        $r->year_id = $yearID;
+        $r->region_id = $MidAndWestWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Ceredigion";
+        $r->year_id = $yearID;
+        $r->region_id = $MidAndWestWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Dwyfor Meirionnydd";
+        $r->year_id = $yearID;
+        $r->region_id = $MidAndWestWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Llanelli";
+        $r->year_id = $yearID;
+        $r->region_id = $MidAndWestWales;
+        $r->save();
+
+
+        $r = new Constituency;
+        $r->name = "Montgomeryshire";
+        $r->year_id = $yearID;
+        $r->region_id = $MidAndWestWales;
+        $r->save();
+
+        $r = new Constituency;
+        $r->name = "Preseli Pembrokeshire";
+        $r->year_id = $yearID;
+        $r->region_id = $MidAndWestWales;
         $r->save();
 
         

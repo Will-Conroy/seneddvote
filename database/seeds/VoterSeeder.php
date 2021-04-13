@@ -12,7 +12,7 @@ class VoterSeeder extends Seeder
     public function run()
     {
         self::testData();
-        self::testDataDefault(4,8, 8, 16);
+        self::testDataDefault(4,8, 8, 24);
     }
 
     private function testData()

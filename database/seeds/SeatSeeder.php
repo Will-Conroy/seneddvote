@@ -27,7 +27,7 @@ class SeatSeeder extends Seeder
     private function makeTestSeatsDefault()
     {
         self::makeRegionalSeats(4,8,3);
-        self::makeConstituencySeats(8, 16);
+        self::makeConstituencySeats(8, 24);
     }
 
     function makeRegionalSeats(int $start, int $max, int $seatPerRegion)
