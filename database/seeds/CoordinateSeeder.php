@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Coordinate;
+use App\Region;
+use App\Constituency;
 
 class CoordinateSeeder extends Seeder
 {
@@ -19,10 +21,10 @@ class CoordinateSeeder extends Seeder
     private function massMakeRegionalCoordinates(int $id, array $coordantes){
         foreach ($coordantes as $coord){
             $r = new Coordinate;
-            $r->region_id = $id;
             $r->long = $coord[0];
             $r->lat = $coord[1];
             $r->save();
+            $r->regions()->attach($id);
         }
     }
 
@@ -30,10 +32,10 @@ class CoordinateSeeder extends Seeder
     {
         foreach ($coordantes as $coord){
             $r = new Coordinate;
-            $r->constituency_id = $id;
             $r->long = $coord[0];
             $r->lat = $coord[1];
             $r->save();
+            $r->constituencies()->attach($id);
         }
     }
 

@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coordinate extends Model
 {
-    public function constituency()
+    public function constituencies()
     {
-        return $this->belongsTo('App\Constituency');
+        return $this->belongsToMany('App\Constituency');
     }
 
-    public function region()
+    public function regions()
     {
-        return $this->belongsTo('App\region','region_id');
+        return $this->belongsToMany('App\region');
     }
 }

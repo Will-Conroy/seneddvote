@@ -23,7 +23,7 @@ class Constituency extends Model
 
     public function coordinates()
     {
-        return $this->hasMany('App\Coordinate');
+        return $this->belongsToMany('App\Coordinate');
     }
 
     public function representatives()
