@@ -13,6 +13,7 @@ class RepresentativeSeeder extends Seeder
     {
         self::testData();
         self::testDataDefault(4,8, 8, 47);
+        self::data2016();
     }
 
     private function testData()
@@ -80,5 +81,102 @@ class RepresentativeSeeder extends Seeder
             }
         } 
         
+    }
+    private function data2016(){
+        $r = new Representative;
+        $r->name = "ymgeiswyr rhestr / list candidates";
+        $r->region_id =  9;
+        $r->party_id = 7;
+        $r->priority = 0;
+        $r->save();
+
+        $r = new Representative;
+        $r->name = "Llyr Gruffydd";
+        $r->region_id =  9;
+        $r->party_id = 8;
+        $r->priority = 0;
+        $r->save();
+
+
+        $r = new Representative;
+        $r->name = "Mark Isherwood";
+        $r->region_id =  9;
+        $r->party_id = 9;
+        $r->priority = 0;
+        $r->save();
+
+
+        $r = new Representative;
+        $r->name = "Michelle Brown";
+        $r->region_id =  9;
+        $r->party_id = 10;
+        $r->priority = 0;
+        $r->save();
+
+
+        $r = new Representative;
+        $r->name = "Nathan Gill";
+        $r->region_id =  9;
+        $r->party_id = 10;
+        $r->priority = 0;
+        $r->save();
+
+
+
+        $r = new Representative;
+        $r->name = "ymgeiswyr rhestr / list candidates ";
+        $r->region_id =  9;
+        $r->party_id = 11;
+        $r->priority = 0;
+        $r->save();
+
+
+
+        $r = new Representative;
+        $r->name = "ymgeiswyr rhestr / list candidates ";
+        $r->region_id =  9;
+        $r->party_id = 12;
+        $r->priority = 0;
+        $r->save();
+
+        $r = new Representative;
+        $r->name = "ymgeiswyr rhestr / list candidates ";
+        $r->region_id =  9;
+        $r->party_id = 13;
+        $r->priority = 0;
+        $r->save();
+
+
+        $r = new Representative;
+        $r->name = "ymgeiswyr rhestr / list candidates ";
+        $r->region_id =  9;
+        $r->party_id = 14;
+        $r->priority = 0;
+        $r->save();
+
+
+        $r = new Representative;
+        $r->name = "ymgeiswyr rhestr / list candidates ";
+        $r->region_id =  9;
+        $r->party_id = 15;
+        $r->priority = 0;
+        $r->save();
+
+
+
+        $r = new Representative;
+        $r->name = "ymgeiswyr rhestr / list candidates ";
+        $r->region_id =  9;
+        $r->party_id = 16;
+        $r->priority = 0;
+        $r->save();
+
+
+        $r = new Representative;
+        $r->name = "ymgeiswyr rhestr / list candidates ";
+        $r->region_id =  9;
+        $r->party_id = 17;
+        $r->priority = 0;
+        $r->save();
     }
 }

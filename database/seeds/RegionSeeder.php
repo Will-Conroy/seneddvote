@@ -14,6 +14,10 @@ class RegionSeeder extends Seeder
     {
         self::testData();
         self::default(2);
+        $r = new Region;
+        $r->name = "North Wales";
+        $r->year_id = 3;
+        $r->save();
     }
     private function testData(){
         $yearID = 1;
