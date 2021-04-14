@@ -48,7 +48,7 @@
 
 
 
-@section('map2Title','Constituncies')
+@section('map2Title','Constituencies')
 @section('map2')
     @foreach ($constituencies as $constituency)
         <script>      

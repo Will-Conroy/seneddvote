@@ -12,7 +12,7 @@ class PartySeeder extends Seeder
     public function run()
     {
         self::testData();
-        self::testDataDefault(4,8, 8, 24);
+        self::testDataDefault(4,8, 8, 47);
     }
 
     private function testData()
