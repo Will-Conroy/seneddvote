@@ -83,100 +83,439 @@ class RepresentativeSeeder extends Seeder
         
     }
     private function data2016(){
-        $r = new Representative;
-        $r->name = "ymgeiswyr rhestr / list candidates";
-        $r->region_id =  9;
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  9; 
         $r->party_id = 7;
         $r->priority = 0;
         $r->save();
-
-        $r = new Representative;
+        
+        $r = new Representative; 
         $r->name = "Llyr Gruffydd";
-        $r->region_id =  9;
+        $r->region_id =  9; 
         $r->party_id = 8;
         $r->priority = 0;
         $r->save();
-
-
-        $r = new Representative;
+        
+        $r = new Representative; 
         $r->name = "Mark Isherwood";
-        $r->region_id =  9;
+        $r->region_id =  9; 
         $r->party_id = 9;
         $r->priority = 0;
         $r->save();
-
-
-        $r = new Representative;
+        
+        $r = new Representative; 
         $r->name = "Michelle Brown";
-        $r->region_id =  9;
+        $r->region_id =  9; 
         $r->party_id = 10;
         $r->priority = 0;
         $r->save();
-
-
-        $r = new Representative;
+        
+        $r = new Representative; 
         $r->name = "Nathan Gill";
-        $r->region_id =  9;
+        $r->region_id =  9; 
         $r->party_id = 10;
         $r->priority = 0;
         $r->save();
-
-
-
-        $r = new Representative;
-        $r->name = "ymgeiswyr rhestr / list candidates ";
-        $r->region_id =  9;
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  9; 
         $r->party_id = 11;
         $r->priority = 0;
         $r->save();
-
-
-
-        $r = new Representative;
-        $r->name = "ymgeiswyr rhestr / list candidates ";
-        $r->region_id =  9;
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  9; 
         $r->party_id = 12;
         $r->priority = 0;
         $r->save();
-
-        $r = new Representative;
-        $r->name = "ymgeiswyr rhestr / list candidates ";
-        $r->region_id =  9;
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  9; 
         $r->party_id = 13;
         $r->priority = 0;
         $r->save();
-
-
-        $r = new Representative;
-        $r->name = "ymgeiswyr rhestr / list candidates ";
-        $r->region_id =  9;
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  9; 
         $r->party_id = 14;
         $r->priority = 0;
         $r->save();
-
-
-        $r = new Representative;
-        $r->name = "ymgeiswyr rhestr / list candidates ";
-        $r->region_id =  9;
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  9; 
         $r->party_id = 15;
         $r->priority = 0;
         $r->save();
-
-
-
-        $r = new Representative;
-        $r->name = "ymgeiswyr rhestr / list candidates ";
-        $r->region_id =  9;
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  9; 
         $r->party_id = 16;
         $r->priority = 0;
         $r->save();
-
-
-        $r = new Representative;
-        $r->name = "ymgeiswyr rhestr / list candidates ";
-        $r->region_id =  9;
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  9; 
         $r->party_id = 17;
         $r->priority = 0;
         $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Simon Thomas";
+        $r->region_id =  10; 
+        $r->party_id = 8;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 9;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Eluned Morgan";
+        $r->region_id =  10; 
+        $r->party_id = 7;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Joyce Watson";
+        $r->region_id =  10; 
+        $r->party_id = 7;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Neil Hamilton";
+        $r->region_id =  10; 
+        $r->party_id = 10;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 12;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 11;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 13;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 18;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 19;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 15;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 14;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  10; 
+        $r->party_id = 17;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  11; 
+        $r->party_id = 7;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "David Rhys Lloyd";
+        $r->region_id =  11; 
+        $r->party_id = 8;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Bethan Jenkins";
+        $r->region_id =  11; 
+        $r->party_id = 8;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Suzy Davies";
+        $r->region_id =  11; 
+        $r->party_id = 9;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Caroline Jones";
+        $r->region_id =  11; 
+        $r->party_id = 10;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  11; 
+        $r->party_id = 12;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  11; 
+        $r->party_id = 11;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  11; 
+        $r->party_id = 13;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  11; 
+        $r->party_id = 15;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  11; 
+        $r->party_id = 20;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  11; 
+        $r->party_id = 17;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 7;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Neil John McEvoy";
+        $r->region_id =  12; 
+        $r->party_id = 8;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Andrew RT Davies";
+        $r->region_id =  12; 
+        $r->party_id = 9;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "David Melding";
+        $r->region_id =  12; 
+        $r->party_id = 9;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Gareth Bennett";
+        $r->region_id =  12; 
+        $r->party_id = 10;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 12;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 11;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 13;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 21;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 15;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 20;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 16;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 22;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  12; 
+        $r->party_id = 23;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  13; 
+        $r->party_id = 7;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Mark Reckless";
+        $r->region_id =  13; 
+        $r->party_id = 10;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "David W Rowlands";
+        $r->region_id =  13; 
+        $r->party_id = 10;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Mohammad Asghar";
+        $r->region_id =  13; 
+        $r->party_id = 9;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Steffan Lewis";
+        $r->region_id =  13; 
+        $r->party_id = 8;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  13; 
+        $r->party_id = 11;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  13; 
+        $r->party_id = 12;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  13; 
+        $r->party_id = 13;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  13; 
+        $r->party_id = 15;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  13; 
+        $r->party_id = 20;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  13; 
+        $r->party_id = 17;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  13; 
+        $r->party_id = 24;
+        $r->priority = 0;
+        $r->save();
+      
     }
 }

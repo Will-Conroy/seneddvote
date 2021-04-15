@@ -104,6 +104,11 @@ class PartySeeder extends Seeder
         $p->colour = "#FF0000";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
+
 
         /*8*/
         $p = new Party;
@@ -112,6 +117,10 @@ class PartySeeder extends Seeder
         $p->colour = "#006400";
         $p->save();
         $p->regions()->attach(9);
+$p->regions()->attach(10);
+$p->regions()->attach(11);
+$p->regions()->attach(12);
+$p->regions()->attach(13);
 
         /*9*/
         $p = new Party;
@@ -120,6 +129,10 @@ class PartySeeder extends Seeder
         $p->colour = "#0087DC";
         $p->save();
         $p->regions()->attach(9);
+$p->regions()->attach(10);
+$p->regions()->attach(11);
+$p->regions()->attach(12);
+$p->regions()->attach(13);
 
 
         /*10*/
@@ -129,6 +142,10 @@ class PartySeeder extends Seeder
         $p->colour = "#70147A";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
 
         /*11*/
         $p = new Party;
@@ -137,6 +154,10 @@ class PartySeeder extends Seeder
         $p->colour = "#810000";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
 
         /*12*/
         $p = new Party;
@@ -145,6 +166,10 @@ class PartySeeder extends Seeder
         $p->colour = "#FAA61A";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
 
         /*13*/
         $p = new Party;
@@ -153,6 +178,10 @@ class PartySeeder extends Seeder
         $p->colour = "#6AB023";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
 
         /*14*/
         $p = new Party;
@@ -161,6 +190,7 @@ class PartySeeder extends Seeder
         $p->colour = "#D3D3D3";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(10);
 
         /*15*/
         $p = new Party;
@@ -169,6 +199,11 @@ class PartySeeder extends Seeder
         $p->colour = "#FFF000";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
+
 
         /*16*/
         $p = new Party;
@@ -177,6 +212,7 @@ class PartySeeder extends Seeder
         $p->colour = "#D3D3D3";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(12);
 
         /*17*/
         $p = new Party;
@@ -185,5 +221,70 @@ class PartySeeder extends Seeder
         $p->colour = "#D3D3D3";
         $p->save();
         $p->regions()->attach(9);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(13);
+
+        /*18*/
+        $p = new Party;
+        $p->name = "People First";
+        $p->image = "/PartyImages/People First.png";
+        $p->colour = "#D3D3D3";
+        $p->save();
+        $p->regions()->attach(10);
+
+         /*19*/
+         $p = new Party;
+         $p->name = "Welsh Christian Party";
+         $p->image = "/PartyImages/WCP.jpg";
+         $p->colour = "#D3D3D3";
+         $p->save();
+         $p->regions()->attach(10);
+
+         /*20*/
+         $p = new Party;
+         $p->name = "Trade Unionist and Socialist Coalition";
+         $p->image = "/PartyImages/TUSC.png";
+         $p->colour = "#FFC0CB";
+         $p->save();
+         $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
+
+
+         /*21*/
+         $p = new Party;
+         $p->name = "Women's Equality Party";
+         $p->image = "/PartyImages/WEP.jpg";
+         $p->colour = "#432360";
+         $p->save();
+         $p->regions()->attach(12);
+
+         /*22*/
+         $p = new Party;
+         $p->name = "Communist Party of Britain";
+         $p->image = "/PartyImages/CPB.jpg";
+         $p->colour = "#FF0000";
+         $p->save();
+         $p->regions()->attach(12);
+
+         /*23*/
+         $p = new Party;
+         $p->name = "Freedom to choose";
+         $p->image = "/PartyImages/Wales.bmp";
+         $p->colour = "#D3D3D3";
+         $p->save();
+         $p->regions()->attach(12);
+
+         /*24*/
+         $p = new Party;
+         $p->name = "National Front";
+         $p->image = "/PartyImages/NationalFront.png";
+         $p->colour = "#000080";
+         $p->save();
+         $p->regions()->attach(13);
+         
+         
+
     }
 }

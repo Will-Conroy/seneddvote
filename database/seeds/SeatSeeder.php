@@ -33,7 +33,7 @@ class SeatSeeder extends Seeder
 
     private function data2016()
     {
-        self::makeRegionalSeats(9,9,4);
+        self::makeRegionalSeats(9,13,4);
     }
 
     function makeRegionalSeats(int $start, int $max, int $seatPerRegion)

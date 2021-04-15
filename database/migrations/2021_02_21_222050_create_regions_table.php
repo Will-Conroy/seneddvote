@@ -17,6 +17,8 @@ class CreateRegionsTable extends Migration
             $table->id();
             $table->string("name");
             $table->BigInteger('year_id')->unsigned();
+            $table->Integer("votes_cast")->unsigned()->nullable();
+            $table->Integer("electorate")->unsigned()->nullable();
             $table->timestamps();
             $table->foreign('year_id')->references('id')->on('years')->onDelete('cascade')->onUpdate('cascade');
         });
