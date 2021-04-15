@@ -117,10 +117,10 @@ class PartySeeder extends Seeder
         $p->colour = "#006400";
         $p->save();
         $p->regions()->attach(9);
-$p->regions()->attach(10);
-$p->regions()->attach(11);
-$p->regions()->attach(12);
-$p->regions()->attach(13);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
 
         /*9*/
         $p = new Party;
@@ -129,10 +129,10 @@ $p->regions()->attach(13);
         $p->colour = "#0087DC";
         $p->save();
         $p->regions()->attach(9);
-$p->regions()->attach(10);
-$p->regions()->attach(11);
-$p->regions()->attach(12);
-$p->regions()->attach(13);
+        $p->regions()->attach(10);
+        $p->regions()->attach(11);
+        $p->regions()->attach(12);
+        $p->regions()->attach(13);
 
 
         /*10*/

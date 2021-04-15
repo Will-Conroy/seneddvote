@@ -18,6 +18,8 @@ class CreateConstituenciesTable extends Migration
             $table->string("name");
             $table->BigInteger('year_id')->unsigned();
             $table->BigInteger('region_id')->unsigned();
+            $table->Integer("votes_cast")->unsigned()->nullable();
+            $table->Integer("electorate")->unsigned()->nullable();
             $table->timestamps();
             $table->foreign('year_id')->references('id')->on('years')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');
