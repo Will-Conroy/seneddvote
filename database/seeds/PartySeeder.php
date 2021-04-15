@@ -108,7 +108,48 @@ class PartySeeder extends Seeder
         $p->regions()->attach(11);
         $p->regions()->attach(12);
         $p->regions()->attach(13);
-
+        $p->constituencies()->attach(9);
+        $p->constituencies()->attach(10);
+        $p->constituencies()->attach(11);
+        $p->constituencies()->attach(12);
+        $p->constituencies()->attach(13);
+        $p->constituencies()->attach(14);
+        $p->constituencies()->attach(15);
+        $p->constituencies()->attach(16);
+        $p->constituencies()->attach(17);
+        $p->constituencies()->attach(18);
+        $p->constituencies()->attach(19);
+        $p->constituencies()->attach(20);
+        $p->constituencies()->attach(21);
+        $p->constituencies()->attach(22);
+        $p->constituencies()->attach(23);
+        $p->constituencies()->attach(24);
+        $p->constituencies()->attach(25);
+        $p->constituencies()->attach(26);
+        $p->constituencies()->attach(27);
+        $p->constituencies()->attach(28);
+        $p->constituencies()->attach(29);
+        $p->constituencies()->attach(30);
+        $p->constituencies()->attach(31);
+        $p->constituencies()->attach(32);
+        $p->constituencies()->attach(33);
+        $p->constituencies()->attach(34);
+        $p->constituencies()->attach(35);
+        $p->constituencies()->attach(36);
+        $p->constituencies()->attach(37);
+        $p->constituencies()->attach(38);
+        $p->constituencies()->attach(39);
+        $p->constituencies()->attach(40);
+        $p->constituencies()->attach(41);
+        $p->constituencies()->attach(42);
+        $p->constituencies()->attach(43);
+        $p->constituencies()->attach(44);
+        $p->constituencies()->attach(45);
+        $p->constituencies()->attach(46);
+        $p->constituencies()->attach(47);
+        $p->constituencies()->attach(48);
+        
+        
 
         /*8*/
         $p = new Party;
@@ -116,11 +157,52 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/PlaidCymru.png";
         $p->colour = "#006400";
         $p->save();
+        $p->constituencies()->attach(9);
+        $p->constituencies()->attach(10);
+        $p->constituencies()->attach(11);
+        $p->constituencies()->attach(12);
+        $p->constituencies()->attach(13);
+        $p->constituencies()->attach(14);
+        $p->constituencies()->attach(15);
+        $p->constituencies()->attach(16);
+        $p->constituencies()->attach(17);
+        $p->constituencies()->attach(18);
+        $p->constituencies()->attach(19);
+        $p->constituencies()->attach(20);
+        $p->constituencies()->attach(21);
+        $p->constituencies()->attach(22);
+        $p->constituencies()->attach(23);
+        $p->constituencies()->attach(24);
+        $p->constituencies()->attach(25);
+        $p->constituencies()->attach(26);
+        $p->constituencies()->attach(27);
+        $p->constituencies()->attach(28);
+        $p->constituencies()->attach(29);
+        $p->constituencies()->attach(30);
+        $p->constituencies()->attach(31);
+        $p->constituencies()->attach(32);
+        $p->constituencies()->attach(33);
+        $p->constituencies()->attach(34);
+        $p->constituencies()->attach(35);
+        $p->constituencies()->attach(36);
+        $p->constituencies()->attach(37);
+        $p->constituencies()->attach(38);
+        $p->constituencies()->attach(39);
+        $p->constituencies()->attach(40);
+        $p->constituencies()->attach(41);
+        $p->constituencies()->attach(42);
+        $p->constituencies()->attach(43);
+        $p->constituencies()->attach(44);
+        $p->constituencies()->attach(45);
+        $p->constituencies()->attach(46);
+        $p->constituencies()->attach(47);
+        $p->constituencies()->attach(48);
         $p->regions()->attach(9);
         $p->regions()->attach(10);
         $p->regions()->attach(11);
         $p->regions()->attach(12);
         $p->regions()->attach(13);
+        
 
         /*9*/
         $p = new Party;
@@ -133,6 +215,46 @@ class PartySeeder extends Seeder
         $p->regions()->attach(11);
         $p->regions()->attach(12);
         $p->regions()->attach(13);
+        $p->constituencies()->attach(9);
+        $p->constituencies()->attach(10);
+        $p->constituencies()->attach(11);
+        $p->constituencies()->attach(12);
+        $p->constituencies()->attach(13);
+        $p->constituencies()->attach(14);
+        $p->constituencies()->attach(15);
+        $p->constituencies()->attach(16);
+        $p->constituencies()->attach(17);
+        $p->constituencies()->attach(18);
+        $p->constituencies()->attach(19);
+        $p->constituencies()->attach(20);
+        $p->constituencies()->attach(21);
+        $p->constituencies()->attach(22);
+        $p->constituencies()->attach(23);
+        $p->constituencies()->attach(24);
+        $p->constituencies()->attach(25);
+        $p->constituencies()->attach(26);
+        $p->constituencies()->attach(27);
+        $p->constituencies()->attach(28);
+        $p->constituencies()->attach(29);
+        $p->constituencies()->attach(30);
+        $p->constituencies()->attach(31);
+        $p->constituencies()->attach(32);
+        $p->constituencies()->attach(33);
+        $p->constituencies()->attach(34);
+        $p->constituencies()->attach(35);
+        $p->constituencies()->attach(36);
+        $p->constituencies()->attach(37);
+        $p->constituencies()->attach(38);
+        $p->constituencies()->attach(39);
+        $p->constituencies()->attach(40);
+        $p->constituencies()->attach(41);
+        $p->constituencies()->attach(42);
+        $p->constituencies()->attach(43);
+        $p->constituencies()->attach(44);
+        $p->constituencies()->attach(45);
+        $p->constituencies()->attach(46);
+        $p->constituencies()->attach(47);
+        $p->constituencies()->attach(48);
 
 
         /*10*/
@@ -146,6 +268,45 @@ class PartySeeder extends Seeder
         $p->regions()->attach(11);
         $p->regions()->attach(12);
         $p->regions()->attach(13);
+        $p->constituencies()->attach(10);
+        $p->constituencies()->attach(12);
+        $p->constituencies()->attach(13);
+        $p->constituencies()->attach(14);
+        $p->constituencies()->attach(15);
+        $p->constituencies()->attach(16);
+        $p->constituencies()->attach(17);
+        $p->constituencies()->attach(18);
+        $p->constituencies()->attach(19);
+        $p->constituencies()->attach(20);
+        $p->constituencies()->attach(21);
+        $p->constituencies()->attach(22);
+        $p->constituencies()->attach(23);
+        $p->constituencies()->attach(24);
+        $p->constituencies()->attach(25);
+        $p->constituencies()->attach(26);
+        $p->constituencies()->attach(27);
+        $p->constituencies()->attach(28);
+        $p->constituencies()->attach(29);
+        $p->constituencies()->attach(30);
+        $p->constituencies()->attach(31);
+        $p->constituencies()->attach(32);
+        $p->constituencies()->attach(33);
+        $p->constituencies()->attach(34);
+        $p->constituencies()->attach(35);
+        $p->constituencies()->attach(36);
+        $p->constituencies()->attach(37);
+        $p->constituencies()->attach(38);
+        $p->constituencies()->attach(39);
+        $p->constituencies()->attach(40);
+        $p->constituencies()->attach(41);
+        $p->constituencies()->attach(42);
+        $p->constituencies()->attach(43);
+        $p->constituencies()->attach(44);
+        $p->constituencies()->attach(45);
+        $p->constituencies()->attach(46);
+        $p->constituencies()->attach(47);
+        $p->constituencies()->attach(48);
+        
 
         /*11*/
         $p = new Party;
@@ -158,6 +319,7 @@ class PartySeeder extends Seeder
         $p->regions()->attach(11);
         $p->regions()->attach(12);
         $p->regions()->attach(13);
+        
 
         /*12*/
         $p = new Party;
@@ -170,6 +332,47 @@ class PartySeeder extends Seeder
         $p->regions()->attach(11);
         $p->regions()->attach(12);
         $p->regions()->attach(13);
+        $p->constituencies()->attach(9);
+        $p->constituencies()->attach(10);
+        $p->constituencies()->attach(11);
+        $p->constituencies()->attach(12);
+        $p->constituencies()->attach(13);
+        $p->constituencies()->attach(14);
+        $p->constituencies()->attach(15);
+        $p->constituencies()->attach(16);
+        $p->constituencies()->attach(17);
+        $p->constituencies()->attach(18);
+        $p->constituencies()->attach(19);
+        $p->constituencies()->attach(20);
+        $p->constituencies()->attach(21);
+        $p->constituencies()->attach(22);
+        $p->constituencies()->attach(23);
+        $p->constituencies()->attach(24);
+        $p->constituencies()->attach(25);
+        $p->constituencies()->attach(26);
+        $p->constituencies()->attach(27);
+        $p->constituencies()->attach(28);
+        $p->constituencies()->attach(29);
+        $p->constituencies()->attach(30);
+        $p->constituencies()->attach(31);
+        $p->constituencies()->attach(32);
+        $p->constituencies()->attach(33);
+        $p->constituencies()->attach(34);
+        $p->constituencies()->attach(35);
+        $p->constituencies()->attach(36);
+        $p->constituencies()->attach(37);
+        $p->constituencies()->attach(38);
+        $p->constituencies()->attach(39);
+        $p->constituencies()->attach(40);
+        $p->constituencies()->attach(41);
+        $p->constituencies()->attach(42);
+        $p->constituencies()->attach(43);
+        $p->constituencies()->attach(44);
+        $p->constituencies()->attach(45);
+        $p->constituencies()->attach(46);
+        $p->constituencies()->attach(47);
+        $p->constituencies()->attach(48);
+        
 
         /*13*/
         $p = new Party;
@@ -182,6 +385,43 @@ class PartySeeder extends Seeder
         $p->regions()->attach(11);
         $p->regions()->attach(12);
         $p->regions()->attach(13);
+        $p->constituencies()->attach(9);
+        $p->constituencies()->attach(10);
+        $p->constituencies()->attach(12);
+        $p->constituencies()->attach(13);
+        $p->constituencies()->attach(16);
+        $p->constituencies()->attach(17);
+        $p->constituencies()->attach(18);
+        $p->constituencies()->attach(19);
+        $p->constituencies()->attach(20);
+        $p->constituencies()->attach(21);
+        $p->constituencies()->attach(22);
+        $p->constituencies()->attach(23);
+        $p->constituencies()->attach(24);
+        $p->constituencies()->attach(25);
+        $p->constituencies()->attach(26);
+        $p->constituencies()->attach(27);
+        $p->constituencies()->attach(28);
+        $p->constituencies()->attach(29);
+        $p->constituencies()->attach(30);
+        $p->constituencies()->attach(31);
+        $p->constituencies()->attach(32);
+        $p->constituencies()->attach(33);
+        $p->constituencies()->attach(34);
+        $p->constituencies()->attach(35);
+        $p->constituencies()->attach(36);
+        $p->constituencies()->attach(37);
+        $p->constituencies()->attach(38);
+        $p->constituencies()->attach(39);
+        $p->constituencies()->attach(40);
+        $p->constituencies()->attach(42);
+        $p->constituencies()->attach(43);
+        $p->constituencies()->attach(44);
+        $p->constituencies()->attach(45);
+        $p->constituencies()->attach(46);
+        $p->constituencies()->attach(47);
+        $p->constituencies()->attach(48);
+        
 
         /*14*/
         $p = new Party;
@@ -191,6 +431,7 @@ class PartySeeder extends Seeder
         $p->save();
         $p->regions()->attach(9);
         $p->regions()->attach(10);
+       
 
         /*15*/
         $p = new Party;
@@ -203,6 +444,7 @@ class PartySeeder extends Seeder
         $p->regions()->attach(11);
         $p->regions()->attach(12);
         $p->regions()->attach(13);
+        
 
 
         /*16*/
@@ -213,6 +455,15 @@ class PartySeeder extends Seeder
         $p->save();
         $p->regions()->attach(9);
         $p->regions()->attach(12);
+        $p->constituencies()->attach(17);
+        $p->constituencies()->attach(20);
+        $p->constituencies()->attach(29);
+        $p->constituencies()->attach(33);
+        $p->constituencies()->attach(34);
+        $p->constituencies()->attach(36);
+        $p->constituencies()->attach(45);
+        $p->constituencies()->attach(47);
+
 
         /*17*/
         $p = new Party;
@@ -224,6 +475,7 @@ class PartySeeder extends Seeder
         $p->regions()->attach(10);
         $p->regions()->attach(11);
         $p->regions()->attach(13);
+        
 
         /*18*/
         $p = new Party;
@@ -233,6 +485,8 @@ class PartySeeder extends Seeder
         $p->save();
         $p->regions()->attach(10);
 
+        
+
          /*19*/
          $p = new Party;
          $p->name = "Welsh Christian Party";
@@ -240,6 +494,7 @@ class PartySeeder extends Seeder
          $p->colour = "#D3D3D3";
          $p->save();
          $p->regions()->attach(10);
+         
 
          /*20*/
          $p = new Party;
@@ -248,8 +503,9 @@ class PartySeeder extends Seeder
          $p->colour = "#FFC0CB";
          $p->save();
          $p->regions()->attach(11);
-        $p->regions()->attach(12);
-        $p->regions()->attach(13);
+$p->regions()->attach(12);
+$p->regions()->attach(13);
+        
 
 
          /*21*/
@@ -259,6 +515,7 @@ class PartySeeder extends Seeder
          $p->colour = "#432360";
          $p->save();
          $p->regions()->attach(12);
+         
 
          /*22*/
          $p = new Party;
@@ -267,6 +524,7 @@ class PartySeeder extends Seeder
          $p->colour = "#FF0000";
          $p->save();
          $p->regions()->attach(12);
+         
 
          /*23*/
          $p = new Party;
@@ -275,6 +533,8 @@ class PartySeeder extends Seeder
          $p->colour = "#D3D3D3";
          $p->save();
          $p->regions()->attach(12);
+         $p->constituencies()->attach(36);
+         
 
          /*24*/
          $p = new Party;
@@ -283,6 +543,49 @@ class PartySeeder extends Seeder
          $p->colour = "#000080";
          $p->save();
          $p->regions()->attach(13);
+
+         /*25*/
+         $p = new Party;
+         $p->name = "Llais Gwynedd";
+         $p->image = "/PartyImages/LGwy.jpg";
+         $p->colour = "#FFFFFF";
+         $p->save();
+         $p->constituencies()->attach(22);
+
+         /*26*/
+         $p = new Party;
+         $p->name = "Putting Llanelli First";
+         $p->image = "/PartyImages/Wales.bmp";
+         $p->colour = "#D3D3D3";
+         $p->save();
+         $p->constituencies()->attach(23);
+
+         /*27*/
+         $p = new Party;
+         $p->name = "Socialist Party of Great Britain";
+         $p->image = "/PartyImages/SPOGB.png";
+         $p->colour = "#D3D3D3";
+         $p->save();
+         $p->constituencies()->attach(32);
+
+         /*28*/
+         $p = new Party;
+         $p->name = "English Democrats";
+         $p->image = "/PartyImages/ED.png";
+         $p->colour = "#D3D3D3";
+         $p->save();
+         $p->constituencies()->attach(45);
+
+         /*28*/
+         $p = new Party;
+         $p->name = "Welsh Sovereignty";
+         $p->image = "/PartyImages/Wales.bmp";
+         $p->colour = "#D3D3D3";
+         $p->save();
+         $p->constituencies()->attach(47);
+
+
+         
          
          
 

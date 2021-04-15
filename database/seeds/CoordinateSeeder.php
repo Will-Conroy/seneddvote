@@ -18,11 +18,10 @@ class CoordinateSeeder extends Seeder
         self::testDatabase();
         self::defaultRegional([[4,9],[5,10],[6,11],[7,12],[8,13]]);
         $constituenceRegID = array();
-        for($i = 0; $i < 40; $i++)
+        for($i = 0; $i < 40; $i++){
             $constituenceRegID[$i] = [8+$i];
-
-       
-
+            $constituenceRegID[$i] = [48+$i];
+        }        
         self::defaultConstituency($constituenceRegID);
     }
 
