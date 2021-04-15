@@ -101,5 +101,7 @@ class RegionSeeder extends Seeder
         $r->save();
         
     }
+   
+
 
 }

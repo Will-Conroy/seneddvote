@@ -70,7 +70,7 @@ class VoterSeeder extends Seeder
             }
         }  
     }
-
+    
     private function data2016(){
         $s = new Voter;
         $s->region_id = 9;
@@ -1902,8 +1902,7 @@ class VoterSeeder extends Seeder
         $s->votes = 628;
         $s->save();
         
-        }
-        
-    
+    }
+ 
 
 }

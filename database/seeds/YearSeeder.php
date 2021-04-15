@@ -24,5 +24,13 @@ class YearSeeder extends Seeder
         $default = new Year;
         $default->name = "2016";
         $default->save();
+
+        $default = new Year;
+        $default->name = "2011";
+        $default->save();
+
+        $default = new Year;
+        $default->name = "2007";
+        $default->save();
     }
 }
