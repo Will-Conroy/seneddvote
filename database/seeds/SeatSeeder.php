@@ -16,7 +16,7 @@ class SeatSeeder extends Seeder
         self::makeTestSeats();
         self::makeTestSeatsDefault();
         self::data2016();
-        #self::data2011();
+        self::data2011();
         #self::data2007();
     }
 
@@ -40,13 +40,13 @@ class SeatSeeder extends Seeder
 
     private function data2011()
     {
-        self::makeRegionalSeats(13,17,4);
+        self::makeRegionalSeats(14,18,4);
         self::makeConstituencySeats(88, 127);
     }
 
     private function data2007()
     {
-        self::makeRegionalSeats(17,21,4);
+        self::makeRegionalSeats(19,24,4);
         self::makeConstituencySeats(128, 167);
     }
 

@@ -14,7 +14,7 @@ class ConstituencySeeder extends Seeder
      self::testData();   
      self::testDataDefault(2, 6);
      self::data2016();
-     #self::data2011();
+     self::data2011();
      #self::data2007();
     }
 
@@ -656,5 +656,327 @@ $r->region_id = 13;
 $r->save();
     }
 
+    private function data2011(){
+        $r = new Constituency;
+        $r->name = "Aberconwy";
+        $r->votes_cast = 20288;
+        $r->electorate = 44978;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Alyn and Deeside";
+        $r->votes_cast = 22769;
+        $r->electorate = 61751;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Arfon";
+        $r->votes_cast = 17664;
+        $r->electorate = 41093;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Clwyd South";
+        $r->votes_cast = 20037;
+        $r->electorate = 54499;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Clwyd West";
+        $r->votes_cast = 25153;
+        $r->electorate = 57980;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Delyn";
+        $r->votes_cast = 23194;
+        $r->electorate = 53996;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Vale of Clwyd";
+        $r->votes_cast = 23056;
+        $r->electorate = 56232;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Wrexham";
+        $r->votes_cast = 18687;
+        $r->electorate = 53516;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Ynys M�n";
+        $r->votes_cast = 24067;
+        $r->electorate = 49431;
+        $r->year_id = 4;
+        $r->region_id = 14;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Brecon and Radnorshire";
+        $r->votes_cast = 28348;
+        $r->electorate = 53546;
+        $r->year_id = 4;
+        $r->region_id = 15;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Carmarthen East and Dinefwr";
+        $r->votes_cast = 27828;
+        $r->electorate = 54243;
+        $r->year_id = 4;
+        $r->region_id = 15;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Carmarthen West and South Pembrokeshire";
+        $r->votes_cast = 28156;
+        $r->electorate = 58435;
+        $r->year_id = 4;
+        $r->region_id = 15;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Ceredigion";
+        $r->votes_cast = 29076;
+        $r->electorate = 56983;
+        $r->year_id = 4;
+        $r->region_id = 15;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Dwyfor Meirionnydd";
+        $r->votes_cast = 20743;
+        $r->electorate = 44669;
+        $r->year_id = 4;
+        $r->region_id = 15;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Llanelli";
+        $r->votes_cast = 26070;
+        $r->electorate = 58838;
+        $r->year_id = 4;
+        $r->region_id = 15;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Montgomeryshire";
+        $r->votes_cast = 22933;
+        $r->electorate = 48675;
+        $r->year_id = 4;
+        $r->region_id = 15;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Preseli Pembrokeshire";
+        $r->votes_cast = 27218;
+        $r->electorate = 57758;
+        $r->year_id = 4;
+        $r->region_id = 15;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Aberavon";
+        $r->votes_cast = 18879;
+        $r->electorate = 50754;
+        $r->year_id = 4;
+        $r->region_id = 16;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Bridgend";
+        $r->votes_cast = 24035;
+        $r->electorate = 59104;
+        $r->year_id = 4;
+        $r->region_id = 16;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Gower";
+        $r->votes_cast = 26773;
+        $r->electorate = 61909;
+        $r->year_id = 4;
+        $r->region_id = 16;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Neath";
+        $r->votes_cast = 23849;
+        $r->electorate = 57533;
+        $r->year_id = 4;
+        $r->region_id = 16;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Ogmore";
+        $r->votes_cast = 20264;
+        $r->electorate = 55442;
+        $r->year_id = 4;
+        $r->region_id = 16;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Swansea East";
+        $r->votes_cast = 18910;
+        $r->electorate = 60246;
+        $r->year_id = 4;
+        $r->region_id = 16;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Swansea West";
+        $r->votes_cast = 21805;
+        $r->electorate = 62345;
+        $r->year_id = 4;
+        $r->region_id = 16;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Cardiff Central";
+        $r->votes_cast = 23628;
+        $r->electorate = 64347;
+        $r->year_id = 4;
+        $r->region_id = 17;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Cardiff North";
+        $r->votes_cast = 34431;
+        $r->electorate = 66934;
+        $r->year_id = 4;
+        $r->region_id = 17;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Cardiff South and Penarth";
+        $r->votes_cast = 27479;
+        $r->electorate = 75038;
+        $r->year_id = 4;
+        $r->region_id = 17;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Cardiff West";
+        $r->votes_cast = 27727;
+        $r->electorate = 64219;
+        $r->year_id = 4;
+        $r->region_id = 17;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Cynon Valley";
+        $r->votes_cast = 18760;
+        $r->electorate = 52133;
+        $r->year_id = 4;
+        $r->region_id = 17;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Pontypridd";
+        $r->votes_cast = 23333;
+        $r->electorate = 60028;
+        $r->year_id = 4;
+        $r->region_id = 17;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Rhondda";
+        $r->votes_cast = 20027;
+        $r->electorate = 52532;
+        $r->year_id = 4;
+        $r->region_id = 17;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Vale of Glamorgan";
+        $r->votes_cast = 33254;
+        $r->electorate = 71062;
+        $r->year_id = 4;
+        $r->region_id = 17;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Blaenau Gwent";
+        $r->votes_cast = 20211;
+        $r->electorate = 53230;
+        $r->year_id = 4;
+        $r->region_id = 18;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Caerphilly";
+        $r->votes_cast = 25570;
+        $r->electorate = 62049;
+        $r->year_id = 4;
+        $r->region_id = 18;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Islwyn";
+        $r->votes_cast = 20908;
+        $r->electorate = 54893;
+        $r->year_id = 4;
+        $r->region_id = 18;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Merthyr Tydfil and Rhymney";
+        $r->votes_cast = 19320;
+        $r->electorate = 55031;
+        $r->year_id = 4;
+        $r->region_id = 18;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Monmouth";
+        $r->votes_cast = 30001;
+        $r->electorate = 64857;
+        $r->year_id = 4;
+        $r->region_id = 18;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Newport East";
+        $r->votes_cast = 19460;
+        $r->electorate = 55120;
+        $r->year_id = 4;
+        $r->region_id = 18;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Newport west";
+        $r->votes_cast = 23014;
+        $r->electorate = 63180;
+        $r->year_id = 4;
+        $r->region_id = 18;
+        $r->save();
+        
+        $r = new Constituency;
+        $r->name = "Torfaen";
+        $r->votes_cast = 22328;
+        $r->electorate = 61126;
+        $r->year_id = 4;
+        $r->region_id = 18;
+        $r->save();
+        
+        }
 }
 

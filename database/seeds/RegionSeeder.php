@@ -15,6 +15,7 @@ class RegionSeeder extends Seeder
         self::testData();
         self::default(2);
         self::data2016();
+        self::data2011();
         
     }
     private function testData(){
@@ -101,7 +102,44 @@ class RegionSeeder extends Seeder
         $r->save();
         
     }
-   
+    
+    private function data2011(){
+        $r = new Region;
+        $r->name = "North Wales";
+        $r->votes_cast = 194798;
+        $r->electorate = 473476;
+        $r->year_id = 4;
+        $r->save();
+        
+        $r = new Region;
+        $r->name = "Mid and West Wales";
+        $r->votes_cast = 433147;
+        $r->electorate = 1563;
+        $r->year_id = 4;
+        $r->save();
+        
+        $r = new Region;
+        $r->name = "South Wales West";
+        $r->votes_cast = 407333;
+        $r->electorate = 1156;
+        $r->year_id = 4;
+        $r->save();
+        
+        $r = new Region;
+        $r->name = "South Wales Central";
+        $r->votes_cast = 506293;
+        $r->electorate = 1413;
+        $r->year_id = 4;
+        $r->save();
+        
+        $r = new Region;
+        $r->name = "South Wales East";
+        $r->votes_cast = 469486;
+        $r->electorate = 1391;
+        $r->year_id = 4;
+        $r->save();
+        
+    }
 
 
 }

@@ -14,7 +14,7 @@ class PartySeeder extends Seeder
         self::testData();
         self::testDataDefault(4,8, 8, 47);
         self::data2016();
-        #self::data2011();
+        self::data2011();
         #self::data2007();
     }
 
@@ -602,6 +602,51 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/WelshLabour.jpg";
         $p->colour = "#FF0000";
         $p->save();
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
+        $p->constituencies()->attach(88);
+        $p->constituencies()->attach(89);
+        $p->constituencies()->attach(90);
+        $p->constituencies()->attach(91);
+        $p->constituencies()->attach(92);
+        $p->constituencies()->attach(93);
+        $p->constituencies()->attach(94);
+        $p->constituencies()->attach(95);
+        $p->constituencies()->attach(96);
+        $p->constituencies()->attach(97);
+        $p->constituencies()->attach(98);
+        $p->constituencies()->attach(99);
+        $p->constituencies()->attach(100);
+        $p->constituencies()->attach(101);
+        $p->constituencies()->attach(102);
+        $p->constituencies()->attach(103);
+        $p->constituencies()->attach(104);
+        $p->constituencies()->attach(105);
+        $p->constituencies()->attach(106);
+        $p->constituencies()->attach(107);
+        $p->constituencies()->attach(108);
+        $p->constituencies()->attach(109);
+        $p->constituencies()->attach(110);
+        $p->constituencies()->attach(111);
+        $p->constituencies()->attach(112);
+        $p->constituencies()->attach(113);
+        $p->constituencies()->attach(114);
+        $p->constituencies()->attach(115);
+        $p->constituencies()->attach(116);
+        $p->constituencies()->attach(117);
+        $p->constituencies()->attach(118);
+        $p->constituencies()->attach(119);
+        $p->constituencies()->attach(120);
+        $p->constituencies()->attach(121);
+        $p->constituencies()->attach(122);
+        $p->constituencies()->attach(123);
+        $p->constituencies()->attach(124);
+        $p->constituencies()->attach(125);
+        $p->constituencies()->attach(126);
+        $p->constituencies()->attach(127);
 
 
         $p = new Party;
@@ -609,6 +654,51 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/PlaidCymru.png";
         $p->colour = "#006400";
         $p->save();
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
+        $p->constituencies()->attach(88);
+        $p->constituencies()->attach(89);
+        $p->constituencies()->attach(90);
+        $p->constituencies()->attach(91);
+        $p->constituencies()->attach(92);
+        $p->constituencies()->attach(93);
+        $p->constituencies()->attach(94);
+        $p->constituencies()->attach(95);
+        $p->constituencies()->attach(96);
+        $p->constituencies()->attach(97);
+        $p->constituencies()->attach(98);
+        $p->constituencies()->attach(99);
+        $p->constituencies()->attach(100);
+        $p->constituencies()->attach(101);
+        $p->constituencies()->attach(102);
+        $p->constituencies()->attach(103);
+        $p->constituencies()->attach(104);
+        $p->constituencies()->attach(105);
+        $p->constituencies()->attach(106);
+        $p->constituencies()->attach(107);
+        $p->constituencies()->attach(108);
+        $p->constituencies()->attach(109);
+        $p->constituencies()->attach(110);
+        $p->constituencies()->attach(111);
+        $p->constituencies()->attach(112);
+        $p->constituencies()->attach(113);
+        $p->constituencies()->attach(114);
+        $p->constituencies()->attach(115);
+        $p->constituencies()->attach(116);
+        $p->constituencies()->attach(117);
+        $p->constituencies()->attach(118);
+        $p->constituencies()->attach(119);
+        $p->constituencies()->attach(120);
+        $p->constituencies()->attach(121);
+        $p->constituencies()->attach(122);
+        $p->constituencies()->attach(123);
+        $p->constituencies()->attach(124);
+        $p->constituencies()->attach(125);
+        $p->constituencies()->attach(126);
+        $p->constituencies()->attach(127);
       
 
         $p = new Party;
@@ -616,14 +706,62 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/Conservative.bmp";
         $p->colour = "#0087DC";
         $p->save();
-       
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
+        $p->constituencies()->attach(88);
+        $p->constituencies()->attach(89);
+        $p->constituencies()->attach(90);
+        $p->constituencies()->attach(91);
+        $p->constituencies()->attach(92);
+        $p->constituencies()->attach(93);
+        $p->constituencies()->attach(94);
+        $p->constituencies()->attach(95);
+        $p->constituencies()->attach(96);
+        $p->constituencies()->attach(97);
+        $p->constituencies()->attach(98);
+        $p->constituencies()->attach(99);
+        $p->constituencies()->attach(100);
+        $p->constituencies()->attach(101);
+        $p->constituencies()->attach(102);
+        $p->constituencies()->attach(103);
+        $p->constituencies()->attach(104);
+        $p->constituencies()->attach(105);
+        $p->constituencies()->attach(106);
+        $p->constituencies()->attach(107);
+        $p->constituencies()->attach(108);
+        $p->constituencies()->attach(109);
+        $p->constituencies()->attach(110);
+        $p->constituencies()->attach(111);
+        $p->constituencies()->attach(112);
+        $p->constituencies()->attach(113);
+        $p->constituencies()->attach(114);
+        $p->constituencies()->attach(115);
+        $p->constituencies()->attach(116);
+        $p->constituencies()->attach(117);
+        $p->constituencies()->attach(118);
+        $p->constituencies()->attach(119);
+        $p->constituencies()->attach(120);
+        $p->constituencies()->attach(121);
+        $p->constituencies()->attach(122);
+        $p->constituencies()->attach(123);
+        $p->constituencies()->attach(124);
+        $p->constituencies()->attach(125);
+        $p->constituencies()->attach(126);
+        $p->constituencies()->attach(127);     
 
         $p = new Party;
         $p->name = "United Kingdom Independence Party (UKIP)";
         $p->image = "/PartyImages/UKIP.png";
         $p->colour = "#70147A";
         $p->save();
-
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
 
         /*12*/
         $p = new Party;
@@ -631,44 +769,105 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/LD.jpg";
         $p->colour = "#FAA61A";
         $p->save();
-  
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
+        $p->constituencies()->attach(88);
+        $p->constituencies()->attach(89);
+        $p->constituencies()->attach(90);
+        $p->constituencies()->attach(91);
+        $p->constituencies()->attach(92);
+        $p->constituencies()->attach(93);
+        $p->constituencies()->attach(94);
+        $p->constituencies()->attach(95);
+        $p->constituencies()->attach(96);
+        $p->constituencies()->attach(97);
+        $p->constituencies()->attach(98);
+        $p->constituencies()->attach(99);
+        $p->constituencies()->attach(100);
+        $p->constituencies()->attach(101);
+        $p->constituencies()->attach(102);
+        $p->constituencies()->attach(103);
+        $p->constituencies()->attach(104);
+        $p->constituencies()->attach(105);
+        $p->constituencies()->attach(106);
+        $p->constituencies()->attach(107);
+        $p->constituencies()->attach(108);
+        $p->constituencies()->attach(109);
+        $p->constituencies()->attach(110);
+        $p->constituencies()->attach(111);
+        $p->constituencies()->attach(112);
+        $p->constituencies()->attach(113);
+        $p->constituencies()->attach(114);
+        $p->constituencies()->attach(115);
+        $p->constituencies()->attach(116);
+        $p->constituencies()->attach(117);
+        $p->constituencies()->attach(118);
+        $p->constituencies()->attach(119);
+        $p->constituencies()->attach(120);
+        $p->constituencies()->attach(121);
+        $p->constituencies()->attach(122);
+        $p->constituencies()->attach(123);
+        $p->constituencies()->attach(124);
+        $p->constituencies()->attach(125);
+        $p->constituencies()->attach(126);
+        $p->constituencies()->attach(127);
 
         $p = new Party;
         $p->name = "Welsh Green Party";
         $p->image = "/PartyImages/Green.png";
         $p->colour = "#6AB023";
         $p->save();
-     
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18); 
+        $p->constituencies()->attach(100);
+
 
         $p = new Party;
         $p->name = "The Official Monster Raving Loony Party";
         $p->image = "/PartyImages/WelshLabour.jpg";
         $p->colour = "#FFF000";
         $p->save();
-
+        $p->regions()->attach(17);
 
         $p = new Party;
         $p->name = "Independent";
         $p->image = "/PartyImages/Wales.bmp";
         $p->colour = "#D3D3D3";
         $p->save();
-    
+        $p->regions()->attach(14);
+        $p->constituencies()->attach(112);
+        $p->constituencies()->attach(117);
+        $p->constituencies()->attach(120);
+        $p->constituencies()->attach(123);
+        $p->constituencies()->attach(127);
 
         $p = new Party;
         $p->name = "Welsh Communist Party";
         $p->image = "/PartyImages/Wales.bmp";
         $p->colour = "#D3D3D3";
         $p->save();
-  
-
-     
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
 
         $p = new Party;
         $p->name = "Welsh Christian Party";
         $p->image = "/PartyImages/WCP.jpg";
         $p->colour = "#D3D3D3";
         $p->save();
- 
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
 
 
         $p = new Party;
@@ -676,49 +875,67 @@ class PartySeeder extends Seeder
         $p->image = "/PartyImages/TUSC.png";
         $p->colour = "#FFC0CB";
         $p->save();
-        $p->regions()->attach(14);
+        $p->regions()->attach(16);
+
 
         $p = new Party;
         $p->name = "Llais Gwynedd";
         $p->image = "/PartyImages/LGwy.jpg";
         $p->colour = "#FFFFFF";
         $p->save();
- 
+        $p->constituencies()->attach(101);
 
         $p = new Party;
         $p->name = "Putting Llanelli First";
         $p->image = "/PartyImages/Wales.bmp";
         $p->colour = "#D3D3D3";
         $p->save();
-        $p->constituencies()->attach(101);
+        $p->constituencies()->attach(102);
 
         $p = new Party;
         $p->name = "English Democrats";
         $p->image = "/PartyImages/ED.png";
         $p->colour = "#D3D3D3";
         $p->save();
-        
+        $p->regions()->attach(18);   
+        $p->constituencies()->attach(124);
+
 
         $p = new Party;
         $p->name = "British National Party";
         $p->image = "/PartyImages/BNP.bmp";
         $p->colour = "#D3D3D3";
         $p->save();
-
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
+        $p->constituencies()->attach(89);
+        $p->constituencies()->attach(108);
+        $p->constituencies()->attach(110);
+        $p->constituencies()->attach(120);
+        $p->constituencies()->attach(121);
+        $p->constituencies()->attach(122);
+        $p->constituencies()->attach(127);
 
         $p = new Party;
         $p->name = "Socialist Labour Party";
         $p->image = "/PartyImages/SLP.bmp";
         $p->colour = "#D3D3D3";
         $p->save();
-
+        $p->regions()->attach(14);
+        $p->regions()->attach(15);
+        $p->regions()->attach(16);
+        $p->regions()->attach(17);
+        $p->regions()->attach(18);
 
         $p = new Party;
         $p->name = "Trade Unionists and Socialists Against Cuts";
         $p->image = "/PartyImages/TUASC.bmp";
         $p->colour = "#D3D3D3";
         $p->save();
- 
+        $p->regions()->attach(17);
     }
     
     private function data2007(){
