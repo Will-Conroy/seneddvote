@@ -15,7 +15,7 @@ class RepresentativeSeeder extends Seeder
         self::testDataDefault(4,8, 8, 47);
         self::data2016();
         self::data2011();
-        #self::data2007();
+        self::data2007();
     }
 
     private function testData()
@@ -3917,7 +3917,1893 @@ class RepresentativeSeeder extends Seeder
         $r->party_id = 34;
         $r->priority = 0;
         $r->save();
-        
+
     }
+
+    private function data2007(){
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  19; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Janet Ryder";
+        $r->region_id =  19; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Mark Isherwood AM";
+        $r->region_id =  19; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Brynle Williams";
+        $r->region_id =  19; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Eleanor Burnham";
+        $r->region_id =  19; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  19; 
+        $r->party_id = 57;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  19; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  19; 
+        $r->party_id = 52;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  19; 
+        $r->party_id = 58;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  19; 
+        $r->party_id = 55;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  19; 
+        $r->party_id = 54;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  19; 
+        $r->party_id = 59;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Nerys Evans";
+        $r->region_id =  20; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Nick Bourne";
+        $r->region_id =  20; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Alun Davies AM";
+        $r->region_id =  20; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Joyce Watson AM";
+        $r->region_id =  20; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 52;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 57;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Caroline Evans";
+        $r->region_id =  20; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Gwynoro Jones";
+        $r->region_id =  20; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 58;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 55;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 54;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 60;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  20; 
+        $r->party_id = 59;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "David Rhys Lloyd &#40;Dai Lloyd&#41;";
+        $r->region_id =  21; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Bethan Jenkins AM";
+        $r->region_id =  21; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Alun Cairns";
+        $r->region_id =  21; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Peter Black AM";
+        $r->region_id =  21; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 57;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 52;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 58;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 55;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Keith James";
+        $r->region_id =  21; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 61;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 62;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "John Jenkins";
+        $r->region_id =  21; 
+        $r->party_id = 63;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 54;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  21; 
+        $r->party_id = 59;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Andrew RT Davies AM";
+        $r->region_id =  22; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "David Melding AM";
+        $r->region_id =  22; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "ymgeiswyr rhestr &#47; list candidates";
+        $r->region_id =  22; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Christopher Franks";
+        $r->region_id =  22; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 57;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 52;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 55;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 58;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 62;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 61;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 54;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 59;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  22; 
+        $r->party_id = 64;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "William Graham";
+        $r->region_id =  23; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Mohammad Asghar &#40;Oscar&#41;";
+        $r->region_id =  23; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Jocelyn Davies";
+        $r->region_id =  23; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Michael German";
+        $r->region_id =  23; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 57;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 52;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Colin Hobbs";
+        $r->region_id =  23; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 58;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 55;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 56;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 54;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Unknown";
+        $r->region_id =  23; 
+        $r->party_id = 59;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Gareth Jones";
+        $r->constituency_id =  128; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Dylan Jones-Evans";
+        $r->constituency_id =  128; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Denise Jones";
+        $r->constituency_id =  128; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Euron Hughes";
+        $r->constituency_id =  128; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Carl Sargeant";
+        $r->constituency_id =  129; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Will Gallagher";
+        $r->constituency_id =  129; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Denise Hutchinson";
+        $r->constituency_id =  129; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Paul Brighton";
+        $r->constituency_id =  129; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Dafydd Passe";
+        $r->constituency_id =  129; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " William Crawford";
+        $r->constituency_id =  129; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Alun Ffred Jones";
+        $r->constituency_id =  130; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Martin Eaglestone";
+        $r->constituency_id =  130; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Gerry Frobisher";
+        $r->constituency_id =  130; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Mel ab Owain";
+        $r->constituency_id =  130; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Elwyn Williams";
+        $r->constituency_id =  130; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Karen Sinclair";
+        $r->constituency_id =  131; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " John Bell";
+        $r->constituency_id =  131; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Nia Davies";
+        $r->constituency_id =  131; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Frank Biggs";
+        $r->constituency_id =  131; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "David Rowlands";
+        $r->constituency_id =  131; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Darren Millar";
+        $r->constituency_id =  132; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Alun Pugh";
+        $r->constituency_id =  132; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Phil Edwards";
+        $r->constituency_id =  132; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Simon Croft";
+        $r->constituency_id =  132; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Warwick Nicholson";
+        $r->constituency_id =  132; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Sandy Mewies AM";
+        $r->constituency_id =  133; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Antoinette Sandbach";
+        $r->constituency_id =  133; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Meg Elis";
+        $r->constituency_id =  133; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Ian Matthews";
+        $r->constituency_id =  133; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Derek Bigg";
+        $r->constituency_id =  133; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Margaret Ann Jones";
+        $r->constituency_id =  134; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Matthew Wright";
+        $r->constituency_id =  134; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Mark Jones";
+        $r->constituency_id =  134; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Mark Young";
+        $r->constituency_id =  134; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Lesley Griffiths";
+        $r->constituency_id =  135; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "John Marek";
+        $r->constituency_id =  135; 
+        $r->party_id = 65;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Felicity Elphick";
+        $r->constituency_id =  135; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Bruce Roberts";
+        $r->constituency_id =  135; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Sion Owen";
+        $r->constituency_id =  135; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Peter Lewis";
+        $r->constituency_id =  135; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Ieuan Wyn Jones";
+        $r->constituency_id =  136; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Peter Rogers";
+        $r->constituency_id =  136; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Jonathan Austin";
+        $r->constituency_id =  136; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " James Roach";
+        $r->constituency_id =  136; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Mandi Abrahams";
+        $r->constituency_id =  136; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Francis Wykes";
+        $r->constituency_id =  136; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Kirsty Williams";
+        $r->constituency_id =  137; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Suzy Davies";
+        $r->constituency_id =  137; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Neil Stone";
+        $r->constituency_id =  137; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Arwel Lloyd";
+        $r->constituency_id =  137; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Rhodri Glyn Thomas";
+        $r->constituency_id =  138; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Kevin Madge";
+        $r->constituency_id =  138; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Henrietta Hensher";
+        $r->constituency_id =  138; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Ian Walton";
+        $r->constituency_id =  138; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Angela Burns AM";
+        $r->constituency_id =  139; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Christine Gwyther";
+        $r->constituency_id =  139; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " John Dixon";
+        $r->constituency_id =  139; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " John Gossage";
+        $r->constituency_id =  139; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Malcolm Calver";
+        $r->constituency_id =  139; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Elin Jones";
+        $r->constituency_id =  140; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " John Davies";
+        $r->constituency_id =  140; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Trefor Jones";
+        $r->constituency_id =  140; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Linda Grace";
+        $r->constituency_id =  140; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Emyr Morgan";
+        $r->constituency_id =  140; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Lord Dafydd Elis-Thomas";
+        $r->constituency_id =  141; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Mike Wood";
+        $r->constituency_id =  141; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " David Phillips";
+        $r->constituency_id =  141; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Steven Churchman";
+        $r->constituency_id =  141; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Helen Mary Jones";
+        $r->constituency_id =  142; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Catherine Thomas";
+        $r->constituency_id =  142; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Andrew Morgan";
+        $r->constituency_id =  142; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Jeremy Townsend";
+        $r->constituency_id =  142; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Mick Bates";
+        $r->constituency_id =  143; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Dan Munford";
+        $r->constituency_id =  143; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " David Thomas";
+        $r->constituency_id =  143; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Bruce Lawson";
+        $r->constituency_id =  143; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Rachel Maycock";
+        $r->constituency_id =  143; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Paul Davies";
+        $r->constituency_id =  144; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Tamsin Dunwoody";
+        $r->constituency_id =  144; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " John Osmond";
+        $r->constituency_id =  144; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Hywel Davies";
+        $r->constituency_id =  144; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Brian Gibbons";
+        $r->constituency_id =  145; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Linet Purcell";
+        $r->constituency_id =  145; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Andrew Tutton";
+        $r->constituency_id =  145; 
+        $r->party_id = 66;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Daisy Meyland-Smith";
+        $r->constituency_id =  145; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Claire Waller";
+        $r->constituency_id =  145; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Captain Beany";
+        $r->constituency_id =  145; 
+        $r->party_id = 67;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Carwyn Jones AM";
+        $r->constituency_id =  146; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Emma Greenow";
+        $r->constituency_id =  146; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Paul Warren";
+        $r->constituency_id =  146; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Nick Thomas";
+        $r->constituency_id =  146; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Edwina Hart";
+        $r->constituency_id =  147; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Byron Davies";
+        $r->constituency_id =  147; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Darren Price";
+        $r->constituency_id =  147; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Nick Tregoning";
+        $r->constituency_id =  147; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Alex Lewis";
+        $r->constituency_id =  147; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Gwenda Thomas";
+        $r->constituency_id =  148; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Andrew Sivertsen";
+        $r->constituency_id =  148; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Shelia Waye";
+        $r->constituency_id =  148; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Janice Gregory";
+        $r->constituency_id =  149; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Sian Caiach";
+        $r->constituency_id =  149; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Norma Lloyd-Nesling";
+        $r->constituency_id =  149; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Steve Smith";
+        $r->constituency_id =  149; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Martin Plant";
+        $r->constituency_id =  149; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Val Lloyd";
+        $r->constituency_id =  150; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Helen Ceri Clarke";
+        $r->constituency_id =  150; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Danny Bowles";
+        $r->constituency_id =  150; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Bob Dowdle";
+        $r->constituency_id =  150; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Alan Robinson";
+        $r->constituency_id =  150; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Ray Welsby";
+        $r->constituency_id =  150; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Gary Evans";
+        $r->constituency_id =  150; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Andrew David Davies";
+        $r->constituency_id =  151; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Peter May";
+        $r->constituency_id =  151; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Harri Lloyd-Davies";
+        $r->constituency_id =  151; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Ian Titherington";
+        $r->constituency_id =  151; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Richard Lewis";
+        $r->constituency_id =  151; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Jenny Randerson";
+        $r->constituency_id =  152; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Sue Lent";
+        $r->constituency_id =  152; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Andrew Murphy";
+        $r->constituency_id =  152; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Thomas Whitfield";
+        $r->constituency_id =  152; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Frank Hughes";
+        $r->constituency_id =  152; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Jonathan Morgan";
+        $r->constituency_id =  153; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Sophie Howe";
+        $r->constituency_id =  153; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Ed Bridges";
+        $r->constituency_id =  153; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Wyn Jones";
+        $r->constituency_id =  153; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Dai Llewellyn";
+        $r->constituency_id =  153; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Lorraine Barrett";
+        $r->constituency_id =  154; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Karen Robson";
+        $r->constituency_id =  154; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Dominic Hannigan";
+        $r->constituency_id =  154; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Jason Toby";
+        $r->constituency_id =  154; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Rhodri Morgan";
+        $r->constituency_id =  155; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Craig Williams";
+        $r->constituency_id =  155; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Neil McEvoy";
+        $r->constituency_id =  155; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Alison Goldsworthy";
+        $r->constituency_id =  155; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Christine Chapman";
+        $r->constituency_id =  156; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Liz Walters";
+        $r->constituency_id =  156; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Neill John";
+        $r->constituency_id =  156; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Margaret Phelps";
+        $r->constituency_id =  156; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Jane Davidson";
+        $r->constituency_id =  157; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Mike Powell";
+        $r->constituency_id =  157; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Richard Grigg";
+        $r->constituency_id =  157; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Janice Charles";
+        $r->constituency_id =  157; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Leighton Andrews";
+        $r->constituency_id =  158; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Jill Evans";
+        $r->constituency_id =  158; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Karen Roberts";
+        $r->constituency_id =  158; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Howard Parsons";
+        $r->constituency_id =  158; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Jane Hutt";
+        $r->constituency_id =  159; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Gordon Kemp";
+        $r->constituency_id =  159; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Barry Shaw";
+        $r->constituency_id =  159; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Mark Hooper";
+        $r->constituency_id =  159; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Kevin Philip Mahoney";
+        $r->constituency_id =  159; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Trish Law";
+        $r->constituency_id =  160; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Keren Bender";
+        $r->constituency_id =  160; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Gareth Lewis";
+        $r->constituency_id =  160; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Natasha Asghar";
+        $r->constituency_id =  160; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Bob Hayward";
+        $r->constituency_id =  160; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Jeffrey Cuthbert";
+        $r->constituency_id =  161; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Lindsay Whittle";
+        $r->constituency_id =  161; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Ron Davies";
+        $r->constituency_id =  161; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Richard Foley";
+        $r->constituency_id =  161; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Huw Price";
+        $r->constituency_id =  161; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Irene James";
+        $r->constituency_id =  162; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Kevin Etheridge";
+        $r->constituency_id =  162; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Alan Pritchard";
+        $r->constituency_id =  162; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Paul Williams";
+        $r->constituency_id =  162; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Mark Maguire";
+        $r->constituency_id =  162; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Huw Lewis";
+        $r->constituency_id =  163; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Amy Kitcher";
+        $r->constituency_id =  163; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Clive Tovey";
+        $r->constituency_id =  163; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Glyndwr Jones";
+        $r->constituency_id =  163; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Jeff Edwards";
+        $r->constituency_id =  163; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Giles Howard";
+        $r->constituency_id =  163; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Neil &#40;Jock&#41; Greer";
+        $r->constituency_id =  163; 
+        $r->party_id = 50;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Vivienne Hadley";
+        $r->constituency_id =  163; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Richard Williams";
+        $r->constituency_id =  163; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Nick Ramsay";
+        $r->constituency_id =  164; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Richard Clark";
+        $r->constituency_id =  164; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Jacqui Sullivan";
+        $r->constituency_id =  164; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Jonathan Clark";
+        $r->constituency_id =  164; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Ed Abrams";
+        $r->constituency_id =  164; 
+        $r->party_id = 56;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "John Griffiths";
+        $r->constituency_id =  165; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Ed Townsend";
+        $r->constituency_id =  165; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Peter Fox";
+        $r->constituency_id =  165; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Trefor Puw";
+        $r->constituency_id =  165; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " James Harris";
+        $r->constituency_id =  165; 
+        $r->party_id = 53;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Michael Blundell";
+        $r->constituency_id =  165; 
+        $r->party_id = 56;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Rosemary Butler";
+        $r->constituency_id =  166; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Matthew Evans";
+        $r->constituency_id =  166; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Nigel Flanagan";
+        $r->constituency_id =  166; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Brian Hancock";
+        $r->constituency_id =  166; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Andrew Constantine";
+        $r->constituency_id =  166; 
+        $r->party_id = 56;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = "Lynne Neagle";
+        $r->constituency_id =  167; 
+        $r->party_id = 47;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Graham Smith";
+        $r->constituency_id =  167; 
+        $r->party_id = 49;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Ian Williams";
+        $r->constituency_id =  167; 
+        $r->party_id = 68;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Rhys Ab Ellis";
+        $r->constituency_id =  167; 
+        $r->party_id = 48;
+        $r->priority = 0;
+        $r->save();
+        
+        $r = new Representative; 
+        $r->name = " Patrick Legg";
+        $r->constituency_id =  167; 
+        $r->party_id = 51;
+        $r->priority = 0;
+        $r->save();
+        
+        }
 
 }

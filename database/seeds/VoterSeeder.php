@@ -15,6 +15,7 @@ class VoterSeeder extends Seeder
         self::testDataDefault(4,8, 8, 47);
         self::data2016();
         self::data2011();
+        self::data2007();
     }
 
     private function testData()
@@ -3291,7 +3292,1583 @@ class VoterSeeder extends Seeder
         $s->votes = 852;
         $s->save();
         
+    }
+    private function data2007(){
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 47;
+        $s->votes = 51831;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 48;
+        $s->votes = 50558;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 49;
+        $s->votes = 50266;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 51;
+        $s->votes = 15275;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 57;
+        $s->votes = 9986;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 50;
+        $s->votes = 8015;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 52;
+        $s->votes = 5660;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 58;
+        $s->votes = 2209;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 55;
+        $s->votes = 1300;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 54;
+        $s->votes = 700;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 19;
+        $s->party_id = 59;
+        $s->votes = 642;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 48;
+        $s->votes = 67258;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 49;
+        $s->votes = 49606;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 47;
+        $s->votes = 39980;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 51;
+        $s->votes = 28790;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 52;
+        $s->votes = 8768;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 50;
+        $s->votes = 8191;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 57;
+        $s->votes = 6389;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 53;
+        $s->votes = 2706;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 58;
+        $s->votes = 2196;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 55;
+        $s->votes = 1493;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 54;
+        $s->votes = 666;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 60;
+        $s->votes = 502;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 20;
+        $s->party_id = 59;
+        $s->votes = 413;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 47;
+        $s->votes = 58347;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 48;
+        $s->votes = 28819;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 49;
+        $s->votes = 26199;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 51;
+        $s->votes = 20226;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 57;
+        $s->votes = 8993;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 52;
+        $s->votes = 6130;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 50;
+        $s->votes = 5914;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 58;
+        $s->votes = 2367;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 55;
+        $s->votes = 1685;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 53;
+        $s->votes = 1186;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 61;
+        $s->votes = 1027;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 62;
+        $s->votes = 713;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 63;
+        $s->votes = 582;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 54;
+        $s->votes = 546;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 21;
+        $s->party_id = 59;
+        $s->votes = 393;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 47;
+        $s->votes = 70799;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 49;
+        $s->votes = 45147;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 48;
+        $s->votes = 32207;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 51;
+        $s->votes = 29262;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 57;
+        $s->votes = 7889;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 52;
+        $s->votes = 7831;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 50;
+        $s->votes = 7645;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 55;
+        $s->votes = 1987;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 58;
+        $s->votes = 1744;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 62;
+        $s->votes = 1079;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 61;
+        $s->votes = 838;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 54;
+        $s->votes = 817;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 59;
+        $s->votes = 757;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 22;
+        $s->party_id = 64;
+        $s->votes = 292;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 47;
+        $s->votes = 67998;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 49;
+        $s->votes = 37936;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 48;
+        $s->votes = 25915;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 51;
+        $s->votes = 20947;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 57;
+        $s->votes = 8940;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 50;
+        $s->votes = 8725;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 52;
+        $s->votes = 5414;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 53;
+        $s->votes = 4876;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 58;
+        $s->votes = 3593;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 55;
+        $s->votes = 2498;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 56;
+        $s->votes = 1655;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 54;
+        $s->votes = 979;
+        $s->save();
+        
+        $s = new Voter;
+        $s->region_id = 23;
+        $s->party_id = 59;
+        $s->votes = 489;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 128;
+        $s->party_id = 48;
+        $s->votes = 7983;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 128;
+        $s->party_id = 49;
+        $s->votes = 6290;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 128;
+        $s->party_id = 47;
+        $s->votes = 4508;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 128;
+        $s->party_id = 51;
+        $s->votes = 1918;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 129;
+        $s->party_id = 47;
+        $s->votes = 8196;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 129;
+        $s->party_id = 49;
+        $s->votes = 4834;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 129;
+        $s->party_id = 53;
+        $s->votes = 3241;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 129;
+        $s->party_id = 51;
+        $s->votes = 2091;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 129;
+        $s->party_id = 48;
+        $s->votes = 1398;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 129;
+        $s->party_id = 50;
+        $s->votes = 1335;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 130;
+        $s->party_id = 48;
+        $s->votes = 10260;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 130;
+        $s->party_id = 47;
+        $s->votes = 5242;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 130;
+        $s->party_id = 49;
+        $s->votes = 1858;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 130;
+        $s->party_id = 51;
+        $s->votes = 1424;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 130;
+        $s->party_id = 50;
+        $s->votes = 789;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 131;
+        $s->party_id = 47;
+        $s->votes = 6838;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 131;
+        $s->party_id = 49;
+        $s->votes = 5719;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 131;
+        $s->party_id = 48;
+        $s->votes = 3894;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 131;
+        $s->party_id = 51;
+        $s->votes = 1838;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 131;
+        $s->party_id = 50;
+        $s->votes = 1209;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 132;
+        $s->party_id = 49;
+        $s->votes = 8905;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 132;
+        $s->party_id = 47;
+        $s->votes = 7309;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 132;
+        $s->party_id = 48;
+        $s->votes = 7162;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 132;
+        $s->party_id = 51;
+        $s->votes = 1705;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 132;
+        $s->party_id = 50;
+        $s->votes = 1124;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 133;
+        $s->party_id = 47;
+        $s->votes = 7507;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 133;
+        $s->party_id = 49;
+        $s->votes = 6996;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 133;
+        $s->party_id = 48;
+        $s->votes = 3179;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 133;
+        $s->party_id = 51;
+        $s->votes = 2669;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 133;
+        $s->party_id = 50;
+        $s->votes = 1318;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 134;
+        $s->party_id = 47;
+        $s->votes = 8104;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 134;
+        $s->party_id = 49;
+        $s->votes = 8012;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 134;
+        $s->party_id = 48;
+        $s->votes = 3884;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 134;
+        $s->party_id = 51;
+        $s->votes = 2275;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 135;
+        $s->party_id = 47;
+        $s->votes = 5633;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 135;
+        $s->party_id = 65;
+        $s->votes = 4383;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 135;
+        $s->party_id = 49;
+        $s->votes = 3372;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 135;
+        $s->party_id = 51;
+        $s->votes = 3268;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 135;
+        $s->party_id = 48;
+        $s->votes = 1878;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 135;
+        $s->party_id = 50;
+        $s->votes = 1033;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 136;
+        $s->party_id = 48;
+        $s->votes = 10653;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 136;
+        $s->party_id = 53;
+        $s->votes = 6261;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 136;
+        $s->party_id = 47;
+        $s->votes = 4681;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 136;
+        $s->party_id = 49;
+        $s->votes = 3480;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 136;
+        $s->party_id = 51;
+        $s->votes = 912;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 136;
+        $s->party_id = 50;
+        $s->votes = 833;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 137;
+        $s->party_id = 51;
+        $s->votes = 15006;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 137;
+        $s->party_id = 49;
+        $s->votes = 9652;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 137;
+        $s->party_id = 47;
+        $s->votes = 2514;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 137;
+        $s->party_id = 48;
+        $s->votes = 1576;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 138;
+        $s->party_id = 48;
+        $s->votes = 15655;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 138;
+        $s->party_id = 47;
+        $s->votes = 7186;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 138;
+        $s->party_id = 49;
+        $s->votes = 4676;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 138;
+        $s->party_id = 51;
+        $s->votes = 1752;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 139;
+        $s->party_id = 49;
+        $s->votes = 8590;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 139;
+        $s->party_id = 47;
+        $s->votes = 8492;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 139;
+        $s->party_id = 48;
+        $s->votes = 8340;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 139;
+        $s->party_id = 51;
+        $s->votes = 1806;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 139;
+        $s->party_id = 53;
+        $s->votes = 1340;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 140;
+        $s->party_id = 48;
+        $s->votes = 14818;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 140;
+        $s->party_id = 51;
+        $s->votes = 10863;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 140;
+        $s->party_id = 49;
+        $s->votes = 2369;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 140;
+        $s->party_id = 47;
+        $s->votes = 1530;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 140;
+        $s->party_id = 53;
+        $s->votes = 528;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 141;
+        $s->party_id = 48;
+        $s->votes = 13201;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 141;
+        $s->party_id = 49;
+        $s->votes = 4333;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 141;
+        $s->party_id = 47;
+        $s->votes = 2749;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 141;
+        $s->party_id = 51;
+        $s->votes = 1839;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 142;
+        $s->party_id = 48;
+        $s->votes = 13839;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 142;
+        $s->party_id = 47;
+        $s->votes = 9955;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 142;
+        $s->party_id = 49;
+        $s->votes = 2757;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 142;
+        $s->party_id = 51;
+        $s->votes = 1051;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 143;
+        $s->party_id = 51;
+        $s->votes = 8704;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 143;
+        $s->party_id = 49;
+        $s->votes = 6725;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 143;
+        $s->party_id = 48;
+        $s->votes = 3076;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 143;
+        $s->party_id = 50;
+        $s->votes = 2251;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 143;
+        $s->party_id = 47;
+        $s->votes = 1544;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 144;
+        $s->party_id = 49;
+        $s->votes = 11086;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 144;
+        $s->party_id = 47;
+        $s->votes = 7881;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 144;
+        $s->party_id = 48;
+        $s->votes = 7101;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 144;
+        $s->party_id = 51;
+        $s->votes = 2652;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 145;
+        $s->party_id = 47;
+        $s->votes = 10129;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 145;
+        $s->party_id = 48;
+        $s->votes = 3558;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 145;
+        $s->party_id = 66;
+        $s->votes = 2561;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 145;
+        $s->party_id = 49;
+        $s->votes = 1990;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 145;
+        $s->party_id = 51;
+        $s->votes = 1450;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 145;
+        $s->party_id = 67;
+        $s->votes = 840;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 146;
+        $s->party_id = 47;
+        $s->votes = 9889;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 146;
+        $s->party_id = 49;
+        $s->votes = 7333;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 146;
+        $s->party_id = 51;
+        $s->votes = 3730;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 146;
+        $s->party_id = 48;
+        $s->votes = 3600;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 147;
+        $s->party_id = 47;
+        $s->votes = 9406;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 147;
+        $s->party_id = 49;
+        $s->votes = 8214;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 147;
+        $s->party_id = 48;
+        $s->votes = 5106;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 147;
+        $s->party_id = 51;
+        $s->votes = 2924;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 147;
+        $s->party_id = 50;
+        $s->votes = 1895;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 148;
+        $s->party_id = 47;
+        $s->votes = 10934;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 148;
+        $s->party_id = 49;
+        $s->votes = 2956;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 148;
+        $s->party_id = 51;
+        $s->votes = 2320;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 149;
+        $s->party_id = 47;
+        $s->votes = 11761;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 149;
+        $s->party_id = 48;
+        $s->votes = 3861;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 149;
+        $s->party_id = 49;
+        $s->votes = 2663;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 149;
+        $s->party_id = 53;
+        $s->votes = 2337;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 149;
+        $s->party_id = 51;
+        $s->votes = 2144;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 150;
+        $s->party_id = 47;
+        $s->votes = 8590;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 150;
+        $s->party_id = 51;
+        $s->votes = 3629;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 150;
+        $s->party_id = 48;
+        $s->votes = 3218;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 150;
+        $s->party_id = 49;
+        $s->votes = 2025;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 150;
+        $s->party_id = 53;
+        $s->votes = 1618;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 150;
+        $s->party_id = 53;
+        $s->votes = 1177;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 150;
+        $s->party_id = 53;
+        $s->votes = 460;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 151;
+        $s->party_id = 47;
+        $s->votes = 7393;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 151;
+        $s->party_id = 51;
+        $s->votes = 5882;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 151;
+        $s->party_id = 49;
+        $s->votes = 4379;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 151;
+        $s->party_id = 48;
+        $s->votes = 3583;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 151;
+        $s->party_id = 50;
+        $s->votes = 1642;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 152;
+        $s->party_id = 51;
+        $s->votes = 11462;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 152;
+        $s->party_id = 47;
+        $s->votes = 4897;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 152;
+        $s->party_id = 49;
+        $s->votes = 3137;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 152;
+        $s->party_id = 48;
+        $s->votes = 1855;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 152;
+        $s->party_id = 50;
+        $s->votes = 1046;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 153;
+        $s->party_id = 49;
+        $s->votes = 15253;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 153;
+        $s->party_id = 47;
+        $s->votes = 10409;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 153;
+        $s->party_id = 51;
+        $s->votes = 4287;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 153;
+        $s->party_id = 48;
+        $s->votes = 2491;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 153;
+        $s->party_id = 50;
+        $s->votes = 1262;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 154;
+        $s->party_id = 47;
+        $s->votes = 10106;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 154;
+        $s->party_id = 49;
+        $s->votes = 7352;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 154;
+        $s->party_id = 47;
+        $s->votes = 5445;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 154;
+        $s->party_id = 48;
+        $s->votes = 3825;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 155;
+        $s->party_id = 47;
+        $s->votes = 10390;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 155;
+        $s->party_id = 49;
+        $s->votes = 6692;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 155;
+        $s->party_id = 48;
+        $s->votes = 5719;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 155;
+        $s->party_id = 51;
+        $s->votes = 4088;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 156;
+        $s->party_id = 47;
+        $s->votes = 11058;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 156;
+        $s->party_id = 48;
+        $s->votes = 5435;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 156;
+        $s->party_id = 49;
+        $s->votes = 2024;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 156;
+        $s->party_id = 51;
+        $s->votes = 1000;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 157;
+        $s->party_id = 47;
+        $s->votes = 9836;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 157;
+        $s->party_id = 51;
+        $s->votes = 6489;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 157;
+        $s->party_id = 48;
+        $s->votes = 4181;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 157;
+        $s->party_id = 49;
+        $s->votes = 3035;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 158;
+        $s->party_id = 47;
+        $s->votes = 12875;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 158;
+        $s->party_id = 48;
+        $s->votes = 6660;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 158;
+        $s->party_id = 51;
+        $s->votes = 1441;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 158;
+        $s->party_id = 49;
+        $s->votes = 1131;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 159;
+        $s->party_id = 47;
+        $s->votes = 11515;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 159;
+        $s->party_id = 49;
+        $s->votes = 11432;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 159;
+        $s->party_id = 48;
+        $s->votes = 4671;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 159;
+        $s->party_id = 51;
+        $s->votes = 3758;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 159;
+        $s->party_id = 50;
+        $s->votes = 2310;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 160;
+        $s->party_id = 53;
+        $s->votes = 12722;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 160;
+        $s->party_id = 47;
+        $s->votes = 7365;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 160;
+        $s->party_id = 51;
+        $s->votes = 1351;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 160;
+        $s->party_id = 48;
+        $s->votes = 1129;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 160;
+        $s->party_id = 49;
+        $s->votes = 951;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 161;
+        $s->party_id = 47;
+        $s->votes = 9026;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 161;
+        $s->party_id = 48;
+        $s->votes = 6739;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 161;
+        $s->party_id = 53;
+        $s->votes = 5805;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 161;
+        $s->party_id = 49;
+        $s->votes = 2954;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 161;
+        $s->party_id = 51;
+        $s->votes = 1596;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 162;
+        $s->party_id = 47;
+        $s->votes = 8883;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 162;
+        $s->party_id = 53;
+        $s->votes = 6665;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 162;
+        $s->party_id = 48;
+        $s->votes = 5084;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 162;
+        $s->party_id = 49;
+        $s->votes = 1797;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 162;
+        $s->party_id = 51;
+        $s->votes = 1135;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 47;
+        $s->votes = 7776;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 51;
+        $s->votes = 3195;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 53;
+        $s->votes = 2622;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 48;
+        $s->votes = 2519;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 53;
+        $s->votes = 1915;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 49;
+        $s->votes = 1151;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 50;
+        $s->votes = 844;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 53;
+        $s->votes = 809;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 163;
+        $s->party_id = 53;
+        $s->votes = 162;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 164;
+        $s->party_id = 49;
+        $s->votes = 15389;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 164;
+        $s->party_id = 47;
+        $s->votes = 6920;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 164;
+        $s->party_id = 51;
+        $s->votes = 4359;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 164;
+        $s->party_id = 48;
+        $s->votes = 2093;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 164;
+        $s->party_id = 56;
+        $s->votes = 804;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 165;
+        $s->party_id = 47;
+        $s->votes = 6395;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 165;
+        $s->party_id = 51;
+        $s->votes = 5520;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 165;
+        $s->party_id = 49;
+        $s->votes = 4512;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 165;
+        $s->party_id = 48;
+        $s->votes = 1696;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 165;
+        $s->party_id = 53;
+        $s->votes = 1354;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 165;
+        $s->party_id = 56;
+        $s->votes = 429;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 166;
+        $s->party_id = 47;
+        $s->votes = 9582;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 166;
+        $s->party_id = 49;
+        $s->votes = 8181;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 166;
+        $s->party_id = 51;
+        $s->votes = 2813;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 166;
+        $s->party_id = 48;
+        $s->votes = 2449;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 166;
+        $s->party_id = 56;
+        $s->votes = 634;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 167;
+        $s->party_id = 47;
+        $s->votes = 9921;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 167;
+        $s->party_id = 49;
+        $s->votes = 4525;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 167;
+        $s->party_id = 68;
+        $s->votes = 3348;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 167;
+        $s->party_id = 48;
+        $s->votes = 2762;
+        $s->save();
+        
+        $s = new Voter;
+        $s->constituency_id = 167;
+        $s->party_id = 51;
+        $s->votes = 2659;
+        $s->save();
+        
         }
+
+
  
 
 }
