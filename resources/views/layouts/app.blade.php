@@ -93,7 +93,15 @@
             @endif
             <hr class="my-4">
             @yield('content')
+            <hr class="my-4">
         </div>
     </div>
 </body>
+
+<footer>
+<div class=" jumbotron jumbotron-fluid text-center">
+    @yield('references')
+</div>
+</footer>
+
 </html>

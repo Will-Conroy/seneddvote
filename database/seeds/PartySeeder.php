@@ -1290,14 +1290,12 @@ class PartySeeder extends Seeder
         $p->regions()->attach(21);
         $p->regions()->attach(22); 
 
-
         $p = new Party;
         $p->name = "Independent Conservative";
         $p->image = "/PartyImages/Wales.bmp";
         $p->colour = "#D3D3D3";
         $p->save();
         $p->regions()->attach(21);
-
 
         $p = new Party;
         $p->name = "Socialist Equality";
@@ -1313,14 +1311,12 @@ class PartySeeder extends Seeder
         $p->save();
         $p->constituencies()->attach(135);
 
-
         $p = new Party;
         $p->name = "Neath Port Talbot Independent Party";
         $p->image = "/PartyImages/Wales.bmp";
         $p->colour = "#D3D3D3";
         $p->save();
         $p->constituencies()->attach(145);
-
 
         $p = new Party;
         $p->name = "Millenium Bean Party";
