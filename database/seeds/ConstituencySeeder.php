@@ -12,7 +12,7 @@ class ConstituencySeeder extends Seeder
     public function run()
     {
      self::testData();   
-     self::testDataDefault(2, 7);
+     self::testDataDefault(2, 4);
      self::data2016();
      self::data2011();
      self::data2007();
