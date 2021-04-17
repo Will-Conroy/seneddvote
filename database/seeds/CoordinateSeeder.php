@@ -16,7 +16,8 @@ class CoordinateSeeder extends Seeder
     {
         
         self::testDatabase();
-        self::defaultRegional([[4,9,14,19],[5,10,15,20],[6,11,16,21],[7,12,17,22],[8,13,18,23]]);
+        #self::defaultRegional([[4,9,14,19],[5,10,15,20],[6,11,16,21],[7,12,17,22],[8,13,18,23]]);
+        self::defaultRegional([[4, 9, 14, 19],[5, 10, 15, 20],[6, 11, 16, 21],[7, 12, 17, 22],[8,  13, 18, 23]]);
         #self::defaultRegional([[4,9,14],[5,10,15],[6,11,16],[7,12,17],[8,13,18]]);
         $constituenceRegID = array();
         for($i = 0; $i < 40; $i++){
