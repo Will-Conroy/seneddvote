@@ -35,6 +35,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-info">Elections Results</button>
+                        <button type="button" class="btn btn-outline-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                        
+                            <a class="dropdown-item" href="{{ route('years.index')}}">All</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ route('years.show', ['year'=> 3])}}">2016</a>
+                            <a class="dropdown-item" href="{{ route('years.show', ['year'=> 4])}}">2011</a>
+                            <a class="dropdown-item" href="{{ route('years.show', ['year'=> 5])}}">2007</a>
+                            
+                        </div>
+                    </div>
 
                     </ul>
 
