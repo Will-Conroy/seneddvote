@@ -42,9 +42,6 @@
 
 
 @section('bottomMap')
-    <script>
-      var tempPolys = [];
-    </script>
     @foreach ($constituencies as $constituency)
     
         <script>   
@@ -53,7 +50,7 @@
             var url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
             url = url.replace(':id',  {!! json_encode($constituency->id) !!});
             var message = "<a href=" + url +">"   +  {!! json_encode($constituency->name) !!}  + "</a>";
-            tempPolys  += [L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(message)];
+            L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(message);
         </script>
     @endforeach
     <script>
@@ -78,7 +75,7 @@
 
 @section('rightCollum')
     
-    <table style="width:100%">
+    <table style="width:100%" class="table table-borderless table-striped table-earning">
         <tr>
             <th>Electorate</th>
             <th>Valid votes cast</th>
@@ -100,9 +97,9 @@
         </script>
     <hr class="my-4">
 
-    <h4>Seat</h4>
+    <h4>Seats</h4>
     <hr class="my-4">
-    <table style="width:100%">
+    <table style="width:100%" class="table table-borderless table-striped table-earning">
         <tr>
             <th>Party</th>
             <th></th>
@@ -121,7 +118,7 @@
     <hr class="my-4">
     <h4>Parties</h4>
     <hr class="my-4">
-    <table style="width:100%">
+    <table style="width:100%" class="table table-borderless table-striped table-earning">
         <tr>
             <th>Party</th>
             <th></th>

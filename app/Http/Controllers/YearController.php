@@ -67,7 +67,7 @@ class YearController extends Controller
             }
             $colours += [$winner->name => $colour];
             $winners += [$constituency->name => $winner];
-            }
+        }
 
         foreach($regions as $region)
         {
