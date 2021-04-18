@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
     @section('content')
@@ -21,6 +20,8 @@
                 </ul>
             </div>
             @endif
+            @yield('leftMapOptions')
+            @yield('rightMapOptions')
     
             <div class="row justify-content-center">
                 <div class="col-lg">
@@ -29,7 +30,7 @@
                     <div class ="row" id="map1" style="width: 100%; height: 700px;"></div>
                     <script>
                         <!-- Making map, location and then zoom-->
-                        var map1 = L.map('map1',{ scrollWheelZoom: false, zoomControl: false  }).setView([52.5, -2.01], 8);
+                        var map1 = L.map('map1',{ scrollWheelZoom: false, zoomControl: false  }).setView(leftMapView, leftMapZoom);
                         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                             maxZoom: 18,
                             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -49,7 +50,7 @@
                     <div id="map2"  style="width: 100%; height: 700px;"></div>
                     <script>
                         <!-- Making map, location and then zoom-->
-                        var map2 = L.map('map2',{ scrollWheelZoom: false, zoomControl: false }).setView([52.5, -4.01], 8);
+                        var map2 = L.map('map2',{ scrollWheelZoom: false, zoomControl: false }).setView(rightMapView, rightMapZoom);
                         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                             maxZoom: 18,
                             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -75,11 +76,7 @@
                     </h4>
                     <table id="leftTable" class="table table-borderless table-striped table-earning">
                         <thead>
-                            <tr>
-                            <th>Party</th>
-                            <th></th>
-                            <th>Represenative</th>
-                            </tr>
+                            @yield('mapLeftTable')
                         </thead>
                         <tbody id="leftTableBody"></tbody>
                     </table>
@@ -90,11 +87,7 @@
                     </h4>
                     <table id="RightTable" class="table table-borderless table-striped table-earning">
                         <thead>
-                            <tr>
-                            <th>Party</th>
-                            <th></th>
-                            <th>Represenative</th>
-                            </tr>
+                            @yield('mapRightTable')
                         </thead>
                         <tbody id="rightTableBody"></tbody>
                     </table>
@@ -102,15 +95,16 @@
             </div>  
 
             <hr class="my-4">
-            <div class="container">
+            
             <h2>Seats</h2>
-                <div class="row">
-                    <div class="col-sm">
-                        @yield('seatsLeft')
-                    </div>
-                    <div class="col-sm">
-                        @yield('seatsRight')
-                    </div>
+            <div class="row">
+            
+                <div class="col-sm">
+                    @yield('seatsLeft')
+                </div>
+      
+                <div class="col-sm">
+                    @yield('seatsRight')
                 </div>
             </div>
         </body>

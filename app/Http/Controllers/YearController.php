@@ -138,7 +138,7 @@ class YearController extends Controller
 
 
     //https://stackoverflow.com/questions/4526062/calculating-the-average-color-between-two-colors-in-php-using-an-index-number-a
-    function get_value_of_color($color) {
+    static function get_value_of_color($color) {
         // assume $color is in the form #xxxxxx
         return array(
             hexdec(substr($color, 1, 2)),
@@ -148,7 +148,7 @@ class YearController extends Controller
     }
 
     //https://stackoverflow.com/questions/4526062/calculating-the-average-color-between-two-colors-in-php-using-an-index-number-a
-    function get_color_from_value($value) {
+    static function get_color_from_value($value) {
         return sprintf('#%02x%02x%02x', $value[0], $value[1], $value[2]);
     }
 
