@@ -39,8 +39,6 @@ class YearController extends Controller
         $constituencyWinners = array();
         foreach($constituencies as $constituency)
         {
-     
-
             $coordQuery = $constituency->coordinates;
             $temp = [];
 
@@ -107,7 +105,7 @@ class YearController extends Controller
         //
     }
 
-    public function get_region_results(Region $region){
+    static public function get_region_results(Region $region){
 
         //formate votes into map that is easier to use
         $votes = [];
@@ -154,7 +152,7 @@ class YearController extends Controller
     }
 
 
-    public function get_constituency_results(Constituency $constituency){
+    static public function get_constituency_results(Constituency $constituency){
         $winningCount = 0;
 
         $voters = $constituency->voters;
@@ -180,7 +178,7 @@ class YearController extends Controller
 
     }
 
-    public function get_region_colour($regionColours){
+    static public function get_region_colour($regionColours){
         $sum = array(0,0,0);
         foreach($regionColours as $regionColour){
             $temp = YearController::get_value_of_color($regionColour);

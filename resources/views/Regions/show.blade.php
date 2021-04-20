@@ -1,9 +1,9 @@
 @extends('layouts.collumMaps')
 
 @section('header')
-    <h1>{{$region->name}}</h1>
-    <p>{{$region->name}} results for the 
-    <a href = {{ route('years.show',['year'=>$yearID])}}>{{$yearName}}</a>
+    <h1>{{$region['name']}}</h1>
+    <p>{{$region['name']}} results for the 
+    <a href = {{ route('years.show',['year'=>$year['id']])}}>{{$year['name']}}</a>
     election.</p>
 @endsection
 
@@ -31,9 +31,9 @@
 
 @section('topMap')
         <script> 
-            var regionName = {!! json_encode($region->name) !!};
+            var regionName = {!! json_encode($region['name']) !!};
             var regionCoords = {!! json_encode($regionCoordinates) !!};
-            var regionColour = {!! json_encode($regionColour) !!};
+            var regionColour = {!! json_encode($region['colour']) !!};
             regionPoly = L.polygon(regionCoords, {color:regionColour}).addTo(map1).bindPopup(regionName);
             map1.fitBounds(regionPoly.getBounds());
         
@@ -45,11 +45,11 @@
     @foreach ($constituencies as $constituency)
     
         <script>   
-            var constituencyCoords = {!! json_encode($constitCoordinates[$constituency->id]) !!};
-            var constituencyColour = {!! json_encode($constitColours[$constitWinners[$constituency->id]->id]) !!};
+            var constituencyCoords = {!! json_encode($constitCoordinates[$constituency['id']]) !!};
+            var constituencyColour = {!! json_encode($constituency['colour']) !!};
             var url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
-            url = url.replace(':id',  {!! json_encode($constituency->id) !!});
-            var message = "<a href=" + url +">"   +  {!! json_encode($constituency->name) !!}  + "</a>";
+            url = url.replace(':id',  {!! json_encode($constituency['id']) !!});
+            var message = "<a href=" + url +">"   +  {!! json_encode($constituency['name']) !!}  + "</a>";
             L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(message);
         </script>
     @endforeach
@@ -84,16 +84,16 @@
             <th>No. Constituencies</th>
         </tr>
         <tr>
-            <td>{{$region->electorate}}</td>
-            <td>{{$region->votes_cast}}</td>
+            <td>{{$region['electorate']}}</td>
+            <td>{{$region['votes_cast']}}</td>
             <td id="turnOut"></td>
-            <td>{{$seatCount}}</td>
-            <td>{{$constituencyCount}}</td>
+            <td>{{$region['seatCount']}}</td>
+            <td>{{$region['constituencyCount']}}</td>
         </tr>
         
     </table>
      <script>
-            document.getElementById("turnOut").innerHTML = ({{$region->votes_cast}}/{{$region->electorate}} * 100).toFixed(2) + '%';
+            document.getElementById("turnOut").innerHTML = ({{$region['votes_cast']}}/{{$region['electorate']}} * 100).toFixed(2) + '%';
         </script>
     <hr class="my-4">
 
@@ -106,11 +106,11 @@
             <th>Name</th>
         </tr>
 
-        @foreach ($winners as $winner)
+        @foreach ($region['seats'] as $seat)
             <tr>
-                <td><img src= {{asset( $winner['image'])}} class="rounded" width= "50" height= "50"></td>
-                <td><a href = {{ route('party.show',['party'=>$winner['party']['id']])}}>{{$winner['party']['name']}}</a></td>
-                <td><a href = {{ route('representative.show',['representative'=>$winner['id']])}}>{{$winner['name']}}</a></td>
+                <td><img src= {{asset( $seat['partyImage'])}} class="rounded" width= "50" height= "50"></td>
+                <td><a href = {{ route('party.show',['party'=>$seat['partyID']])}}>{{$seat['partyName']}}</a></td>
+                <td><a href = {{ route('representative.show',['representative'=>$seat['repID']])}}>{{$seat['repName']}}</a></td>
             </tr>
         @endforeach
         
@@ -137,7 +137,7 @@
                 </td>
                 <td>{{ $vote['votes']}}</td>
                  <td>
-                    <script>document.write(({{$vote['votes']}}/{{$region->votes_cast}} * 100).toFixed(2) + '%');</script>
+                    <script>document.write(({{$vote['votes']}}/{{$region['votes_cast']}} * 100).toFixed(2) + '%');</script>
                 </td>
                 </tr>
             
