@@ -1,8 +1,8 @@
 @extends('layouts.collumMaps')
 
 @section('header')
-    <h1>{{$constituency->name}}</h1>
-    <p>{{$constituency->name}} results for the 
+    <h1>{{$constituency['name']}}</h1>
+    <p>{{$constituency['name']}} results for the 
     <a href = {{ route('years.show',['year'=>$year['id']])}}>{{$year['name']}}</a>
     election.</p>
 @endsection
@@ -30,7 +30,7 @@
         <script> 
             var regionName = {!! json_encode($region['name']) !!};
             var regionCoords = {!! json_encode($regionCoordinates) !!};
-            var regionColour = {!! json_encode($regionColour) !!};
+            var regionColour = {!! json_encode($region['colour']) !!};
             regionPoly = L.polygon(regionCoords, {color:regionColour}).addTo(map2).bindPopup(regionName);
             map1.fitBounds(regionPoly.getBounds());
             map2.fitBounds(regionPoly.getBounds());
@@ -41,7 +41,7 @@
 @section('topMap')
     <script>   
         var constituencyCoords = {!! json_encode($constitCoordinates) !!};
-        var constituencyColour = {!! json_encode($constitColours) !!};
+        var constituencyColour = {!! json_encode($constituency['colour']) !!};
         L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map1).bindPopup(message);
     </script>
 @endsection
@@ -56,14 +56,14 @@
             <th>Region</th>
         </tr>
          <tr>
-            <td>{{$constituency->electorate}}</td>
-            <td>{{$constituency->votes_cast}}</td>
+            <td>{{$constituency['electorate']}}</td>
+            <td>{{$constituency['votes_cast']}}</td>
             <td id="turnOut"></td>
             <td> <a href = {{ route('region.show',['region'=>$region['id']])}}>{{$region['name']}}</a></td>
         </tr>
     </table>
     <script>
-            document.getElementById("turnOut").innerHTML = ({{$constituency->votes_cast}}/{{$constituency->electorate}} * 100).toFixed(2) + '%';
+            document.getElementById("turnOut").innerHTML = ({{$constituency['votes_cast']}}/{{$constituency['electorate']}} * 100).toFixed(2) + '%';
     </script>
    
     <hr class="my-4">
@@ -77,9 +77,9 @@
             <th>Name</th>
         </tr>
         <tr>
-            <td><img src= {{asset( $constitWinner['party']['image'])}} class="rounded" width= "50" height= "50"></td>
-            <td><a href = {{ route('party.show',['party'=>$constitWinner['party']['id']])}}>{{$constitWinner['party']['name']}}</a></td>
-            <td><a href = {{ route('representative.show',['representative'=>$constitWinner['id']])}}>{{$constitWinner['name']}}</a></td>
+            <td><img src= {{asset( $constituency['seat']['partyImage'])}} class="rounded" width= "50" height= "50"></td>
+            <td><a href = {{ route('party.show',['party'=>$constituency['seat']['partyID']])}}>{{$constituency['seat']['partyName']}}</a></td>
+            <td><a href = {{ route('representative.show',['representative'=>$constituency['seat']['repID']])}}>{{$constituency['seat']['repName']}}</a></td>
         </tr>
     </table>
     <hr class="my-4">
@@ -105,7 +105,7 @@
                 </td>
                 <td>{{ $vote['votes']}}</td>
                  <td>
-                    <script>document.write(({{$vote['votes']}}/{{$constituency->votes_cast}} * 100).toFixed(2) + '%');</script>
+                    <script>document.write(({{$vote['votes']}}/{{$constituency['votes_cast']}} * 100).toFixed(2) + '%');</script>
                 </td>
                 </tr>
         
