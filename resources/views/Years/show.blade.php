@@ -1,8 +1,8 @@
 @extends('layouts.sideBySideMaps')
 
 @section('header')
-    <h1>{{$year->name}}</h1>
-    <p>Over view of {{$year->name}} results</p>
+    <h1>{{$year}}</h1>
+    <p>Over view of {{$year}} results</p>
 @endsection
 
 
@@ -10,10 +10,10 @@
     <h4>Regions</h4>
     <br>
     @foreach ($regions as $region )
-        <h5> {{$region->name}}</h5>
-        @foreach ($region->seats as $seat )
-        <a href = {{  route("region.show",  ["region"=> $region->id])}}>
-            <img src= {{asset($winners[$seat->id]->party->image)}} class="rounded" width= "50" height= "50">
+        <h5> {{$region['name']}}</h5>
+        @foreach ($region['seats'] as $seat )
+        <a href = {{  route("region.show",  ["region"=> $region['id']])}}>
+            <img src= {{asset($seat['partyImage'])}} class="rounded" width= "50" height= "50">
         </a>
         @endforeach
     @endforeach
@@ -23,11 +23,13 @@
     <h4>Constituencies</h4>
     <br>
     @foreach ($regions as $region )
-        <h5> {{$region->name}}</h5>
-        @foreach ($region->constituencies as $constituency )
-         <a href = {{  route("constituency.show",  ["constituency"=> $constituency->id])}}>
-         <img src= {{asset($winners[$constituency->name]->party->image)}} class="rounded" width= "50" height= "50" title= {{$constituency->name}}>
-         </a>
+        <h5> {{$region['name']}}</h5>
+        @foreach($constituencies as $constituency)
+            @if($constituency['regionID'] == $region['id'])
+                <a href = {{  route("constituency.show",  ["constituency"=> $constituency['id']])}}>
+                    <img src= {{asset($constituency['seat']['partyImage'])}} class="rounded" width= "50" height= "50">
+                </a>
+            @endif
         @endforeach
     @endforeach
 @endsection
@@ -64,16 +66,16 @@
   
         <script> 
             
-            var regionName = {!! json_encode($region->name) !!};
-            var regionID = {!! json_encode($region->id) !!};
-            var regionCoords = {!! json_encode($coordinates[$region->name]) !!};
-            var regionColour = {!! json_encode($colours[$region->name]) !!};
+            var regionName = {!! json_encode($region['name']) !!};
+            var regionID = {!! json_encode($region['id']) !!};
+            var regionCoords = {!! json_encode($coordinates[$region['name']]) !!};
+            var regionColour = {!! json_encode([$region['colour']]) !!};
             var regionWinnngParties = [];
 
         </script>
-            @foreach ($region->seats as $seat )
+            @foreach ($region['seats'] as $seat )
             <script> 
-               regionWinnngParties.push([{!! json_encode($winners[$seat->id]->party->name) !!},{!! json_encode($winners[$seat->id]->party->id) !!}, {!! json_encode($winners[$seat->id]->party->image) !!}, {!! json_encode($winners[$seat->id]->name) !!}, {!! json_encode($winners[$seat->id]->id) !!}]);
+               regionWinnngParties.push([{!! json_encode($seat['partyName']) !!},{!! json_encode($seat['partyID']) !!}, {!! json_encode($seat['partyImage']) !!}, {!! json_encode($seat['repName']) !!}, {!! json_encode($seat['repID']) !!}]);
             </script>
             @endforeach
         <script> 
@@ -117,11 +119,12 @@
 @section('mapRight')
     @foreach ($constituencies as $constituency)
         <script>   
-            var constituencyID = {!! json_encode($constituency->id) !!};
-            var constituencyName = {!! json_encode($constituency->name) !!};
-            var constituencyCoords = {!! json_encode($coordinates[$constituency->name]) !!};
-            var constituencyColour = {!! json_encode($colours[$winners[$constituency->name]->name]) !!};
-            var constituencyWinnngParty = [{!! json_encode($winners[$constituency->name]->party->name) !!}, {!! json_encode($winners[$constituency->name]->party->id) !!}, {!! json_encode($winners[$constituency->name]->party->image) !!}, {!! json_encode($winners[$constituency->name]->name) !!}, {!! json_encode($winners[$constituency->name]->id) !!}];
+            var constituencyID = {!! json_encode($constituency['id']) !!};
+            var constituencyName = {!! json_encode($constituency['name']) !!};
+            var constituencyCoords = {!! json_encode($coordinates[$constituency['name']]) !!};
+            var constituencyColour = {!! json_encode($constituency['colour']) !!};
+            var constituencyWinnngParty = [{!! json_encode($constituency['seat']['partyName']) !!}, {!! json_encode($constituency['seat']['partyID']) !!}, 
+            {!! json_encode($constituency['seat']['partyImage']) !!}, {!! json_encode($constituency['seat']['repName']) !!}, {!! json_encode($constituency['seat']['repID']) !!}];
 
             L.polygon(constituencyCoords, {color:constituencyColour, constituencyName:constituencyName, constituencyID:constituencyID ,constituencyWinnngParty:constituencyWinnngParty}).addTo(map2).on('click', function(e) {
                 url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
