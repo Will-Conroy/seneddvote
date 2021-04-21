@@ -93,8 +93,8 @@
         
     </table>
      <script>
-            document.getElementById("turnOut").innerHTML = ({{$region['votes_cast']}}/{{$region['electorate']}} * 100).toFixed(2) + '%';
-        </script>
+            document.getElementById("turnOut").innerHTML = ({!! json_encode($region['votes_cast']) !!}/{!! json_encode($region['electorate']) !!} * 100).toFixed(2) + '%';
+    </script>
     <hr class="my-4">
 
     <h4>Seats</h4>
@@ -137,7 +137,7 @@
                 </td>
                 <td>{{ $vote['votes']}}</td>
                  <td>
-                    <script>document.write(({{$vote['votes']}}/{{$region['votes_cast']}} * 100).toFixed(2) + '%');</script>
+                    <script>document.write(({!! json_encode($vote['votes']) !!}/{!! json_encode($region['votes_cast']) !!} * 100).toFixed(2) + '%');</script>
                 </td>
                 </tr>
             

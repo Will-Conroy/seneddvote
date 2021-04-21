@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Year;
 use App\Region;
 use App\Constituency;
+use App\Party;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -34,8 +35,11 @@ class YearController extends Controller
         $constituencies =  $year->constituencies;
         $regions = $year->regions;
         $coordinates = [];
-
-
+        $parties = array();
+        $allParties = $year->parties;
+        foreach($allParties as $party)
+            array_push($parties, YearController::get_party_vote_total($party));
+        
         $constituencyWinners = array();
         foreach($constituencies as $constituency)
         {
@@ -46,8 +50,13 @@ class YearController extends Controller
                 array_push($temp,  array($coord->long, $coord->lat));
             
             $coordinates += [$constituency->name => $temp];
+            $result =  YearController::get_constituency_results($constituency);
 
-            array_push($constituencyWinners, YearController::get_constituency_results($constituency));
+            foreach($parties as &$party){
+                if($result['seat']['partyID'] == $party['id'])
+                    $party['seatsConstituency'] += 1;
+            }
+            array_push($constituencyWinners, $result);
         }
 
         $regionWinners = array();
@@ -60,10 +69,27 @@ class YearController extends Controller
             
             $coordinates += [$region->name => $temp];
             
-            array_push($regionWinners, YearController::get_region_results($region));
+            $result = YearController::get_region_results($region);
+            foreach($parties as &$party){
+                foreach($result['seats'] as $seat){
+                    if($seat['partyID'] == $party['id'])
+                    $party['seatsRegional'] += 1;
+                }
+            }
+
+            array_push($regionWinners, $result);
+            
         }
+        $totalVotes = 0;
+        $totalSeats = 0;
+        foreach($parties as $party){
+            $totalVotes += $party['votes'];
+            $totalSeats += $party['seatsConstituency'] + $party['seatsRegional'];
+        }
+            
+
         return view('years.show',['year' => $year->name,'regions' => $regionWinners, 'constituencies' => $constituencyWinners,
-        'coordinates' => $coordinates]);
+        'coordinates' => $coordinates, 'parties' =>  $parties, 'totalVotes' => $totalVotes, 'totalSeats' =>$totalSeats]);
     }
 
 
@@ -191,6 +217,16 @@ class YearController extends Controller
         $sum[2] = $sum[2]/count($regionColours);
 
         return YearController::get_color_from_value($sum);
+    }
+
+    public function get_party_vote_total(Party $party){
+        $voteTotal = 0;
+        foreach($party->voters as $vote){
+            $voteTotal += $vote->votes;
+        }
+        $outVote = ['name' => $party->name, 'id' => $party->id, 'image' => $party->image, 'votes' => $voteTotal, 'seatsConstituency' => 0, 'seatsRegional' => 0];
+        return $outVote;
+
     }
 
 }

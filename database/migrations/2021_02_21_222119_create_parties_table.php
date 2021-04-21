@@ -17,8 +17,10 @@ class CreatePartiesTable extends Migration
             $table->id();
             $table->string("name");
             $table->string("colour");
+            $table->BigInteger('year_id')->unsigned()->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
+            $table->foreign('year_id')->references('id')->on('years')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

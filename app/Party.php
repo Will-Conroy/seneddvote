@@ -25,6 +25,11 @@ class Party extends Model
     {
         return $this->hasMany('App\Voter');
     }
+
+    public function year()
+    {
+        return $this->belongsTo('App\Year');
+    }
     
 
 }

@@ -111,11 +111,12 @@
         </div>
     </div>
 </body>
-
 <footer>
 <div class=" jumbotron jumbotron-fluid text-center">
     @yield('references')
 </div>
 </footer>
+
+
 
 </html>

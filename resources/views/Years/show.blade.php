@@ -2,7 +2,7 @@
 
 @section('header')
     <h1>{{$year}}</h1>
-    <p>Over view of {{$year}} results</p>
+    <p>Overview of {{$year}} results</p>
 @endsection
 
 
@@ -154,11 +154,49 @@
         </script>
     @endforeach
 @endsection
-
-
 @section('references')
     Election Data was collected from <a href = "https://business.senedd.wales/mgManageElectionResults.aspx">The senedd bussiness pages</a>.
-
-
-
 @endsection
+@section('partyTable')
+    <table id="leftTable" class="table table-borderless table-striped table-earning">
+        <thead>          
+            <tr>
+                <th>Party</th>
+                <th></th>
+                
+                <th>Region</th>
+                <th>Constituency</th>
+                <th>Seats</th>
+                
+                <th>Votes</th>
+                <th>Votes %</th>
+                <th>Seats %</th>
+                <th>Seat Vote Dif</th>
+            </tr>
+         </thead>
+         <tbody>   
+            @foreach($parties as $party)
+                <tr>
+                    <td><img src= {{asset( $party['image'])}} class="rounded" width= "50" height= "50"></td>
+
+                    <td>{{$party['name']}}</td>
+                    <td>{{$party['seatsRegional']}}</td>
+                    <td>{{$party['seatsConstituency']}}</td>
+
+                    <td><script>var seatsWon = {!! json_encode($party['seatsConstituency']) !!}+{!! json_encode($party['seatsRegional']) !!};
+                    document.write( seatsWon);</script></td>
+                    <td>{{$party['votes']}}</td>
+                    <td><script> var votePercetage = ({!! json_encode($party['votes']) !!}/{!! json_encode($totalVotes) !!} * 100).toFixed(2)
+                    document.write( votePercetage + '%');</script></td>
+                    
+                    <td><script> var seatPercetage = (({!! json_encode($party['seatsConstituency']) !!}+{!! json_encode($party['seatsRegional']) !!})/{!! json_encode($totalSeats) !!} * 100).toFixed(2);
+                    document.write(seatPercetage + '%');</script></td>
+                     <td><script> document.write((seatPercetage - votePercetage).toFixed(2) + '%');
+                     </script></td>
+                     
+                </tr> 
+            @endforeach
+        </tbody>
+    </table>
+@endsection
+

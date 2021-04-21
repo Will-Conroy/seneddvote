@@ -137,7 +137,7 @@ class RegionController extends Controller
     }
 
 
-    public function get_region_results(Region $region){
+    static public function get_region_results(Region $region){
 
         //formate votes into map that is easier to use
         $votes = [];

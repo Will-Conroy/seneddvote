@@ -16,5 +16,10 @@ class Year extends Model
         return $this->hasMany('App\Region');
     }
 
+    public function parties()
+    {
+        return $this->hasMany('App\Party');
+    }
+
     
 }

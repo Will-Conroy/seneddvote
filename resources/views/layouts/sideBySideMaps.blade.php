@@ -106,12 +106,11 @@
                 <div class="col-sm">
                     @yield('seatsRight')
                 </div>
+                
             </div>
+            <h2>Parties</h2>
+            @yield('partyTable')
         </body>
     @endsection
-
-
-    
-    
 </html>
 

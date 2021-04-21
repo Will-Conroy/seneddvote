@@ -2,7 +2,7 @@
 
 @section('header')
     <h1>{{$representative->name}}</h1>
-    <p>Over view of {{$representative->name}} results</p>
+    <p>Overview of {{$representative->name}} results</p>
 @endsection
 
 

@@ -63,7 +63,7 @@
         </tr>
     </table>
     <script>
-            document.getElementById("turnOut").innerHTML = ({{$constituency['votes_cast']}}/{{$constituency['electorate']}} * 100).toFixed(2) + '%';
+            document.getElementById("turnOut").innerHTML = ({!! json_encode($constituency['votes_cast']) !!}/{!! json_encode($constituency['electorate']) !!} * 100).toFixed(2) + '%';
     </script>
    
     <hr class="my-4">
@@ -105,7 +105,7 @@
                 </td>
                 <td>{{ $vote['votes']}}</td>
                  <td>
-                    <script>document.write(({{$vote['votes']}}/{{$constituency['votes_cast']}} * 100).toFixed(2) + '%');</script>
+                    <script>document.write(({!! json_encode($vote['votes']) !!}/{!! json_encode($constituency['votes_cast']) !!} * 100).toFixed(2) + '%');</script>
                 </td>
                 </tr>
         
