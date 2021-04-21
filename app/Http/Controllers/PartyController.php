@@ -30,12 +30,32 @@ class partyController extends Controller
      */
     public function show(party $party)
     {
+        $year = $party->year->name;
+        $regionalVotersAll = $party->voters->whereNotNull('region_id');
+        $regionalVoters = array();
+        foreach($regionalVotersAll as $vote)
+            array_push($regionalVoters, ['name' => $vote->region->name, 'id' =>$vote->region->id, 'votes' => $vote->votes, 'seats' => 0]);
+
+        $constituencyVotersAll = $party->voters->whereNotNull('constituency_id');
+        $constituencyVoters = array();
+        foreach($constituencyVotersAll as $vote)
+            array_push($constituencyVoters, ['name' => $vote->constituency->name, 'id' => $vote->constituency->id, 'votes' => $vote->votes, 'seats' => 0]);
         $regions = $party->regions;
         $regionResults = array();
         $coordinates = [];
         
         foreach($regions as $region){
-            array_push($regionResults,  RegionController::get_region_results($region));
+            $results = RegionController::get_region_results($region);
+            array_push($regionResults,  $results);
+            foreach($results['seats'] as $seat){
+                if($seat['partyID'] == $party->id){
+                    foreach($regionalVoters as &$voter){
+                        if($voter['name'] == $region->name)
+                            $voter['seats'] += 1;
+                    }
+                }
+            }
+            
             $coordQuery = $region->coordinates;
             $temp = [];
 
@@ -43,30 +63,38 @@ class partyController extends Controller
                 array_push($temp,  array($coord->long, $coord->lat));
     
             $coordinates += [$region->name => $temp];
-
-            $year = $region->year->name;
         }
-
 
         $constituencies = $party->constituencies;
         $constituencyResults = array();
-        
         foreach($constituencies as $constituency){
-          
-            array_push($constituencyResults, PartyController::get_constituency_results($constituency, $party->id));
-
+            $results = PartyController::get_constituency_results($constituency, $party->id);
+            array_push($constituencyResults, $results);
+            if($results['seat']['partyID'] == $party->id){
+                foreach($constituencyVoters as &$voter){
+                    if($voter['name'] == $constituency->name)
+                        $voter['seats'] = 1;
+                }
+            }
+             
             $coordQuery = $constituency->coordinates;
             $temp = [];
-
             foreach($coordQuery as $coord)
                 array_push($temp,  array($coord->long, $coord->lat));
-    
             $coordinates += [$constituency->name => $temp];
-            $year = $region->year->name;
         }
 
+        $constituencySeatTotal = 0;
+        foreach($constituencyVoters as $votes)
+            $constituencySeatTotal += $votes['seats'];
+        
+        $regionSeatTotal = 0;
+        foreach($regionalVoters as $votes)
+            $regionSeatTotal += $votes['seats'];
+        
         return view('parties.show',['party' => $party, 'constituencies' => $constituencyResults, 'regions' => $regionResults,
-        'coordinates' => $coordinates, 'year' => $year]);
+        'coordinates' => $coordinates, 'year' => $year, 'constituencyVotes' => $constituencyVoters, 'regionalVotes' => $regionalVoters,
+        'regionSeatTotal' => $regionSeatTotal, 'constituencySeatTotal' => $constituencySeatTotal ]);
     }
 
 
