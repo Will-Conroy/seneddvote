@@ -2,7 +2,7 @@
 
 @section('header')
     <h1>{{$party->name}}</h1>
-    <p>Overview of {{$party->name}}'s' results in {{$year}}</p>
+    <p>Overview of {{$party->name}}'s results in {{$year}}</p>
 @endsection
 
 
@@ -46,6 +46,59 @@
             L.polygon(regionCoords, {color:regionColour}).addTo(map1).bindPopup(message);        
         </script>
     @endforeach
+@endsection
+
+
+
+
+
+@section('rightCollum')
+    <table style="width:100%" class="table table-borderless table-striped table-earning">
+        <tr>
+            <th>Region</th>
+            <th>Constituency</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>{{$regionSeatTotal}}</td>
+            <td>{{$constituencySeatTotal}}</td>
+            <td><script>document.write({!! json_encode($regionSeatTotal) !!}+{!! json_encode($constituencySeatTotal) !!});</script></td>
+        </tr>
+    </table>
+    <hr class="my-4">
+    <table style="width:100%" class="table table-borderless table-striped table-earning">
+        <tr>
+            <th>Region</th>
+            <th>Votes</th>
+            <th>Seats</th>
+        </tr>
+        @foreach($regionalVotes as $votes)
+            <tr>
+                <td><a href = {{ route('region.show',['region'=>$votes['id']])}}>{{$votes['name']}}</a></td>
+                <td>{{$votes['votes']}}</td>
+                <td>{{$votes['seats']}}</td>
+            </tr>
+        @endforeach
+        
+    </table>
+    <hr class="my-4">
+    <table style="width:100%" class="table table-borderless table-striped table-earning">
+        <tr>
+            <th>Constituency</th>
+            <th>Votes</th>
+            <th>Seats</th>
+        </tr>
+        @foreach($constituencyVotes as $votes)
+            <tr>
+                <td><a href = {{ route('constituency.show',['constituency'=> $votes['id']])}}>{{$votes['name']}}</a></td>
+                <td>{{$votes['votes']}}</td>
+                <td>{{$votes['seats']}}</td>
+            </tr>
+        @endforeach
+        
+    </table>
+    <hr class="my-4">
+  
 @endsection
 
 

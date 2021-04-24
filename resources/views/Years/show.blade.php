@@ -177,9 +177,10 @@
          <tbody>   
             @foreach($parties as $party)
                 <tr>
-                    <td><img src= {{asset( $party['image'])}} class="rounded" width= "50" height= "50"></td>
+                    <td><a href = {{ route('party.show',['party'=>$party['id']])}}>
+                    <img src= {{asset( $party['image'])}} class="rounded" width= "50" height= "50"></a></td>
 
-                    <td>{{$party['name']}}</td>
+                    <td><a href = {{ route('party.show',['party'=>$party['id']])}}>{{$party['name']}}</a></td>
                     <td>{{$party['seatsRegional']}}</td>
                     <td>{{$party['seatsConstituency']}}</td>
 
@@ -193,7 +194,6 @@
                     document.write(seatPercetage + '%');</script></td>
                      <td><script> document.write((seatPercetage - votePercetage).toFixed(2) + '%');
                      </script></td>
-                     
                 </tr> 
             @endforeach
         </tbody>

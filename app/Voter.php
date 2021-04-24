@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Voter extends Model
 {
-    public function constitunecy()
+    public function constituency()
     {
         return $this->belongsTo('App\Constituency');
     }
