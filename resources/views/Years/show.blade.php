@@ -121,12 +121,15 @@
         <script>   
             var constituencyID = {!! json_encode($constituency['id']) !!};
             var constituencyName = {!! json_encode($constituency['name']) !!};
-            var constituencyCoords = {!! json_encode($coordinates[$constituency['name']]) !!};
+            var string = {!! json_encode($coordinates[$constituency['name']]) !!};
+            var stringtwo = "var constituencyCoords = " +string;
+            eval(stringtwo)
+            //window.alert(constituencyCoords);
             var constituencyColour = {!! json_encode($constituency['colour']) !!};
             var constituencyWinnngParty = [{!! json_encode($constituency['seat']['partyName']) !!}, {!! json_encode($constituency['seat']['partyID']) !!}, 
             {!! json_encode($constituency['seat']['partyImage']) !!}, {!! json_encode($constituency['seat']['repName']) !!}, {!! json_encode($constituency['seat']['repID']) !!}];
 
-            L.polygon(constituencyCoords, {color:constituencyColour, constituencyName:constituencyName, constituencyID:constituencyID ,constituencyWinnngParty:constituencyWinnngParty}).addTo(map2).on('click', function(e) {
+            var regionPoly = L.polygon(constituencyCoords, {color:constituencyColour, constituencyName:constituencyName, constituencyID:constituencyID ,constituencyWinnngParty:constituencyWinnngParty}).addTo(map2).on('click', function(e) {
                 url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
                 url = url.replace(':id', this.options.constituencyID);
                 document.getElementById("mapRightTableHeader").innerHTML ="<a href=" + url +">"   + this.options.constituencyName  + "</a>"
@@ -150,6 +153,7 @@
                 name.innerHTML = "<a href=" + url +">"   + this.options.constituencyWinnngParty[3] + "</a>";
                 
             });
+            
 
         </script>
     @endforeach

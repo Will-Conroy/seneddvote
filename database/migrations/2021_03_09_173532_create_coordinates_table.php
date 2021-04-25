@@ -17,8 +17,7 @@ class CreateCoordinatesTable extends Migration
             $table->id();
             $table->BigInteger('constituency_id')->unsigned()->nullable();
             $table->BigInteger('region_id')->unsigned()->nullable();
-            $table->double('long');
-            $table->double('lat');
+            $table->longText('LatLong');
             $table->timestamps();
             $table->foreign('constituency_id')->references('id')->on('constituencies')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');

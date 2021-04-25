@@ -43,13 +43,9 @@ class YearController extends Controller
         $constituencyWinners = array();
         foreach($constituencies as $constituency)
         {
-            $coordQuery = $constituency->coordinates;
-            $temp = [];
+            $quards = $constituency->coordinates->first();
 
-            foreach($coordQuery as $coord)
-                array_push($temp,  array($coord->long, $coord->lat));
-            
-            $coordinates += [$constituency->name => $temp];
+            $coordinates += [$constituency->name => $quards->LatLong];
             $result =  YearController::get_constituency_results($constituency);
 
             foreach($parties as &$party){
@@ -62,13 +58,8 @@ class YearController extends Controller
         $regionWinners = array();
         foreach($regions as $region)
         {
-            $coordQuery = $region->coordinates;
-            $temp = [];
-            foreach($coordQuery as $coord)
-                array_push($temp,  array($coord->long, $coord->lat));
             
-            $coordinates += [$region->name => $temp];
-            
+            $coordinates += [$region->name => $region->coordinates->first()->latLong];
             $result = YearController::get_region_results($region);
             foreach($parties as &$party){
                 foreach($result['seats'] as $seat){
