@@ -32,7 +32,8 @@
 @section('topMap')
         <script> 
             var regionName = {!! json_encode($region['name']) !!};
-            var regionCoords = {!! json_encode($regionCoordinates) !!};
+            var string = "var regionCoords = " + {!! json_encode($regionCoordinates) !!};
+            eval(string);
             var regionColour = {!! json_encode($region['colour']) !!};
             regionPoly = L.polygon(regionCoords, {color:regionColour}).addTo(map1).bindPopup(regionName);
             map1.fitBounds(regionPoly.getBounds());
@@ -45,7 +46,8 @@
     @foreach ($constituencies as $constituency)
     
         <script>   
-            var constituencyCoords = {!! json_encode($constitCoordinates[$constituency['id']]) !!};
+            var string = "var constituencyCoords = " +{!! json_encode($constitCoordinates[$constituency['id']]) !!};
+            eval(string)
             var constituencyColour = {!! json_encode($constituency['colour']) !!};
             var url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
             url = url.replace(':id',  {!! json_encode($constituency['id']) !!});

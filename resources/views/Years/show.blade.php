@@ -68,7 +68,8 @@
             
             var regionName = {!! json_encode($region['name']) !!};
             var regionID = {!! json_encode($region['id']) !!};
-            var regionCoords = {!! json_encode($coordinates[$region['name']]) !!};
+            var string = "var regionCoords = " +{!! json_encode($coordinates[$region['name']]) !!};
+            eval(string);
             var regionColour = {!! json_encode([$region['colour']]) !!};
             var regionWinnngParties = [];
 
@@ -121,10 +122,8 @@
         <script>   
             var constituencyID = {!! json_encode($constituency['id']) !!};
             var constituencyName = {!! json_encode($constituency['name']) !!};
-            var string = {!! json_encode($coordinates[$constituency['name']]) !!};
-            var stringtwo = "var constituencyCoords = " +string;
-            eval(stringtwo)
-            //window.alert(constituencyCoords);
+            var string = "var constituencyCoords = " +{!! json_encode($coordinates[$constituency['name']]) !!};
+            eval(string)
             var constituencyColour = {!! json_encode($constituency['colour']) !!};
             var constituencyWinnngParty = [{!! json_encode($constituency['seat']['partyName']) !!}, {!! json_encode($constituency['seat']['partyID']) !!}, 
             {!! json_encode($constituency['seat']['partyImage']) !!}, {!! json_encode($constituency['seat']['repName']) !!}, {!! json_encode($constituency['seat']['repID']) !!}];

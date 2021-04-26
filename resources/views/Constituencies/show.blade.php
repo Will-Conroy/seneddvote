@@ -29,7 +29,8 @@
 @section('bottomMap')
         <script> 
             var regionName = {!! json_encode($region['name']) !!};
-            var regionCoords = {!! json_encode($regionCoordinates) !!};
+            var string = "var regionCoords = " +{!! json_encode($regionCoordinates) !!};
+            eval(string);
             var regionColour = {!! json_encode($region['colour']) !!};
             regionPoly = L.polygon(regionCoords, {color:regionColour}).addTo(map2).bindPopup(regionName);
             map1.fitBounds(regionPoly.getBounds());
@@ -40,7 +41,8 @@
 
 @section('topMap')
     <script>   
-        var constituencyCoords = {!! json_encode($constitCoordinates) !!};
+        var string = "var constituencyCoords = " +{!! json_encode($constitCoordinates) !!};
+        eval(string)
         var constituencyColour = {!! json_encode($constituency['colour']) !!};
         L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map1).bindPopup(message);
     </script>

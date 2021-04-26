@@ -56,13 +56,8 @@ class partyController extends Controller
                 }
             }
             
-            $coordQuery = $region->coordinates;
-            $temp = [];
-
-            foreach($coordQuery as $coord)
-                array_push($temp,  array($coord->long, $coord->lat));
-    
-            $coordinates += [$region->name => $temp];
+           
+            $coordinates += [$region->name => $region->coordinates->first()->LatLong];
         }
 
         $constituencies = $party->constituencies;
@@ -76,12 +71,7 @@ class partyController extends Controller
                         $voter['seats'] = 1;
                 }
             }
-             
-            $coordQuery = $constituency->coordinates;
-            $temp = [];
-            foreach($coordQuery as $coord)
-                array_push($temp,  array($coord->long, $coord->lat));
-            $coordinates += [$constituency->name => $temp];
+            $coordinates += [$constituency->name => $constituency->coordinates->first()->LatLong];
         }
 
         $constituencySeatTotal = 0;

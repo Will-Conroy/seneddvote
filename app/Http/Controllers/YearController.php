@@ -59,7 +59,7 @@ class YearController extends Controller
         foreach($regions as $region)
         {
             
-            $coordinates += [$region->name => $region->coordinates->first()->latLong];
+            $coordinates += [$region->name => $region->coordinates->first()->LatLong];
             $result = YearController::get_region_results($region);
             foreach($parties as &$party){
                 foreach($result['seats'] as $seat){

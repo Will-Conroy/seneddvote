@@ -36,22 +36,11 @@ class RegionController extends Controller
         $constituencyWinners = array();
         foreach($constituencies as $constituency)
         {
-            $coordQuery = $constituency->coordinates;
-            $temp = [];
-
-            foreach($coordQuery as $coord)
-                array_push($temp,  array($coord->long, $coord->lat));
-            
-            $constitCoordinates += [$constituency->id => $temp];
+            $constitCoordinates += [$constituency->id => $constituency->coordinates->first()->LatLong];
             array_push($constituencyWinners, YearController::get_constituency_results($constituency));
         }
 
-        $regionCoordinates = [];
-        $coordQuery = $region->coordinates;
-
-        $temp = [];
-        foreach($coordQuery as $coord)
-            array_push($regionCoordinates,  array($coord->long, $coord->lat));
+        $regionCoordinates = $region->coordinates->first()->LatLong;
         
         $votes = [];
         $seatsGiven = [];

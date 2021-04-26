@@ -30,19 +30,11 @@ class constituencyController extends Controller
     public function show(Constituency $constituency)
     {
         $region = $constituency->region;
-        $constitCoordinates = array();
-        $coordQuery = $constituency->coordinates;
-        $temp = [];
-        foreach($coordQuery as $coord)
-            array_push($constitCoordinates,  array($coord->long, $coord->lat));
-
-        $regionCoordinates = [];
-        $coordQuery = $region->coordinates;
-        $temp = [];
-        foreach($coordQuery as $coord)
-            array_push($regionCoordinates,  array($coord->long, $coord->lat));
-
-    
+        
+        $constitCoordinates = $constituency->coordinates->first()->LatLong;
+       
+        $regionCoordinates = $region->coordinates->first()->LatLong;
+       
         $voteOut = array();
         $votes = $constituency->voters;
         foreach($votes as $vote){

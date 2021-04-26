@@ -24,7 +24,8 @@
 @section('bottomMap')
     @foreach ($constituencies as $constituency)
         <script>   
-            var constituencyCoords = {!! json_encode($coordinates[$constituency['name']]) !!};
+            var string = "var constituencyCoords = " +{!! json_encode($coordinates[$constituency['name']]) !!};
+            eval(string)
             var constituencyColour = {!! json_encode($constituency['colour']) !!};
             var constitfillOpacity = {!! json_encode($constituency['seat']['opacity']) !!};
             var url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
@@ -38,7 +39,8 @@
 @section('topMap')
     @foreach ($regions as $region)
         <script> 
-            var regionCoords = {!! json_encode($coordinates[$region['name']]) !!};
+            var string = "var regionCoords = " +{!! json_encode($coordinates[$region['name']]) !!};
+            eval(string);
             var regionColour = {!! json_encode($region['colour']) !!};
             var url = '{{ route("region.show",  ["region"=>":id"]) }}';
             url = url.replace(':id',  {!! json_encode($region['id']) !!});
