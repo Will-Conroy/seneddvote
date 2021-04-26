@@ -60,7 +60,7 @@ class YearController extends Controller
         {
             
             $coordinates += [$region->name => $region->coordinates->first()->LatLong];
-            $result = YearController::get_region_results($region);
+            $result = YearController::get_region_results($region, $constituencyWinners);
             foreach($parties as &$party){
                 foreach($result['seats'] as $seat){
                     if($seat['partyID'] == $party['id'])
@@ -122,41 +122,54 @@ class YearController extends Controller
         //
     }
 
-    static public function get_region_results(Region $region){
+    static public function get_region_results(Region $region, $constituencyWinners){
 
         //formate votes into map that is easier to use
         $votes = [];
         $seatsGiven = [];
         $voters = $region->voters;
         $seats = array();
-
+        $totalVotes =[];
         foreach($voters as $voter){
-            $votes += [$voter->party->id => $voter->votes];
+            
             $seatsGiven += [$voter->party->id => 1];
+            $votes += [$voter->party->id => 0];
+            $totalVotes += [$voter->party->id => $voter->votes];
+        }
+        
+        foreach($constituencyWinners as $con){
+            if($con['regionID'] ==  $region->id)
+                $seatsGiven[$con['seat']['partyID']] += 1;
         }
 
         $regionColours = array();
         $parties = $region->parties;
         $regionSeats = $region->seats;
+        
         foreach($regionSeats as $seat)
         {
+            
             $winningCount = 0;
+            $winnerId = 0;
             foreach($parties as $party)
             {
+                $votes[$party->id] = $totalVotes[$party->id]/$seatsGiven[$party->id];
                 if($votes[$party->id] > $winningCount)
                 {
-                    $seatsGiven[$party->id] += 1;
                     $winningCount = $votes[$party->id];
-                    $votes[$party->id] = $votes[$party->id]/$seatsGiven[$party->id];
-                    $representatives = $region->representatives;
-
-                    foreach($representatives as $representative)
-                        if($representative->party->id == $party->id)
-                            $winner = $representative;
-                    
-                    $colour = $winner->party->colour;
+                    $winnerId = $party->id;
                 }
+
             }
+            $seatsGiven[$winnerId ] += 1;
+            $representatives = $region->representatives;
+
+            foreach($representatives as $representative)
+                if($representative->party->id ==$winnerId)
+                    $winner = $representative;
+            
+            $colour = $winner->party->colour;
+            
             array_push($regionColours, $colour);
             array_push($seats, ['id' => $seat->id, 'colour' => $colour, 
             'partyName' => $winner->party->name, 'partyImage' => $winner->party->image, 
