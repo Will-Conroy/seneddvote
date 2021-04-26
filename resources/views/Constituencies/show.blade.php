@@ -31,8 +31,8 @@
             var regionName = {!! json_encode($region['name']) !!};
             var string = "var regionCoords = " +{!! json_encode($regionCoordinates) !!};
             eval(string);
-            var regionColour = {!! json_encode($region['colour']) !!};
-            regionPoly = L.polygon(regionCoords, {color:regionColour}).addTo(map2).bindPopup(regionName);
+            
+            regionPoly = L.polygon(regionCoords).addTo(map2).bindPopup(regionName);
             map1.fitBounds(regionPoly.getBounds());
             map2.fitBounds(regionPoly.getBounds());
         </script>
