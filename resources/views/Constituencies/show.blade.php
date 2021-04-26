@@ -44,7 +44,8 @@
         var string = "var constituencyCoords = " +{!! json_encode($constitCoordinates) !!};
         eval(string)
         var constituencyColour = {!! json_encode($constituency['colour']) !!};
-        L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map1).bindPopup(message);
+        poly = L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map1).bindPopup(message);
+        
     </script>
 @endsection
 
@@ -65,6 +66,7 @@
         </tr>
     </table>
     <script>
+    
             document.getElementById("turnOut").innerHTML = ({!! json_encode($constituency['votes_cast']) !!}/{!! json_encode($constituency['electorate']) !!} * 100).toFixed(2) + '%';
     </script>
    
