@@ -45,7 +45,12 @@ class partyController extends Controller
         $coordinates = [];
         
         foreach($regions as $region){
-            $results = RegionController::get_region_results($region);
+            $constresutls = array();
+            foreach($region->constituencies as $constituencyIntReg){
+                array_push($constresutls,YearController::get_constituency_results($constituencyIntReg));
+            }
+           
+            $results = RegionController::get_region_results($region,  $constresutls);
             array_push($regionResults,  $results);
             foreach($results['seats'] as $seat){
                 if($seat['partyID'] == $party->id){

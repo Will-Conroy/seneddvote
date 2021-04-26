@@ -48,10 +48,10 @@ class constituencyController extends Controller
 
         
         $constitWinner = ConstituencyController::get_constituency_results($constituency);
-        $regionWinners = YearController::get_region_results($region);
+        $regionOut = ['id' => $region->id, 'name' => $region->name];
 
         $year = ['id' =>  $constituency->year->id, 'name' =>  $constituency->year->name];
-        return view('constituencies.show',['constituency' => $constitWinner, 'region' => $regionWinners, 'regionCoordinates' => $regionCoordinates,
+        return view('constituencies.show',['constituency' => $constitWinner, 'region' => $regionOut,'regionCoordinates' => $regionCoordinates,
         'constitCoordinates' => $constitCoordinates, 'votes' =>  $voteOut, 'year' => $year]);    
     }
     
