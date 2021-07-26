@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Year;
-use App\party;
+use App\Party;
 use App\Constituency;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +19,7 @@ class partyController extends Controller
     public function index()
     {
         $parties = DB::table('parties')->simplePaginate(15);
-        return view('parties.index',['parties' => $parties]);
+        return view('Parties.index',['parties' => $parties]);
     }
 
     /**
@@ -87,7 +87,7 @@ class partyController extends Controller
         foreach($regionalVoters as $votes)
             $regionSeatTotal += $votes['seats'];
         
-        return view('parties.show',['party' => $party, 'constituencies' => $constituencyResults, 'regions' => $regionResults,
+        return view('Parties.show',['party' => $party, 'constituencies' => $constituencyResults, 'regions' => $regionResults,
         'coordinates' => $coordinates, 'year' => $year, 'constituencyVotes' => $constituencyVoters, 'regionalVotes' => $regionalVoters,
         'regionSeatTotal' => $regionSeatTotal, 'constituencySeatTotal' => $constituencySeatTotal ]);
     }

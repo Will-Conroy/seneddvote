@@ -18,7 +18,7 @@ class RegionController extends Controller
     public function index()
     {
         $regions = DB::table('regions')->simplePaginate(15);
-        return view('regions.index',['regions' => $regions]);
+        return view('Regions.index',['regions' => $regions]);
     }
 
     /**
@@ -67,7 +67,7 @@ class RegionController extends Controller
             array_push($voteOut, ['image' => $vote->party->image, 'party' => ['name' => $vote->party->name, 'id' => $vote->party->id], 'votes' => $vote->votes, 
             'names' => $names]);
         }
-        return view('regions.show',['region' => $regionWinners, 'regionCoordinates' => $regionCoordinates,'constituencies' => $constituencyWinners, 
+        return view('Regions.show',['region' => $regionWinners, 'regionCoordinates' => $regionCoordinates,'constituencies' => $constituencyWinners, 
         'constitCoordinates' => $constitCoordinates, 'year' => $year, 'votes' => $voteOut]);    
     }
 
@@ -79,7 +79,7 @@ class RegionController extends Controller
     public function indexByYear(Year $year)
     {
         $regions = $year->regions;
-        return view('regions.index',['regions' => $regions]);  
+        return view('Regions.index',['regions' => $regions]);  
     }
 
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Year;
-use App\constituency;
+use App\Constituency;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +18,7 @@ class constituencyController extends Controller
     public function index()
     {
         $constituencies = DB::table('constituencies')->simplePaginate(15);
-        return view('constituencies.index',['constituencies' => $constituencies]);
+        return view('Constituencies.index',['constituencies' => $constituencies]);
     }
 
     /**
@@ -51,7 +51,7 @@ class constituencyController extends Controller
         $regionOut = ['id' => $region->id, 'name' => $region->name];
 
         $year = ['id' =>  $constituency->year->id, 'name' =>  $constituency->year->name];
-        return view('constituencies.show',['constituency' => $constitWinner, 'region' => $regionOut,'regionCoordinates' => $regionCoordinates,
+        return view('Constituencies.show',['constituency' => $constitWinner, 'region' => $regionOut,'regionCoordinates' => $regionCoordinates,
         'constitCoordinates' => $constitCoordinates, 'votes' =>  $voteOut, 'year' => $year]);    
     }
     
@@ -65,7 +65,7 @@ class constituencyController extends Controller
     public function indexByYear(Year $year)
     {
         $constituencies = $year->constituencies;
-        return view('constituencies.index',['constituencies' => $constituencies]);  
+        return view('Constituencies.index',['constituencies' => $constituencies]);  
     }
 
 

@@ -18,7 +18,7 @@ class Representative extends Model
 
     public function party()
     {
-        return $this->belongsTo('App\party');
+        return $this->belongsTo('App\Party');
     }
     
     public function voters()

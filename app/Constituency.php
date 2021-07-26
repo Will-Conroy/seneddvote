@@ -33,11 +33,11 @@ class Constituency extends Model
 
     public function parties()
     {
-        return $this->belongsToMany('App\party');
+        return $this->belongsToMany('App\Party');
     }
     public function voters()
     {
-        return $this->hasMany('App\voter');
+        return $this->hasMany('App\Voter');
     }
 
 

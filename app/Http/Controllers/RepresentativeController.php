@@ -18,7 +18,7 @@ class representativeController extends Controller
     public function index()
     {
         $representatives = DB::table('representatives')->simplePaginate(15);
-        return view('representatives.index',['representatives' => $representatives]);
+        return view('Representatives.index',['representatives' => $representatives]);
     }
 
     /**
@@ -29,7 +29,7 @@ class representativeController extends Controller
      */
     public function show(representative $representative)
     {
-        return view('representatives.show',['representative' => $representative]);    
+        return view('Representatives.show',['representative' => $representative]);    
     }
 
 
@@ -41,7 +41,7 @@ class representativeController extends Controller
     public function indexByParty(Party $party)
     {
         $representatives = $party->representatives;
-        return view('representatives.index',['representatives' => $representatives]);  
+        return view('Representatives.index',['representatives' => $representatives]);  
     }
 
 

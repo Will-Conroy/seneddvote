@@ -3,7 +3,7 @@
 @section('header')
     <h1>{{$region['name']}}</h1>
     <p>{{$region['name']}} results for the 
-    <a href = {{ route('years.show',['year'=>$year['id']])}}>{{$year['name']}}</a>
+    <a href = {{ route('Years.show',['year'=>$year['id']])}}>{{$year['name']}}</a>
     election.</p>
 @endsection
 
@@ -49,7 +49,7 @@
             var string = "var constituencyCoords = " +{!! json_encode($constitCoordinates[$constituency['id']]) !!};
             eval(string)
             var constituencyColour = {!! json_encode($constituency['colour']) !!};
-            var url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
+            var url = '{{ route("Constituency.show",  ["constituency"=>":id"]) }}';
             url = url.replace(':id',  {!! json_encode($constituency['id']) !!});
             var message = "<a href=" + url +">"   +  {!! json_encode($constituency['name']) !!}  + "</a>";
             L.polygon(constituencyCoords, {color:constituencyColour}).addTo(map2).bindPopup(message);
@@ -112,7 +112,7 @@
             <tr>
                 <td><img src= {{asset( $seat['partyImage'])}} class="rounded" width= "50" height= "50"></td>
                 <td><a href = {{ route('party.show',['party'=>$seat['partyID']])}}>{{$seat['partyName']}}</a></td>
-                <td><a href = {{ route('representative.show',['representative'=>$seat['repID']])}}>{{$seat['repName']}}</a></td>
+                <td><a href = {{ route('Representative.show',['representative'=>$seat['repID']])}}>{{$seat['repName']}}</a></td>
             </tr>
         @endforeach
         

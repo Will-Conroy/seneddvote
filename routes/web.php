@@ -16,29 +16,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('years','YearController@index')->name('years.index');
-Route::get('years/{year}','YearController@show')->name('years.show');
+Route::get('years','YearController@index')->name('Years.index');
+Route::get('years/{year}','YearController@show')->name('Years.show');
 
-Route::get('years/{year}/regions','RegionController@indexByYear')->name('region.indexByYear');
-Route::get('years/{year}/regions/{name}','RegionController@showByYearName')->name('region.showByYearName');
+Route::get('years/{year}/regions','RegionController@indexByYear')->name('Region.indexByYear');
+Route::get('years/{year}/regions/{name}','RegionController@showByYearName')->name('Region.showByYearName');
 
-Route::get('years/{year}/constituencies','ConstituencyController@indexByYear')->name('constituency.indexByYear');
-Route::get('years/{year}/constituencies/{name}','ConstituencyController@showByYearName')->name('constituency.showByYearName');
+Route::get('years/{year}/constituencies','ConstituencyController@indexByYear')->name('Constituency.indexByYear');
+Route::get('years/{year}/constituencies/{name}','ConstituencyController@showByYearName')->name('Constituency.showByYearName');
 
-Route::get('regions','RegionController@index')->name('region.index');
-Route::get('regions/{region}','RegionController@show')->name('region.show');
+Route::get('regions','RegionController@index')->name('Region.index');
+Route::get('regions/{region}','RegionController@show')->name('Region.show');
 
-Route::get('constituencies','ConstituencyController@index')->name('constituency.index');
-Route::get('constituencies/{constituency}','ConstituencyController@show')->name('constituency.show');
+Route::get('constituencies','ConstituencyController@index')->name('Constituency.index');
+Route::get('constituencies/{constituency}','ConstituencyController@show')->name('Constituency.show');
 
 Route::get('parties','PartyController@index')->name('party.index');
 Route::get('parties/{party}','PartyController@show')->name('party.show');
 
-Route::get('parties/{party}/representatives','RepresentativeController@indexByParty')->name('representative.indexByParty');
-Route::get('parties/{party}/representatives/{name}','RepresentativeController@showByPartyName')->name('representative.showByPartyName');
+Route::get('parties/{party}/representatives','RepresentativeController@indexByParty')->name('Representative.indexByParty');
+Route::get('parties/{party}/representatives/{name}','RepresentativeController@showByPartyName')->name('Representative.showByPartyName');
 
-Route::get('representatives','RepresentativeController@index')->name('representative.index');
-Route::get('representatives/{representative}','RepresentativeController@show')->name('representative.show');
+Route::get('representatives','RepresentativeController@index')->name('Representative.index');
+Route::get('representatives/{representative}','RepresentativeController@show')->name('Representative.show');
 
 Auth::routes();
 

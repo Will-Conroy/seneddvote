@@ -41,11 +41,11 @@
                         </button>
                         <div class="dropdown-menu">
                         
-                            <a class="dropdown-item" href="{{ route('years.index')}}">All</a>
+                            <a class="dropdown-item" href="{{ route('Years.index')}}">All</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{ route('years.show', ['year'=> 3])}}">2016</a>
-                            <a class="dropdown-item" href="{{ route('years.show', ['year'=> 4])}}">2011</a>
-                            <a class="dropdown-item" href="{{ route('years.show', ['year'=> 5])}}">2007</a>
+                            <a class="dropdown-item" href="{{ route('Years.show', ['year'=> 3])}}">2016</a>
+                            <a class="dropdown-item" href="{{ route('Years.show', ['year'=> 4])}}">2011</a>
+                            <a class="dropdown-item" href="{{ route('Years.show', ['year'=> 5])}}">2007</a>
                             
                         </div>
                     </div>

@@ -20,7 +20,7 @@ class YearController extends Controller
     public function index()
     {
         $years = DB::table('years')->simplePaginate(15);
-        return view('years.index',['years' => $years]);
+        return view('Years.index',['years' => $years]);
         
     }
 
@@ -79,7 +79,7 @@ class YearController extends Controller
         }
             
 
-        return view('years.show',['year' => $year->name,'regions' => $regionWinners, 'constituencies' => $constituencyWinners,
+        return view('Years.show',['year' => $year->name,'regions' => $regionWinners, 'constituencies' => $constituencyWinners,
         'coordinates' => $coordinates, 'parties' =>  $parties, 'totalVotes' => $totalVotes, 'totalSeats' =>$totalSeats]);
     }
 

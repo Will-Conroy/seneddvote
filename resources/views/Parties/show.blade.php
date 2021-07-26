@@ -28,7 +28,7 @@
             eval(string)
             var constituencyColour = {!! json_encode($constituency['colour']) !!};
             var constitfillOpacity = {!! json_encode($constituency['seat']['opacity']) !!};
-            var url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
+            var url = '{{ route("Constituency.show",  ["constituency"=>":id"]) }}';
             url = url.replace(':id',  {!! json_encode($constituency['id']) !!});
             var message = "<a href=" + url +">"   +  {!! json_encode($constituency['name']) !!}  + "</a>";
             L.polygon(constituencyCoords, {color:constituencyColour, fillOpacity:constitfillOpacity}).addTo(map2).bindPopup(message);
@@ -42,7 +42,7 @@
             var string = "var regionCoords = " +{!! json_encode($coordinates[$region['name']]) !!};
             eval(string);
             var regionColour = {!! json_encode($region['colour']) !!};
-            var url = '{{ route("region.show",  ["region"=>":id"]) }}';
+            var url = '{{ route("Region.show",  ["region"=>":id"]) }}';
             url = url.replace(':id',  {!! json_encode($region['id']) !!});
             var message = "<a href=" + url +">"   +  {!! json_encode($region['name']) !!}  + "</a>";
             L.polygon(regionCoords, {color:regionColour}).addTo(map1).bindPopup(message);        
@@ -76,7 +76,7 @@
         </tr>
         @foreach($regionalVotes as $votes)
             <tr>
-                <td><a href = {{ route('region.show',['region'=>$votes['id']])}}>{{$votes['name']}}</a></td>
+                <td><a href = {{ route('Region.show',['region'=>$votes['id']])}}>{{$votes['name']}}</a></td>
                 <td>{{$votes['votes']}}</td>
                 <td>{{$votes['seats']}}</td>
             </tr>
@@ -92,7 +92,7 @@
         </tr>
         @foreach($constituencyVotes as $votes)
             <tr>
-                <td><a href = {{ route('constituency.show',['constituency'=> $votes['id']])}}>{{$votes['name']}}</a></td>
+                <td><a href = {{ route('Constituency.show',['constituency'=> $votes['id']])}}>{{$votes['name']}}</a></td>
                 <td>{{$votes['votes']}}</td>
                 <td>{{$votes['seats']}}</td>
             </tr>

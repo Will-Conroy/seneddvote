@@ -3,7 +3,7 @@
 @section('header')
     <h1>{{$constituency['name']}}</h1>
     <p>{{$constituency['name']}} results for the 
-    <a href = {{ route('years.show',['year'=>$year['id']])}}>{{$year['name']}}</a>
+    <a href = {{ route('Years.show',['year'=>$year['id']])}}>{{$year['name']}}</a>
     election.</p>
 @endsection
 
@@ -62,7 +62,7 @@
             <td>{{$constituency['electorate']}}</td>
             <td>{{$constituency['votes_cast']}}</td>
             <td id="turnOut"></td>
-            <td> <a href = {{ route('region.show',['region'=>$region['id']])}}>{{$region['name']}}</a></td>
+            <td> <a href = {{ route('Region.show',['region'=>$region['id']])}}>{{$region['name']}}</a></td>
         </tr>
     </table>
     <script>
@@ -83,7 +83,7 @@
         <tr>
             <td><img src= {{asset( $constituency['seat']['partyImage'])}} class="rounded" width= "50" height= "50"></td>
             <td><a href = {{ route('party.show',['party'=>$constituency['seat']['partyID']])}}>{{$constituency['seat']['partyName']}}</a></td>
-            <td><a href = {{ route('representative.show',['representative'=>$constituency['seat']['repID']])}}>{{$constituency['seat']['repName']}}</a></td>
+            <td><a href = {{ route('Representative.show',['representative'=>$constituency['seat']['repID']])}}>{{$constituency['seat']['repName']}}</a></td>
         </tr>
     </table>
     <hr class="my-4">

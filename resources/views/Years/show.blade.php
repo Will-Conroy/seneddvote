@@ -12,7 +12,7 @@
     @foreach ($regions as $region )
         <h5> {{$region['name']}}</h5>
         @foreach ($region['seats'] as $seat )
-        <a href = {{  route("region.show",  ["region"=> $region['id']])}}>
+        <a href = {{  route("Region.show",  ["region"=> $region['id']])}}>
             <img src= {{asset($seat['partyImage'])}} class="rounded" width= "50" height= "50">
         </a>
         @endforeach
@@ -26,7 +26,7 @@
         <h5> {{$region['name']}}</h5>
         @foreach($constituencies as $constituency)
             @if($constituency['regionID'] == $region['id'])
-                <a href = {{  route("constituency.show",  ["constituency"=> $constituency['id']])}}>
+                <a href = {{  route("Constituency.show",  ["constituency"=> $constituency['id']])}}>
                     <img src= {{asset($constituency['seat']['partyImage'])}} class="rounded" width= "50" height= "50">
                 </a>
             @endif
@@ -82,7 +82,7 @@
         <script> 
             L.polygon(regionCoords, {color:regionColour, regionName:regionName, regionID:regionID, regionWinnngParties:regionWinnngParties}).addTo(map1).on('click', function(e) {
                 document.getElementById("mapLeftTableHeader").innerHTML = this.options.regionName;
-                url = '{{ route("region.show",  ["region"=>":id"]) }}';
+                url = '{{ route("Region.show",  ["region"=>":id"]) }}';
                 url = url.replace(':id', this.options.regionID);
                 document.getElementById("mapLeftTableHeader").innerHTML ="<a href=" + url +">"   + this.options.regionName  + "</a>"
                 $("#leftTableBody").empty();
@@ -96,7 +96,7 @@
                     url = url.replace(':id', this.options.regionWinnngParties[i][1]);
                     party.innerHTML =  party.innerHTML =  "<a href=" + url +">"   + this.options.regionWinnngParties[i][0] + "</a>";
                     let name = row.insertCell(2);
-                    url = '{{ route("representative.show",  ["representative"=>":id"]) }}';
+                    url = '{{ route("Representative.show",  ["representative"=>":id"]) }}';
                     url = url.replace(':id', this.options.regionWinnngParties[i][4]);
                     name.innerHTML = "<a href=" + url +">"   + this.options.regionWinnngParties[i][3] + "</a>";
                 }             
@@ -129,7 +129,7 @@
             {!! json_encode($constituency['seat']['partyImage']) !!}, {!! json_encode($constituency['seat']['repName']) !!}, {!! json_encode($constituency['seat']['repID']) !!}];
 
             var regionPoly = L.polygon(constituencyCoords, {color:constituencyColour, constituencyName:constituencyName, constituencyID:constituencyID ,constituencyWinnngParty:constituencyWinnngParty}).addTo(map2).on('click', function(e) {
-                url = '{{ route("constituency.show",  ["constituency"=>":id"]) }}';
+                url = '{{ route("Constituency.show",  ["constituency"=>":id"]) }}';
                 url = url.replace(':id', this.options.constituencyID);
                 document.getElementById("mapRightTableHeader").innerHTML ="<a href=" + url +">"   + this.options.constituencyName  + "</a>"
                 
@@ -147,7 +147,7 @@
                 party.innerHTML =  party.innerHTML =  "<a href=" + url +">"   + this.options.constituencyWinnngParty[0] + "</a>";
                 
                 let name = row.insertCell(2);
-                url = '{{ route("representative.show",  ["representative"=>":id"]) }}';
+                url = '{{ route("Representative.show",  ["representative"=>":id"]) }}';
                 url = url.replace(':id', this.options.constituencyWinnngParty[4]);
                 name.innerHTML = "<a href=" + url +">"   + this.options.constituencyWinnngParty[3] + "</a>";
                 

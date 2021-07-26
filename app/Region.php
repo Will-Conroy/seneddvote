@@ -18,7 +18,7 @@ class Region extends Model
 
     public function constituencies()
     {
-        return $this->hasMany('App\constituency');
+        return $this->hasMany('App\Constituency');
     }
     
     public function coordinates()
@@ -33,7 +33,7 @@ class Region extends Model
 
     public function parties()
     {
-        return $this->belongsToMany('App\party');
+        return $this->belongsToMany('App\Party');
     }
 
     public function voters()
