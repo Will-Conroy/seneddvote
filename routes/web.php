@@ -13,16 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'InfoController@basic')->name('Info.basic');
 
 
-Route::get('/info', function () {
-    return view('welcome');
-});
+Route::get('/info/will', 'InfoController@basic')->name('Info.basic');
 
-Route::get('/info/will', 'InfoController@will')->name('will');
+Route::get('/info/will', 'InfoController@will')->name('Info.will');
 
 
 Route::get('years','YearController@index')->name('Years.index');

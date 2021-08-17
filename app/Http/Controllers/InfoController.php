@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 class InfoController extends Controller
 {
  
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function will()
     {
-        return view('welcome');
+        return view('Info.will');
+    }
+
+
+    public function basic()
+    {
+        return view('Info.basic');
     }
 }
