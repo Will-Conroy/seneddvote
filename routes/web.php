@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/info', function () {
+    return view('welcome');
+});
+
+Route::get('/info/will', 'InfoController@will')->name('will');
+
+
 Route::get('years','YearController@index')->name('Years.index');
 Route::get('years/{year}','YearController@show')->name('Years.show');
 
