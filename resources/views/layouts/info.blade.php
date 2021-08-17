@@ -1,5 +1,4 @@
-
-@extends('layouts.info')
+@extends('layouts.app')
 
 @section('title', 'Years')
 
