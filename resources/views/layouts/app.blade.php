@@ -34,21 +34,41 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-outline-info">Elections Results</button>
-                        <button type="button" class="btn btn-outline-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="sr-only">Toggle Dropdown</span>
+                        <!-- Elections results Navagtion -->
+                        <div class="btn-group">
+                        <button class="btn btn-success btn-lg " type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Elections Results
                         </button>
                         <div class="dropdown-menu">
-                        
-                            <a class="dropdown-item" href="{{ route('Years.index')}}">All</a>
+                        <a class="dropdown-item" href="{{ route('Years.index')}}">All</a>
+                            
                             <div class="dropdown-divider"></div>
+                            <li class="dropdown-header">Years</li> 
                             <a class="dropdown-item" href="{{ route('Years.show', ['year'=> 3])}}">2016</a>
                             <a class="dropdown-item" href="{{ route('Years.show', ['year'=> 4])}}">2011</a>
                             <a class="dropdown-item" href="{{ route('Years.show', ['year'=> 5])}}">2007</a>
                             
                         </div>
-                    </div>
+
+                    <!-- Info Navagtion -->
+                    <div class="btn-group">
+                        <button class="btn btn-info btn-lg  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About
+                        </button>
+
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('Info.basic')}}">Info</a>
+                        <li class="dropdown-header">Data</li> 
+                        <a class="dropdown-item" href="https://business.senedd.wales/mgManageElectionResults.aspx">Votes</a>
+                               
+                        <a class="dropdown-item" href="https://geoportal.statistics.gov.uk/datasets/national-assembly-for-wales-electoral-regions-december-2018-boundaries-wa-bfe/explore?location=52.400000%2C-4.000000%2C8.94">Regional Map</a>
+                        <a class="dropdown-item" href="https://geoportal.statistics.gov.uk/datasets/national-assembly-for-wales-constituencies-december-2018-wa-buc/explore?location=52.386279%2C-4.000000%2C8.94">Constituency Map</a>
+
+                        <div class="dropdown-divider"></div>
+                        <li class="dropdown-header">Portfolio</li> 
+                        <a class="dropdown-item" href="{{ route('Info.will')}}">Will</a>
+                            
+                        </div>
 
                     </ul>
                   
