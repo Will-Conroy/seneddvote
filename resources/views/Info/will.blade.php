@@ -266,16 +266,16 @@
                     <h4 class="lead">Unity - C#</h4>
                     <hr class="my-4">
                     <p>
-                        fadskfjasdkljfaslkdjfaslkdjflaskdjf;laskdjfal; skdjfl;asdkjfljaf;dljfalksdhgahdsglkhsadgkljfakdsjfksdhag akldhsg
-                        dfkhad;sflkh
-                        gdahhsd;array_change_key_caseasdghk
-                        adkghjdsg
-                        agdkhas
-                        gadshkghsa
-                        gadsgklashdg
-                        agdhaskdlg
-                        adgklagh
-                        adsgdkghag
+                    This project was born from a casual game jam with lifelong colleague <a href="https://github.com/Patrick-Akbar">Patrick</a>. Due to competing commitments during the 48 hr time limit, we felt unsatisfied with our work. 
+                    Eager to gain more experience in every stage of the game development process, we decided to continue working on the project. 
+                    </p>
+
+                    <p>
+                    The heart of the game is built around the command pattern, which was modified with a state pattern. A central command processor deals with all game actions. Which includes actions such as, the drawing or playing of cards and ending phases. 
+                    This allows us to make sure actions happen consecutively, but also allows the undoing of any action with ease. 
+                    Even more importantly the command pattern allows for actions to be queued up. Which lets us set up, amongst other things, the automatic discarding of the hand at the end of a turn. 
+                    The state pattern is used to stop certain actions being performed during a given phase. Finally an observer pattern is used to update hubs and logs. 
+                    All of this was dones in Unity from scratch, writing our own C# scripts.
                     </p>
 
                 </div>
@@ -325,11 +325,12 @@
             
             <div class="col-sm">
                 
-                    <h4 class="lead">Advanged Object Orated Progaming C++</h4>
+                    <h4 class="lead">Advanced Object Oriented Programming - C++</h4>
                     <hr class="my-4">
                     <p >C++ tool to read and filter Walsh data stored in JSON and CSV formats</p>
                     <p>
-                        asgadfgf
+                    This was the major piece of course work for my Advanced Object Oriented Programming module. Design to test our best practices and knowledge in C++. In this course work we were given a skeleton of code written and documented by our own lecturer. Then given a project specification and automatic test suite. Our task was to produce code that would not only implement the project specification, but was as well documented and as professional as possible. This was easily my most challenging and enjoyable course work undertaken at Swansea. 
+                    At the end I had achieved 87% in this project. Details about some of my design decisions during the development process are recorded in the <a href="https://github.com/Will-Conroy/Stats-Wales-Data-Analysis-Tool#readme">README.md</a>, as that is what we were instructed to do.
                     </p>
 
                 </div>
