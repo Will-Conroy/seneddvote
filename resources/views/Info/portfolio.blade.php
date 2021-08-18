@@ -9,7 +9,10 @@
 
     @section('app')
     <div class=" jumbotron jumbotron-fluid text-center">
-            @yield('header')
+            
+            <div class="alert alert-success text-center">
+                 @yield('header')
+            </div>
             @if($errors->any())
                 <div>
                     <h3>Errors:</h3>   
