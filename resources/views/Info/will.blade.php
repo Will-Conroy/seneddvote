@@ -81,6 +81,25 @@
                         </a>
                     </div>
                 </div>
+                <hr class="my-4">
+                <!--CV-->
+                <div class="row">
+                        <div class="col-sm-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                                <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                                <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                            </svg>
+                        </div>
+
+                        <div class="col-sm">
+                            <a href="{{url('/will/WillCV.pdf')}}">
+                                CV
+                            </a>
+                        </div>
+                </div>
+
+
+
                 <!--Phone-->
                 <hr class="my-4">
                 <div class="row">
@@ -150,7 +169,27 @@
                     </div>
                 </div>
             <hr class="my-4">
+            <!--dissertation-->
+            <div class="row">
+                    <div class="col-sm-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                            <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                            <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                        </svg>
+                    </div>
+
+                    <div class="col-sm">
+                        <a href="{{url('/will/dissertation.pdf')}}">
+                            Dissertation
+                        </a>
+                    </div>
+                
+            <hr class="my-4">
             </div>
+            </div>
+
+
+            
             
             <div class="col-sm-4 justify-content-center">
             <img src="{{url('/will/SeneddVoteDemo.gif')}}" class="rounded float img-fluid" alt="Animated Gif of maps">
@@ -161,17 +200,25 @@
                     <h4 class="lead">Laravel - PHP, mySQL, JavaScript</h4>
                     <hr class="my-4">
                     <p>
-                        fadskfjasdkljfaslkdjfaslkdjflaskdjf;laskdjfal; skdjfl;asdkjfljaf;dljfalksdhgahdsglkhsadgkljfakdsjfksdhag akldhsg
-                        dfkhad;sflkh
-                        gdahhsd;array_change_key_caseasdghk
-                        adkghjdsg
-                        agdkhas
-                        gadshkghsa
-                        gadsgklashdg
-                        agdhaskdlg
-                        adgklagh
-                        adsgdkghag
+                        Seneddvote.co.uk was a Web Application that started development as part of my dissertation at Swansea Uni. A copy of which can be found <a href="{{url('/will/dissertation.pdf')}}">
+                            here
+                        </a>, it of course goes into much more detail about my  development process.
                     </p>
+                    <p>
+                        The application takes voting data from <a href="https://business.senedd.wales/mgManageElectionResults.aspx">Welsh General Elections</a> and then stores them in a database. Then when displaying the data it models the results according to the Additional Member System. It is done this way, so that polling or hypothetical voting results can be added into the site and accurate results generated instantly.
+                    </p>
+                    <h4 class="lead">Features:</h4>
+                    <ul>
+                        <li>Accurately model results given voting data.</li>
+                        <li>Store of a repository of historical election data.</li>
+                        <li>Parties, Constituencies and Regions have dedicated pages displaying the models results.</li>
+                        <li>Display the model’s election results with color-coded interactive map.</li>
+                    </ul>
+                    <p>
+                        It was developed using a Model-View-Controller framework <a href="https://laravel.com/">Laravel</a>. A mySQL database was created to store all historical election data, which was then displayed using javascript’s <a href="https://leafletjs.com/">Leaflet</a> interactive maps.
+                        This is an ongoing personal project. During my dissertation the application lived exclusively on a virtual server, on my own pc using <a href="https://www.virtualbox.org">Virtualbox</a>. Since then I have started hosting the site on <a href="https://www.hostinger.co.uk/">Hostinger</a>.
+                    </p>
+                    
 
                 </div>
             </div>
