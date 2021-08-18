@@ -18,7 +18,7 @@
             </div>
       
             <div class="col-sm">
-                <h4 class="lead"> About Me</h4>
+                <h4 class="lead"> </h4>
                 <hr class="my-4">
                 
                 
@@ -186,6 +186,9 @@
                 
             <hr class="my-4">
             </div>
+
+        
+
             </div>
 
 
@@ -269,7 +272,11 @@
                     This project was born from a casual game jam with lifelong colleague <a href="https://github.com/Patrick-Akbar">Patrick</a>. Due to competing commitments during the 48 hr time limit, we felt unsatisfied with our work. 
                     Eager to gain more experience in every stage of the game development process, we decided to continue working on the project. 
                     </p>
-
+                    <p>
+                    The main Inspiration was of evolution, and the idea of two species that evolved to compete against each other. To this end the basic premise is, of a local multiplayer mard game, where the players each build their own decks. 
+                    Which will then get shuffled into one deck. During each of their turns players desperately try to ‘evolve’ their team of 3 ants . Both trying to optimize their own ants, sabotage the other. 
+                    This is all while fighting over the same resources and having to accommodate the other player's deck and strategy into your own.
+                    </p>
                     <p>
                     The heart of the game is built around the command pattern, which was modified with a state pattern. A central command processor deals with all game actions. Which includes actions such as, the drawing or playing of cards and ending phases. 
                     This allows us to make sure actions happen consecutively, but also allows the undoing of any action with ease. 
